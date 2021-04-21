@@ -7,7 +7,7 @@ AM I RESPONSIVE IMAGE/GIF
 
 [View website](URL.ie)
 
----
+--
 # Contents
 
 1. [Project Overview](#project-overview)
