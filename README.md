@@ -50,7 +50,7 @@ My own goals as a developer creating this project were to:
 # UX
 [^ Back To Top ](#contents) 
 
-![alt text](assets/wireframes/PNG "Bia.ie Main Website")
+![alt text](images/wireframes/PNG "Bia.ie Main Website")
 
 ## Goals
 
@@ -100,13 +100,9 @@ As a business/admin user, I would like to do all of the above as well as:
 ## Design
 
 ### Typography
-The following fonts were used:
+I wanted to use [Montserrat](https://fonts.google.com/specimen/Montserrat#about) for the headings and [Open Sans](https://fonts.google.com/specimen/Open+Sans/#about) as a supporting body font to achieve the desired clean-cut image.
 
- was used for the navigation elements. was used for headings. Regular was used for the general text.
-(I wanted to use `'Montserrat'` so I used this font along with `sans-serif;` as a backup font to maintain the clean-cut image.)
-
-
-## Icons
+### Icons
 Materialize icons has been used for this project.
 
 ### Color Scheme
@@ -116,38 +112,174 @@ However the colour red is used for error messages for the Signup and Login pages
 
 I ended up creating and using the below palette once it had passed rigorous Accessibility testing in **A11y's Color Contrast Accessibility Validator**. 
 
-![alt text](assets/wireframes/bia-color-palette.PNG "Bia Color Palette")
-
+![alt text](static/images/bia-color-palette.PNG "Bia Color Palette")
 
 
 ## Wireframes
 
-- [Wireframes](assets/wireframes/wireframes.pdf "Bia Wireframes"): The document contains screens displaying the design of the homepage, recipe page, forms, and recipe list layouts on desktop, tablet and mobile devices.
+The folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") including mockups of the homepage, an individual recipe page, submit recipe page, featured business page and account creation page designed at the beginning of the project for desktop, tablet and mobile devices. I have also included the projected [sitemap](wireframes/sitemap.png "Bia Sitemap") and data [schema](wireframes/schema.PNG "Bia Schema").
 **Please note the finalised project contains slight variations to the original wireframe**
-
-sitemap
-
-*********************************
 
 # Features
 [^ Back To Top ](#contents) 
 
-![alt text](assets/wireframes/PNG "wireframe")
+![alt text](images/wireframes/PNG "wireframe")
 
 ## Existing Features
+Existing features
+Index page informs the user about the site in the eye-catching jumbotron
+ Ads for featured businesses
+ Signup
+ Login
+Search: users are able to search for recipes by username, title or any other text. If no results are found message "No results found. Please try again".
+ Sorting by category in navigation links.
+ Access to user profile with all users recipes
+ If user has not added any recipes, the profile reads "X" and has "Submit Recipe" CTA.
+ Whenever user has logged in user is greeted with a 5 second flash welcome message
+ When user is first registerd user is greeted with 5 second "Signup Successful" flashed message.
+ Profile page displays username in banner
+ Thank you page with a "Back Home" button that appears after user has edited or submitted a recipe
+ Only registered and logged in users allowed to sumbit/edit and delete recipes.
+ Only user that posted the recipe or admin can delete and/or edit it.
+ Social icons with links in the page footer
+ Recipes displayed in list have title, description, cooking time and user information
+ Single recipe page have full recipe information, the date and time it was first created, image and list.
+ Single recipe page displays tips only if they have been defined. All other fields are required.
+ Submit recipe and edit recipe forms have clear instructions and character limits for certain fields.
+ If password is too short or email is invalid etc tooltip appears
+ Favicon
+ Bootstrap input field validation
+
+
 ## Features Left to Implement
+newsletter
+Future features
+Pagination
+Google/Facebook login
+ Admin recipe review to either accept or reject recipe for it to be public.
+ More categories
+ Admin able to add/edit/delete categories
+ Sort recipes by tags
+ Nutrition calculations
+ Server side credential validation
+ SSL certificate
+ Recipe Comments
+ Lazy loading images
+ Prevent duplicate subscribers
+ "Remember me" signup checkbox
+ Edit user profiles
+ User profiles with description, avatar, post list
+ Ability to click on other user profiles and see recipes they posted
+ Page loading animation
+ Filter emails so that there are no duplicates for subscription letters
+ Admin portal
+ Contact form and admin to be able to see all received messages directly in the admin console
+ Recipe image url validation
+
 
 # Information Architecture
 [^ Back To Top ](#contents)
 ## Database Choice
+In order to fulfil the project requirements, the NoSQL database MongoDB was utilised to store the data.
+
+This non-relational database structure suits Bia.ie as there are only a few relationships between the various collections. 
+
 ## Data Modeling
+The project currently relies on five database collections:
+
+#### Categories collection
+
+|**Key**|**Type**|**Notes**|
+|:-----|:-----|:-----|
+|_id|ObjectId||
+|category_name|string||
+
+#### Recipe collection
+
+|**Key**|**Type**|**Notes**|
+|:-----|:-----|:-----|
+|_id|ObjectId||
+|title|string||
+|category_name|string||
+|recipe_description|string||
+|image_url|string||
+|serves|Array||
+|prep|string||
+|cooks|string||
+|difficulty|string||
+|ingredient_name|string||
+|instructions|string||
+|date_added|string||
+|username|string||
+
+
+#### Users collection
+
+|**Key**|**Type**|**Notes**|
+|:-----|:-----|:-----|
+|_id|ObjectId||
+|username|string||
+|password|string||
+|email|string||
+
+
+#### Businesses collection
+
+|**Key**|**Type**|**Notes**|
+|:-----|:-----|:-----|
+|_id|ObjectId||
+|business_name|string||
+|business_description|string||
+|business_url|string||
+
+
+#### Ingredients collection
+
+|**Key**|**Type**|**Notes**|
+|:-----|:-----|:-----|
+|_id|ObjectId||
+|ingredient_name|string||
+|business_url|string||
 
 # Technologies Used
 [^ Back To Top ](#contents)
 ## Languages
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Python](https://www.python.org/)
+  - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+
 ## Libraries and Frameworks
+
+- [Flask](https://palletsprojects.com/p/flask/)
+- [jQuery](https://jquery.com/)?????????
+- [Materialize](https://materializecss.com/)
+
+
+## Extensions and kits
+
+- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)???????
+- [Flask Paginate](https://pythonhosted.org/Flask-paginate/)
+- [Pillow](https://pillow.readthedocs.io/en/stable/)?????
+- [Werkzeug](https://palletsprojects.com/p/werkzeug/)
+
 ## Tools
+- [Am I Responsive?](http://ami.responsivedesign.is/)
+- [Autoprefixer](https://autoprefixer.github.io/)
+- [Favicon.io](https://favicon.io//)
+- [Font Awesome](https://fontawesome.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [Amazon AWS](https://aws.amazon.com/) (S3)??????????????
+- [Balsamiq](https://balsamiq.com/wireframes/)
+- [GitHub](https://github.com/)
+- [GitPod](https://gitpod.io/)
+- [Heroku](https://www.heroku.com/about)
+
 ## Databases
+- [MongoDB](https://www.mongodb.com/)
+
+
 In the construction of this project I have utilised the following languages, frameworks, libraries and tools:
 - **HTML5,** **CSS3** and **JavaScript** programming languages
 - [Bootstrap v4.5.3](https://getbootstrap.com)
@@ -159,12 +291,10 @@ In the construction of this project I have utilised the following languages, fra
 - [Balsamiq](https://balsamiq.com/)
     - I used **Balsamiq**, the rapid low-fidelity UI wireframing tool during the prototyping phase to structure the website and its content following best UX practices.
 - [Color Hex](https://www.color-hex.com/)
-    - I created the color palette for my project using the theme colours of the main Fiid website and **Color Hex** to help structure the UI for the game. 
-- [Photoshop](https://www.photoshop.com)
-    - I created the background image using the image graphics editor **Photoshop** so each Fiid product is visually on screen for the duration of the game to further brand/product awareness.
+    - I created the color palette for my project using the theme colours of the main Bia.ie website and **Color Hex** to help structure the UI for the game. 
 - [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools)
     - **Chrome Dev Tools** was used to consistently test the site and run reports from Lighthouse.
-- [Google Fonts](https://getbootstrap.com)
+- [Google Fonts](https://fonts.google.com)
     - **Google Fonts** was used to style the website fonts.
 - [Font Awesome](https://fontawesome.com/)
     - I used the font & icon toolkit Font Awesome in the win modal to define elements by a visual means and break up the larger section of text.
@@ -188,12 +318,14 @@ In the construction of this project I have utilised the following languages, fra
     - **W3C CSS Validation Service** was used to check the validity of my CSS in the project.
 - [JS Hint Validator](https://jshint.com/)
     - **JS Hint** was used to analyze and ensure the source code complies with coding rules. 
-- [Pep8 Online](http://pep8online.com/)
-    - **Pep 8 Online** 
 - [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/)
     - I used **WAVE** to make my site more accessible to individuals with disabilities by detecting any potential issues.
-
-
+- [Pep8 Online](http://pep8online.com/)
+    - **Pep 8 Online** 
+Figma
+Python
+mongodb
+materialise for icons etc
 
 # Testing
 [^ Back To Top ](#contents)
@@ -201,6 +333,7 @@ The Testing process has been documented in this [testing.md file.](/testing.md "
 
 # Deployment
 [^ Back To Top ](#contents)
+
 ## Local Deployment
 ## Heroku Deployment
 
