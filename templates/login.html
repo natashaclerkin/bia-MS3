@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align">Join the Bia Community</h3>
+    <h3 class="center-align">Log In</h3>
 
     <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel">
                 <!-- username -->
                 <div class="row">
 					<div class="input-field col s12">
-						<i class="fas fa-user-plus prefix #43a047 green-text text-darken-1"></i>
+						<i class="fas fa-user-cog prefix #43a047 green-text text-darken-1"></i>
 						<input id="username" name="username" type="text" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
 						<label for="username">Username</label>
@@ -24,22 +24,22 @@
                         <label for="password">Password</label>
                     </div>
                 </div>
-                <!-- register -->
+                <!-- log in -->
                 <div class="row">
                     <button type="submit" class="col s12 btn-large #43a047 green darken-1">
-                        Register <i class="fas fa-sign-in-alt"></i>
+                        Log In <i class="fas fa-sign-in-alt"></i>
                     </button>
                 </div>
             </div>
         </form>
     </div>
 
-    <!-- Navigate registered users to login -->
+    <!-- Navigate unregistered users to register -->
     <div class="row">
         <div class="col s12">
             <p class="center-align">
-                Already Registered?
-                <a href="{{ url_for('login') }}" class="#43a047 green-text text-darken-1">Log In</a>
+                New Here?
+                <a href="{{ url_for('register') }}" class="#43a047 green-text text-darken-1">Register Account</a>
             </p>
         </div>
     </div>
