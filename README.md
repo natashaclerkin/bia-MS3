@@ -117,7 +117,7 @@ I ended up creating and using the below palette once it had passed rigorous Acce
 
 ## Wireframes
 
-The folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") including mockups of the homepage, an individual recipe page, submit recipe page, featured business page and account creation page designed at the beginning of the project for desktop, tablet and mobile devices. I have also included the projected [sitemap](wireframes/sitemap.png "Bia Sitemap") and data [schema](wireframes/schema.PNG "Bia Schema").
+The folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") including mockups of the homepage, an individual recipe page, submit recipe page, featured business page and account creation page designed at the beginning of the project for desktop, tablet and mobile devices. I have also included the projected [sitemap](wireframes/site-map.png "Bia Sitemap") and data [schema](wireframes/schema.PNG "Bia Schema").
 **Please note the finalised project contains slight variations to the original wireframe**
 
 # Features
