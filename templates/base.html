@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- FontAwesome -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" type="text/css">
     <!-- Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
     <!-- Static css file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
@@ -19,47 +20,55 @@
 
 <body>
 
-	<header>
+    <header>
         <!-- top navbar -->
-		<nav>
-			<div class="nav-wrapper black">
-				<a href="{{ url_for('get_recipes') }}" class="brand-logo">BIA.IE</a>
-				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-				<ul class="right hide-on-med-and-down">
-					<li><a href="{{ url_for('get_recipes') }}">Home</a></li>
-					<li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-					<li><a href="#">Submit a Recipe</a></li>
-					<li><a href="#">Manage Recipes</a></li>
-					<li><a href="#">Log Out</a></li>
-					<li><a href="{{ url_for('login') }}">Log In</a></li>
-					<li><a href="{{ url_for('register') }}">Register</a></li>
-				</ul>
-			</div>
-		</nav>
+        <nav>
+            <div class="nav-wrapper black">
+                <a href="{{ url_for('get_recipes') }}" class="brand-logo">BIA.IE</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+                    {% if session.user %}
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="#">Submit a Recipe</a></li>
+                    <li><a href="#">Manage Recipes</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
 
         <!-- mobile sidenav -->
-		<ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align">BIA.IE</h4></li>
+        <ul class="sidenav" id="mobile-demo">
+            <li>
+                <h4 class="center-align">BIA.IE</h4>
+            </li>
             <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+            {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="#">Submit a Recipe</a></li>
             <li><a href="#">Manage Recipes</a></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            {% else %}
             <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
-		</ul>
+            {% endif %}
+        </ul>
     </header>
-    
+
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="#43a047 green darken-1 center-align">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="#43a047 green darken-1 center-align">{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 
@@ -75,4 +84,5 @@
     {% block scripts %}
     {% endblock %}
 </body>
+
 </html>
