@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap: 100, 200, 300, 400, 500, 600, 700, 800, 900');
 
-a {
+body {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav .brand-logo {
+    padding-left: 10px;
 }
