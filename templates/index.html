@@ -1,16 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for recipe in recipes %}
-{{ recipe.recipe_name }}<br>
-{{ recipe.category_name }}<br>
-{{ recipe.recipe_description }}<br>
-{{ recipe.serves }}<br>
-{{ recipe.prep_time}}<br>
-{{ recipe.cook_time}}<br>
-{{ recipe.difficulty}}<br>
-{% endfor %}
-
 
 <!-- Trending Title -->
 <div class="row">
@@ -20,124 +10,142 @@
 
 
 <!-- Recipe Gallery-->
-<div class="row">
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="static/images/peanut-pad-thai.jpg">
-                <!--<span class="card-title">Card Title</span>-->
-                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
-            </div>
-            <div class="card-content">
-                <p>Lifeforce Pad Thai</p>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="static/images/peanut-pad-thai.jpg">
-                <!--<span class="card-title">Card Title</span>-->
-                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
-            </div>
-            <div class="card-content">
-                <p>Lifeforce Pad Thai</p>
+    <div class="row">
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="static/images/peanut-pad-thai.jpg">
+                    <!--<span class="card-title">Card Title</span>-->
+                    <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
+                </div>
+                {% for recipe in recipes %}
+                <div class="card-content">
+                    <p>{{ recipe.recipe_name }}</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="static/images/peanut-pad-thai.jpg">
-                <!--<span class="card-title">Card Title</span>-->
-                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
-            </div>
-            <div class="card-content">
-                <p>Lifeforce Pad Thai</p>
+        {% endfor %}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="static/images/peanut-pad-thai.jpg">
+                    <!--<span class="card-title">Card Title</span>-->
+                    <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
+                </div>
+                {% for recipe in recipes %}
+                <div class="card-content">
+                    <p>{{ recipe.recipe_name }}</p>
+                </div>
             </div>
         </div>
+        {% endfor %}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="static/images/peanut-pad-thai.jpg">
+                    <!--<span class="card-title">Card Title</span>-->
+                    <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
+                </div>
+                {% for recipe in recipes %}
+                <div class="card-content">
+                    <p>{{ recipe.recipe_name }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-</div>
 
 
-<div class="row">
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="static/images/peanut-pad-thai.jpg">
-                <!--<span class="card-title">Card Title</span>-->
-                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
-            </div>
-            <div class="card-content">
-                <p>Lifeforce Pad Thai</p>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="static/images/peanut-pad-thai.jpg">
-                <!--<span class="card-title">Card Title</span>-->
-                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
-            </div>
-            <div class="card-content">
-                <p>Lifeforce Pad Thai</p>
+    <div class="row">
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="static/images/peanut-pad-thai.jpg">
+                    <!--<span class="card-title">Card Title</span>-->
+                    <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
+                </div>
+                {% for recipe in recipes %}
+                <div class="card-content">
+                    <p>{{ recipe.recipe_name }}</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="static/images/peanut-pad-thai.jpg">
-                <!--<span class="card-title">Card Title</span>-->
-                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
-            </div>
-            <div class="card-content">
-                <p>Lifeforce Pad Thai</p>
+        {% endfor %}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="static/images/peanut-pad-thai.jpg">
+                    <!--<span class="card-title">Card Title</span>-->
+                    <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
+                </div>
+                {% for recipe in recipes %}
+                <div class="card-content">
+                    <p>{{ recipe.recipe_name }}</p>
+                </div>
             </div>
         </div>
+        {% endfor %}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="static/images/peanut-pad-thai.jpg">
+                    <!--<span class="card-title">Card Title</span>-->
+                    <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
+                </div>
+                {% for recipe in recipes %}
+                <div class="card-content">
+                    <p>{{ recipe.recipe_name }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-</div>
 
 
-<div class="row">
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="static/images/peanut-pad-thai.jpg">
-                <!--<span class="card-title">Card Title</span>-->
-                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
-            </div>
-            <div class="card-content">
-                <p>Lifeforce Pad Thai</p>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="static/images/peanut-pad-thai.jpg">
-                <!--<span class="card-title">Card Title</span>-->
-                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
-            </div>
-            <div class="card-content">
-                <p>Lifeforce Pad Thai</p>
+    <div class="row">
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="static/images/peanut-pad-thai.jpg">
+                    <!--<span class="card-title">Card Title</span>-->
+                    <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
+                </div>
+                {% for recipe in recipes %}
+                <div class="card-content">
+                    <p>{{ recipe.recipe_name }}</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="static/images/peanut-pad-thai.jpg">
-                <!--<span class="card-title">Card Title</span>-->
-                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
-            </div>
-            <div class="card-content">
-                <p>Lifeforce Pad Thai</p>
+        {% endfor %}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="static/images/peanut-pad-thai.jpg">
+                    <!--<span class="card-title">Card Title</span>-->
+                    <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
+                </div>
+                {% for recipe in recipes %}
+                <div class="card-content">
+                    <p>{{ recipe.recipe_name }}</p>
+                </div>
             </div>
         </div>
+        {% endfor %}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="static/images/peanut-pad-thai.jpg">
+                    <!--<span class="card-title">Card Title</span>-->
+                    <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
+                </div>
+                {% for recipe in recipes %}
+                <div class="card-content">
+                    <p>{{ recipe.recipe_name }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-</div>
 
 
-{% endblock %}
+    {% endblock %}
