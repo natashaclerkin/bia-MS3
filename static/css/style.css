@@ -9,3 +9,29 @@ body {
 nav .brand-logo {
     padding-left: 10px;
 }
+
+.helper-text {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: none;
+    letter-spacing: 0px;
+}
+
+.input-field>label {
+    color: #000; 
+    font-size: 16px;
+}
+
+.select-wrapper input.select-dropdown {
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 10px;
+}
+
+.dropdown-content{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: none;
+    letter-spacing: 0px;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #000; 
+}
