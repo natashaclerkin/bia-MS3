@@ -23,7 +23,6 @@ nav .brand-logo {
 
 .select-wrapper input.select-dropdown {
     font-family: 'Open Sans', sans-serif;
-    padding-top: 10px;
 }
 
 .dropdown-content{
@@ -35,3 +34,18 @@ nav .brand-logo {
 .dropdown-content li>a, .dropdown-content li>span {
     color: #000; 
 }
+
+
+.card-image .img_recipe {
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.img_recipe {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
