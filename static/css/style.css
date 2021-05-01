@@ -49,3 +49,31 @@ nav .brand-logo {
     height: 100%;
 }
 
+
+h1{
+    font-size: 44px;
+}
+
+h2{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+h3{
+    font-size: 16px;
+}
+
+h4{
+    font-size: 16px;
+}
+
+
+.btn-small{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.collapsible-header i{
+    margin: 5px;
+    line-height: 60px;
+}

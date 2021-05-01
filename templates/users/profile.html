@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Profile Heading -->
+<div class="row">
+    <h1 class="center-align"> Welcome back, {{ username }}!</h1>
+    <hr class="blackline">
+</div>
+
+
+<!-- User's recipes -->
+<div class="row">
+    <div class="col s2 m12">
+        <div class="col s12 center-align">
+            <h2>My recipes</h2>
+        </div>
+        <div class="col right">
+            <a class="btn-small #43a047 green darken-1"
+                    href="{{ url_for('add_recipe') }}">Add a new recipe +</a>
+        </div>
+        
+        <!-- All user created recipes -->
+        <div class="col s2 m12">
+            <ul class="collapsible">
+                {% for recipe in user_recipes %}
+                <li>
+                    <div class="collapsible-header #fafafa grey lighten-5">
+                        <div class="col s2">
+                            <i class="fas fa-caret-down"></i>
+
+                        </div>
+                        <div class="recipe-title col s5">
+                            <h3>{{ recipe.recipe_name }}</h3>
+                        </div>
+                        <div class="col s5">
+                            <a class="btn-small right #e53935 red darken-1"
+                    href="">Delete</a>
+                    <a class="btn-small right #ffffff white #43a047 green-text darken-1"
+                    href="">Edit</a>
+                        </div>
+                    </div>
+                    <div class="collapsible-body">
+                        <h4>Category: {{ recipe.category_name }}</h4>
+                        <h4>Short Description: {{ recipe.description }}</h4>
+                        <h4>Serves: {{ recipe.serves }}</h4>
+                        <h4>Prep time (In Mins): {{ recipe.prep_time }}</h4>
+                        <h4>Cook time (In Mins): {{ recipe.cook_time }}</h4>
+                        <h4>Ingredients: {{ recipe.ingredients }}</h4>
+                        <h4>Method: {{ recipe.method}}</h4>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+
+    {% endblock %}
