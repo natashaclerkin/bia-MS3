@@ -13,7 +13,7 @@
         <!-- Recipe name -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="recipe_name" name="recipe_name" type="text" maxlength="20"
+                <input id="recipe_name" name="recipe_name" value="{{recipe.recipe_name}}" type="text" maxlength="20"
                     pattern="^[^\s][A-Za-z0-9\s]{1,20}$" class="validate" required>
                 <label for="recipe_name">Recipe name</label>
                 <span class="helper-text" data-error="Max 20 Characters" data-success="Sounds yummy!"></span>
@@ -23,10 +23,14 @@
         <div class="row">
             <div class="input-field col s12">
                 <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected>Select category</option>
+                    <option value="" disabled>Select category</option>
                     {% for category in categories %}
-                    <option value="{{ category.category_name}}">{{ category.category_name}}</option>
-                    {% endfor %}
+                            {% if category.category_name == recipe.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name}}">{{ category.category_name}}</option>
+                            {% endif %}
+                        {% endfor %}
                 </select>
                 <label for="category_name">Recipe category</label>
             </div>
@@ -34,7 +38,7 @@
         <!-- IMG Upload URL -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="img_url" name="img_url" type="url" pattern="https?://.+" class="validate" required>
+                <input id="img_url" name="img_url" value="{{recipe.img_url}}" type="url" pattern="https?://.+" class="validate" required>
                 <label for="img_url">Image url</label>
                 <span class="helper-text" data-error="Enter a valid URL" data-success="Looks good!"></span>
             </div>
@@ -42,7 +46,7 @@
         <!-- Serves -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="serves" name="serves" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
+                <input id="serves" name="serves" value="{{recipe.serves}}" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
                 <label for="serves">Number of servings</label>
                 <span class="helper-text" data-error="Enter a valid serving amount"
                     data-success="Nice, Hopefully there's leftovers!">For example: 4</span>
@@ -51,7 +55,7 @@
         <!-- Prep time  -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="prep_time" name="prep_time" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
+                <input id="prep_time" name="prep_time" value="{{recipe.prep_time}}" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
                 <label for="prep_time">Prep time (in mins)</label>
                 <span class="helper-text" data-error="Enter a valid time" data-success="Only? Wow, that's quick!">For
                     example: 15</span>
@@ -60,7 +64,7 @@
         <!-- Cook time  -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="cook_time" name="cook_time" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
+                <input id="cook_time" name="cook_time" value="{{recipe.cook_time}}" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
                 <label for="cook_time">Cooking time (in mins)</label>
                 <span class="helper-text" data-error="Enter a valid time" data-success="Only? Wow, that's quick!">For
                     example: 15</span>
@@ -69,7 +73,7 @@
         <!-- Ingredients  -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required></textarea>
+                <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required>{{- recipe.ingredients -}}</textarea>
                 <label for="ingredients">Ingredients</label>
                 <span class="helper-text" data-error="Write each new ingredient on a new line"
                     data-success="Super, now I'm hungry!">Write each new ingredient on a new line.</span>
@@ -78,7 +82,7 @@
         <!-- Method  -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="method" name="method" class="materialize-textarea validate" required></textarea>
+                <textarea id="method" name="method" class="materialize-textarea validate" required>{{- recipe.method -}}</textarea>
                 <label for="method">Method</label>
                 <span class="helper-text" data-error="Write each step of the method on a new line"
                     data-success="Great! Love it when a plan comes together.">Write each step of the method on a new
@@ -88,19 +92,19 @@
         <!-- Short Description -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="description" name="description" class="materialize-textarea validate" required></textarea>
+                <textarea id="description" name="description" class="materialize-textarea validate" required>{{- recipe.description -}}</textarea>
                 <label for="description">Short Description</label>
                 <span class="helper-text" data-error="A catchy bit of info about your recipe goes here!"
                     data-success="Good job! My tummy's rumbling!">A catchy bit of info about your recipe goes
                     here!</span>
             </div>
         </div>
-        <!-- Submit button -->
+        <!-- Submit & cancel buttons -->
         <div class="row">
             <div class="col s12 center-align">
-                <button type="submit" class="btn-large #43a047 green darken-1">Edit recipe</button>
-                <a class="btn-large #43a047 green darken-1"
+                <a class="btn-large red text-shadow"
                     href="{{ url_for('profile', username=session['user'])  }}">Cancel</a>
+                <button type="submit" class="btn-large #43a047 green darken-1">Edit recipe</button>
             </div>
 
         </div>
