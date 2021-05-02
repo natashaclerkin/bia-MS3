@@ -137,7 +137,7 @@ def add_recipe():
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
-        flash("Recipe is successfully added")
+        flash("Recipe has been successfully added")
         return redirect(url_for("all_recipes"))
     # Find categories in db
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -162,12 +162,21 @@ def edit_recipe(recipe_id):
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, editing)
-        flash("Recipe is successfully Updated")
+        flash("Recipe has been successfully Updated")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
         "edit_recipe.html", recipe=recipe, categories=categories)
+
+
+# delete recipe
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    # Delete recipe from db
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe has been succesfully deleted")
+    return redirect(url_for("profile", username=session['user']))
 
 
 # run application
