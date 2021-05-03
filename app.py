@@ -34,6 +34,15 @@ def all_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# search recipes
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    # Search for recipes based on query
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("recipes.html", recipes=recipes)
+
+
 # signup
 @app.route("/register", methods=["GET", "POST"])
 def register():
