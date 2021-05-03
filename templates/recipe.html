@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Recipe Title -->
+<div class="row">
+    <h1 class="center-align">{{ recipe.recipe_name }}</h1>
+    <hr class="blackline">
+</div>
+
+
+<!-- Recipe info & image -->
+<div class="row">
+    <div class="col s6">
+        <img class="img_recipe" src="{{recipe.img_url}}" alt="recipe_image">
+        <div class="recipe-desc #43a047 green-text text-darken-1"><i class="fas fa-user"></i> {{recipe.created_by}}
+        </div>
+
+        <p class="recipe-desc">{{recipe.description}}</p>
+
+        
+    </div>
+
+    <div class="col s6 border-left">
+        
+        <h6 class="#43a047 green-text text-darken-1">Ingredients: </h6>
+        <ul>
+            {% for list in recipe.ingredients.splitlines() %}
+            <li>
+                <p class="recipe-desc "> {{list}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+ </div>
+<!-- Info -->
+<div>
+<hr class="blackline">
+<div class="row">
+
+    <div class="col s12 m4 center-align">
+        <h6 class="#43a047 green-text text-darken-1">PREP TIME: </h6>
+        <p class="recipe-desc">{{recipe.prep_time}} mins</p>
+    </div>
+    <div class="col s12 m4 center-align">
+        <h6 class="#43a047 green-text text-darken-1">COOK TIME: </h6>
+        <p class="recipe-desc">{{recipe.cook_time}} mins</p>
+    </div>
+    <div class="col s12 m4 center-align">
+        <h6 class="#43a047 green-text text-darken-1">SERVES: </h6>
+        <p class="recipe-desc">{{recipe.serves}} mins</p>
+    </div>
+
+</div>
+<hr class="blackline">
+</div>
+<!-- Method -->
+<div class="row">
+    <div class="col s12">
+        <h6 class="#43a047 green-text text-darken-1">Method: </h6>
+        <ol>
+            {% for steps in recipe.method.splitlines() %}
+            <li>
+                <p class="recipe-desc"> {{steps}}</p>
+            </li>
+            {% endfor %}
+        </ol>
+
+    </div>
+</div>
+
+{% endblock %}

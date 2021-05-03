@@ -1,16 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for recipe in recipes %}
-{{ recipe.recipe_name }}<br>
-{{ recipe.category_name }}<br>
-{{ recipe.description }}<br>
-{{ recipe.serves }}<br>
-{{ recipe.prep_time}}<br>
-{{ recipe.cook_time}}<br>
-{% endfor %}
-
-
 <!-- Recipes Title -->
 <div class="row">
     <h1 class="center-align">ALL RECIPES</h1>
@@ -27,7 +17,8 @@
                 <label for="query">Search Recipes</label>
             </div>
             <div class="col s12 m4">
-                <a href="{{ url_for('all_recipes')}}" class="#ffffff white #43a047 green-text darken-1 btn text-shadow">Reset</a>
+                <a href="{{ url_for('all_recipes')}}"
+                    class="#ffffff white #43a047 green-text darken-1 btn text-shadow">Reset</a>
                 <button type="submit" class="#43a047 green darken-1 btn text-shadow">
                     <i class="fas fa-search left"></i> Search
                 </button>
@@ -35,32 +26,35 @@
         </div>
     </form>
 </div>
+<!-- Recipe Gallery-->
+{% if recipes|length > 0 %}
 
-    {% if recipes|length > 0 %}
-    <!-- Recipe Gallery-->
-    <div class="row">
-        {% for recipe in recipes %}
-        <div class="col s12 m4">
-            <div class="card">
+<div class="row">
+    {% for recipe in recipes %}
+    <div class="col s12 m4">
+        <div class="card">
+            <a href="{{ url_for('recipe', recipe_id=recipe._id) }}">
                 <div class="card-image">
                     <img class="img_recipe" src="{{ recipe.img_url}}">
                     <!--<span class="card-title">Card Title</span>-->
                     <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
                 </div>
                 <div class="card-content">
-                    <p>{{ recipe.recipe_name }}</p>
+                    <p>{{ recipe.recipe_name }}
+                    </p>
                 </div>
-            </div>
+                </a>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 
-    {% else %}
-        <div class="row">
-            <div class="col s12 center-align">
-                <p class="red-text">Hmm... no results found, try another dish!</p>
-            </div>
-        </div>
-    {% endif %}
+{% else %}
+<div class="row">
+    <div class="col s12 center-align">
+        <p class="red-text">Hmm... no results found, try another dish!</p>
+    </div>
+</div>
+{% endif %}
 
 {% endblock %}
