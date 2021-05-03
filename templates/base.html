@@ -21,7 +21,7 @@
 <body>
 
     <header>
-        <!-- top navbar --> 
+        <!-- top navbar -->
         <nav>
             <div class="nav-wrapper black">
                 <a href="{{ url_for('index') }}" class="brand-logo">BIA.IE</a>
@@ -32,7 +32,9 @@
                     {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="{{ url_for('add_recipe') }}">Submit a Recipe</a></li>
-                    <li><a href="#">Manage Recipes</a></li>
+                        {% if session.user|lower == "admin"|lower %}
+                        <li><a href="{{ url_for('categories') }}">Manage Categories</a></li>
+                        {% endif %}
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -52,7 +54,9 @@
             {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('add_recipe') }}">Submit a Recipe</a></li>
-            <li><a href="#">Manage Recipes</a></li>
+            {% if session.user|lower == "admin"|lower %}
+            <li><a href="{{ url_for('categories') }}">Manage Categories</a></li>
+            {% endif %}
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
             <li><a href="{{ url_for('login') }}">Log In</a></li>
