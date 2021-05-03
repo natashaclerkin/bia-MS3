@@ -2,6 +2,19 @@
 {% block content %}
 
 
+<!-- About us section -->
+        
+<div class="hero-image">
+    <img src="static/images/bia-about.png">
+  <div class="hero-text">
+    <h1>About Bia </h1>
+    <p>This is who we are</p>
+    <button>Join now</button>
+  </div>
+</div>
+
+
+
 <!-- Title -->
 <div class="row">
     <h1 class="center-align">#TRENDING</h1>
@@ -9,23 +22,40 @@
 </div>
 
 
+
 <!-- Recipe Gallery-->
+
 <div class="row">
     {% for recipe in recipes %}
     <div class="col s12 m4">
         <div class="card">
-            <div class="card-image">
-                <img src="static/images/peanut-pad-thai.jpg">
-                <!--<span class="card-title">Card Title</span>-->
-                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
-            </div>
-            <div class="card-content">
-                <p>{{ recipe.recipe_name }}</p>
-            </div>
+            <a href="{{ url_for('recipe', recipe_id=recipe._id) }}">
+                <div class="card-image">
+                    <img class="img_recipe" src="{{ recipe.img_url}}">
+                    <!--<span class="card-title">Card Title</span>-->
+                    <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
+                </div>
+                <div class="card-content center-align">
+                    <p>{{ recipe.recipe_name }}
+                    </p>
+                </div>
+                </a>
         </div>
     </div>
     {% endfor %}
 </div>
 
+<!-- Featured section -->
+
+<div class="hero-image">
+    <img src="static/images/bia-featured.png">
+  <div class="hero-text">
+    <h1>Bia Featured</h1>
+    <p>This is why they're featured</p>
+    <button>Learn more</button>
+  </div>
+</div>
+
 
 {% endblock %}
+
