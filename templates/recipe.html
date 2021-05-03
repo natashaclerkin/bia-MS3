@@ -10,9 +10,9 @@
 
 <!-- Recipe info & image -->
 <div class="row">
-    <div class="col s6">
+    <div class="col s6 border-right">
         <img class="img_recipe" src="{{recipe.img_url}}" alt="recipe_image">
-        <div class="recipe-desc #43a047 green-text text-darken-1"><i class="fas fa-user"></i> {{recipe.created_by}}
+        <div class="recipe-desc #43a047 green-text text-darken-1">Created by: <i class="fas fa-user #000000 black-text"></i> {{recipe.created_by}}
         </div>
 
         <p class="recipe-desc">{{recipe.description}}</p>
@@ -20,10 +20,10 @@
         
     </div>
 
-    <div class="col s6 border-left">
+    <div class="col s6">
         
         <h6 class="#43a047 green-text text-darken-1">Ingredients: </h6>
-        <ul>
+        <ul class="browser-default">
             {% for list in recipe.ingredients.splitlines() %}
             <li>
                 <p class="recipe-desc "> {{list}}</p>
@@ -49,7 +49,7 @@
     </div>
     <div class="col s12 m4 center-align">
         <h6 class="#43a047 green-text text-darken-1">SERVES: </h6>
-        <p class="recipe-desc">{{recipe.serves}} mins</p>
+        <p class="recipe-desc">{{recipe.serves}}</p>
     </div>
 
 </div>

@@ -27,6 +27,13 @@ def index():
     return render_template("index.html", recipes=recipes)
 
 
+# bia featured
+@app.route("/bia_featured")
+def bia_featured():
+    featured = list(mongo.db.recipes.find())
+    return render_template("featured.html", featured=featured)
+
+
 # recipes
 @app.route("/all_recipes")
 def all_recipes():

@@ -29,6 +29,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
+                    <li><a href="{{ url_for('bia_featured') }}">Bia Featured</a></li>
                     {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="{{ url_for('add_recipe') }}">Submit a Recipe</a></li>
@@ -50,18 +51,19 @@
                 <h4 class="center-align">BIA.IE</h4>
             </li>
             <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
-            {% if session.user %}
-            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-            <li><a href="{{ url_for('add_recipe') }}">Submit a Recipe</a></li>
-            {% if session.user|lower == "admin"|lower %}
-            <li><a href="{{ url_for('categories') }}">Manage Categories</a></li>
-            {% endif %}
-            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-            {% else %}
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>
-            {% endif %}
+                    <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
+                    <li><a href="{{ url_for('bia_featured') }}">Bia Featured</a></li>
+                    {% if session.user %}
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="{{ url_for('add_recipe') }}">Submit a Recipe</a></li>
+                        {% if session.user|lower == "admin"|lower %}
+                        <li><a href="{{ url_for('categories') }}">Manage Categories</a></li>
+                        {% endif %}
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                    {% endif %}
         </ul>
     </header>
 

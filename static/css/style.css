@@ -84,10 +84,14 @@ h4{
     letter-spacing: 0px;
 }
 
-.border-left{
-    border-left:1px solid #000;
+.border-right{
+    border-right:1px solid #000;
 }
 
 .card .card-content p {
     color: #000;
+}
+
+.search-panel{
+    padding: 0px;
 }
