@@ -173,9 +173,9 @@ def edit_recipe(recipe_id):
 # delete recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
-    # Delete recipe from db
+    # Remove recipe from db
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Recipe has been succesfully deleted")
+    flash("Recipe has been successfully deleted")
     return redirect(url_for("profile", username=session['user']))
 
 
@@ -216,6 +216,15 @@ def edit_category(category_id):
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
+
+
+# delete categories
+@app.route("/delete_category/<category_id>")
+def delete_category(category_id):
+    # Remove category from db
+    mongo.db.categories.remove({"_id": ObjectId(category_id)})
+    flash("Category has been successfully deleted")
+    return redirect(url_for("categories"))
 
 
 # run application
