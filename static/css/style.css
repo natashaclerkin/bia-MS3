@@ -88,6 +88,11 @@ h4{
     border-right:1px solid #000;
 }
 
+
+.brand-info{
+    padding-bottom: 50px;
+}
+
 .card .card-content p {
     color: #000;
 }
@@ -140,3 +145,5 @@ h4{
 .page-footer{
     padding: 0px;
 }
+
+

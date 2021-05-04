@@ -16,7 +16,7 @@
                 <input id="recipe_name" name="recipe_name" type="text" maxlength="21"
                     pattern="^[^\s][A-Za-z0-9\s]{1,20}$" class="validate" required>
                 <label for="recipe_name">Recipe name</label>
-                <span class="helper-text" data-error="Max 20 Characters" data-success="Sounds yummy!"></span>
+                <span class="helper-text" data-error="Max 20 Characters." data-success="Sounds yummy!"></span>
             </div>
         </div>
         <!-- Category name -->
@@ -36,7 +36,7 @@
             <div class="input-field col s12">
                 <input id="img_url" name="img_url" type="url" pattern="https?://.+" class="validate" required>
                 <label for="img_url">Image url</label>
-                <span class="helper-text" data-error="Enter a valid URL" data-success="Looks good!"></span>
+                <span class="helper-text" data-error="Enter a valid URL." data-success="Looks good!"></span>
             </div>
         </div>
         <!-- Serves -->
@@ -44,7 +44,7 @@
             <div class="input-field col s12">
                 <input id="serves" name="serves" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
                 <label for="serves">Number of servings</label>
-                <span class="helper-text" data-error="Enter a valid serving amount"
+                <span class="helper-text" data-error="Enter a valid serving amount."
                     data-success="Nice, Hopefully there's leftovers!">For example: 4</span>
             </div>
         </div>
@@ -53,7 +53,7 @@
             <div class="input-field col s12">
                 <input id="prep_time" name="prep_time" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
                 <label for="prep_time">Prep time (in mins)</label>
-                <span class="helper-text" data-error="Enter a valid time" data-success="Only? Wow, that's quick!">For
+                <span class="helper-text" data-error="Enter a valid time." data-success="Only? Wow, that's quick!">For
                     example: 15</span>
             </div>
         </div>
@@ -62,7 +62,7 @@
             <div class="input-field col s12">
                 <input id="cook_time" name="cook_time" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
                 <label for="cook_time">Cooking time (in mins)</label>
-                <span class="helper-text" data-error="Enter a valid time" data-success="Only? Wow, that's quick!">For
+                <span class="helper-text" data-error="Enter a valid time." data-success="Only? Wow, that's quick!">For
                     example: 15</span>
             </div>
         </div>
@@ -71,7 +71,7 @@
             <div class="input-field col s12">
                 <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required></textarea>
                 <label for="ingredients">Ingredients</label>
-                <span class="helper-text" data-error="Write each new ingredient on a new line"
+                <span class="helper-text" data-error="Write each new ingredient on a new line."
                     data-success="Super, now I'm hungry!">Write each new ingredient on a new line.</span>
             </div>
         </div>
@@ -80,7 +80,7 @@
             <div class="input-field col s12">
                 <textarea id="method" name="method" class="materialize-textarea validate" required></textarea>
                 <label for="method">Method</label>
-                <span class="helper-text" data-error="Write each step of the method on a new line"
+                <span class="helper-text" data-error="Write each step of the method on a new line."
                     data-success="Great! Love it when a plan comes together.">Write each step of the method on a new
                     line.</span>
             </div>
@@ -90,9 +90,25 @@
             <div class="input-field col s12">
                 <textarea id="description" name="description" class="materialize-textarea validate" required></textarea>
                 <label for="description">Short Description</label>
-                <span class="helper-text" data-error="A catchy bit of info about your recipe goes here!"
-                    data-success="Good job! My tummy's rumbling!">A catchy bit of info about your recipe goes
-                    here!</span>
+                <span class="helper-text" data-error="Please include details on the Irish brand ingredients used."
+                    data-success="Good job! My tummy's rumbling!">Tell us more about your recipe and any featured Irish brand ingredients!</span>
+            </div>
+        </div>
+        <!-- Featured Irish Brand -->
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="business_name" name="business_name" class="materialize-textarea validate" required></textarea>
+                <label for="business_name">Featured Irish Brand</label>
+                <span class="helper-text" data-error="Please write the brand name only."
+                    data-success="Amazing, thanks for supporting one of our great Irish food businesses.">Tell us the name of the Irish food brand featured in your recipe!</span>
+            </div>
+        </div>
+        <!-- Featured Irish Brand URL -->
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="business_url" name="business_url" type="url" pattern="https?://.+" class="validate" required>
+                <label for="business_url">Featured Irish Brand Website</label>
+                <span class="helper-text" data-error="Enter a valid URL." data-success="Looks good!">Help promote the brand by adding their direct website URL</span>
             </div>
         </div>
         <!-- Submit button -->

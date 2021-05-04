@@ -16,12 +16,16 @@
         </div>
 
         <p class="recipe-desc">{{recipe.description}}</p>
-
         
     </div>
 
     <div class="col s6">
-        
+        <div class="brand-info">
+        <p class="recipe-desc">This recipe was made using Irish brand, <span class="#43a047 green-text text-darken-1">{{recipe.business_name}}.</span></p>
+        <p class="recipe-desc">Learn more about {{recipe.business_name}} and their products at <span class="#43a047 green-text text-darken-1">{{recipe.business_url}}</span></p>
+        </div>
+
+        <div>
         <h6 class="#43a047 green-text text-darken-1">Ingredients: </h6>
         <ul class="browser-default">
             {% for list in recipe.ingredients.splitlines() %}
@@ -32,7 +36,7 @@
         </ul>
     </div>
 </div>
-
+</div>
  </div>
 <!-- Info -->
 <div>

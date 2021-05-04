@@ -159,6 +159,8 @@ def add_recipe():
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "description": request.form.get("description"),
+            "business_name": request.form.get("business_name"),
+            "business_url": request.form.get("business_url"),
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
@@ -184,6 +186,8 @@ def edit_recipe(recipe_id):
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "description": request.form.get("description"),
+            "business_name": request.form.get("business_name"),
+            "business_url": request.form.get("business_url"),
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, editing)
