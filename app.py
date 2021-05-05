@@ -27,11 +27,20 @@ def index():
     return render_template("index.html", recipes=recipes)
 
 
-# bia featured
+# bia featured brands
 @app.route("/bia_featured")
 def bia_featured():
-    featured = list(mongo.db.recipes.find())
-    return render_template("featured.html", featured=featured)
+    brands = list(mongo.db.brands.find())
+    return render_template("featured.html", brands=brands)
+
+
+# individual brand page
+@app.route("/brand/<brand_id>")
+def brand(brand_id):
+    # Find brand from id
+    brand = mongo.db.brands.find_one({"_id": ObjectId(brand_id)})
+
+    return render_template("brand.html", brand=brand)
 
 
 # recipes
@@ -159,13 +168,13 @@ def add_recipe():
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "description": request.form.get("description"),
-            "business_name": request.form.get("business_name"),
-            "business_url": request.form.get("business_url"),
+            "brand_name": request.form.get("brand_name"),
+            "brand_url": request.form.get("brand_url"),
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe has been successfully added")
-        return redirect(url_for("all_recipes"))
+        return redirect(url_for("profile", username=session['user']))
     # Find categories in db
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
@@ -186,12 +195,13 @@ def edit_recipe(recipe_id):
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "description": request.form.get("description"),
-            "business_name": request.form.get("business_name"),
-            "business_url": request.form.get("business_url"),
+            "brand_name": request.form.get("brand_name"),
+            "brand_url": request.form.get("brand_url"),
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, editing)
         flash("Recipe has been successfully Updated")
+        return redirect(url_for("profile", username=session['user']))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)

@@ -40,15 +40,15 @@
                         </div>
                     </div>
                     <div class="collapsible-body">
-                        <h4>Category: {{ recipe.category_name }}</h4>
-                        <h4>Short Description: {{ recipe.description }}</h4>
-                        <h4>Featured Irish Brand Name: {{ recipe.business_name}}</h4>
-                        <h4>Featured Irish Brand Website: {{ recipe.business_url}}</h4>                        
-                        <h4>Serves: {{ recipe.serves }}</h4>
-                        <h4>Prep time (In Mins): {{ recipe.prep_time }}</h4>
-                        <h4>Cook time (In Mins): {{ recipe.cook_time }}</h4>
-                        <h4>Ingredients: {{ recipe.ingredients }}</h4>
-                        <h4>Method: {{ recipe.method}}</h4>
+                        <h4 class="#43a047 green-text text-darken-1">Category: <span class="#000000 recipe-desc black-text">{{ recipe.category_name }}</span></h4>
+                        <h4 class="#43a047 green-text text-darken-1">Short Description: <span class="#000000 recipe-desc black-text">{{ recipe.description }}</span></h4>
+                        <h4 class="#43a047 green-text text-darken-1">Featured Irish Brand Name: <span class="#000000 recipe-desc black-text">{{ recipe.brand_name}}</span></h4>
+                        <h4 class="#43a047 green-text text-darken-1">Featured Irish Brand Website: <span class="#000000 recipe-desc black-text">{{ recipe.brand_url}}</span></h4>                        
+                        <h4 class="#43a047 green-text text-darken-1">Serves: <span class="#000000 recipe-desc black-text">{{ recipe.serves }}</span></h4>
+                        <h4 class="#43a047 green-text text-darken-1">Prep time (In Mins): <span class="#000000 recipe-desc black-text">{{ recipe.prep_time }}</span></h4>
+                        <h4 class="#43a047 green-text text-darken-1">Cook time (In Mins): <span class="#000000 recipe-desc black-text">{{ recipe.cook_time }}</span></h4>
+                        <h4 class="#43a047 green-text text-darken-1">Ingredients: <span class="#000000 recipe-desc black-text">{{ recipe.ingredients }}</span></h4>
+                        <h4 class="#43a047 green-text text-darken-1">Method: <span class="#000000 recipe-desc black-text">{{ recipe.method}}</span></h4>
                     </div>
                 </li>
                 {% endfor %}
@@ -58,3 +58,6 @@
 
 
     {% endblock %}
+
+     <div class="recipe-desc #43a047 green-text text-darken-1">Created by: <i class="fas fa-user #000000 black-text"></i> {{recipe.created_by}}
+        </div>
