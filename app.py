@@ -144,6 +144,24 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/recipes/<category>")
+def recipes(category):
+    # Show recipes by category
+    if category == "all":
+        recipes = list(mongo.db.recipes.find())
+    elif category == "breakfast":
+        recipes = list(mongo.db.recipes.find({"category_name": "Breakfast"}))
+    elif category == "dinner":
+        recipes = list(mongo.db.recipes.find({"category_name": "Dinner"}))
+    elif category == "dessert":
+        recipes = list(mongo.db.recipes.find({"category_name": "Dessert"}))
+    elif category == "vegan":
+        recipes = list(mongo.db.recipes.find({"category_name": "Vegan"}))
+
+    return render_template(
+        "recipes.html", recipes=recipes, category=category)
+
+
 # individual recipe page
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):

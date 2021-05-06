@@ -31,8 +31,11 @@
         <!-- navbar -->
         <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
-                <li><a href="{{ url_for('bia_featured') }}">All recipes</a></li>
-                <li><a href="{{ url_for('bia_featured') }}">All recipes</a></li>
+                <li><a href="{{ url_for('recipes', category='all') }}">All recipes</a></li>
+                <li><a href="{{ url_for('recipes', category='breakfast') }}">Breakfast</a></li>
+                <li><a href="{{ url_for('recipes', category='dinner') }}">Dinner</a></li>
+                <li><a href="{{ url_for('recipes', category='dessert') }}">Dessert</a></li>
+                <li><a href="{{ url_for('recipes', category='vegan') }}">Vegan</a></li>
             </ul>
 
         <nav>
