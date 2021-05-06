@@ -4,6 +4,7 @@ $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
     $(".collapsible").collapsible();
     $("select").formSelect();
+    $(".dropdown-trigger").dropdown();
 
     validateMaterializeSelect();
     function validateMaterializeSelect() {

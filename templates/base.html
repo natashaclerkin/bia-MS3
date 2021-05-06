@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Materialize icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
@@ -20,22 +22,29 @@
 
 <body>
 
+
+
+
+
+
     <header>
-        <!-- top navbar -->
+        <!-- navbar -->
+        <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+                <li><a href="{{ url_for('bia_featured') }}">All recipes</a></li>
+                <li><a href="{{ url_for('bia_featured') }}">All recipes</a></li>
+            </ul>
+
         <nav>
             <div class="nav-wrapper black">
                 <a href="{{ url_for('index') }}" class="brand-logo">BIA.IE</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
+                    <!-- Dropdown Trigger -->
+                        <li><a class="dropdown-trigger" href="{{ url_for('all_recipes') }}" data-target="dropdown1">Recipes<i class="material-icons left">arrow_drop_down</i></a></li>
                     <li><a href="{{ url_for('bia_featured') }}">Bia Brands</a></li>
                     {% if session.user %}
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="{{ url_for('add_recipe') }}">Submit a Recipe</a></li>
-                        {% if session.user|lower == "admin"|lower %}
-                        <li><a href="{{ url_for('categories') }}">Manage Categories</a></li>
-                        {% endif %}
+                    <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="material-icons left">person</i> {{ username }}</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -48,17 +57,12 @@
         <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <h4 class="center-align">BIA.IE</h4>
+                <a href="{{ url_for('index') }}" class="brand-logo">BIA.IE</a>
             </li>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
                     <li><a href="{{ url_for('bia_featured') }}">Bia Featured</a></li>
                     {% if session.user %}
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="{{ url_for('add_recipe') }}">Submit a Recipe</a></li>
-                        {% if session.user|lower == "admin"|lower %}
-                        <li><a href="{{ url_for('categories') }}">Manage Categories</a></li>
-                        {% endif %}
+                    <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="material-icons left">person</i> {{ username }}</a></li>                
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
