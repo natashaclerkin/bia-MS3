@@ -10,6 +10,11 @@ nav .brand-logo {
     padding-left: 10px;
 }
 
+nav ul a {
+    padding: 0 20px;
+}
+
+
 .helper-text {
     font-family: 'Open Sans', sans-serif;
     text-transform: none;
@@ -36,6 +41,9 @@ nav .brand-logo {
     color: #000;
 }
 
+.dropdown-content li>a {
+    font-size: 14px;
+}
 
 .card-image .img_recipe {
     height: 200px;
