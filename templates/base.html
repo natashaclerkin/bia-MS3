@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!--Favicon-->
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon"/>
-     <!-- Materialize icons-->
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
+    <!-- Materialize icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -27,46 +27,51 @@
     <header>
         <!-- navbar -->
         <!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-                <li><a href="{{ url_for('recipes', category='all') }}">All recipes</a></li>
-                <li><a href="{{ url_for('recipes', category='breakfast') }}">Breakfast</a></li>
-                <li><a href="{{ url_for('recipes', category='dinner') }}">Dinner</a></li>
-                <li><a href="{{ url_for('recipes', category='dessert') }}">Dessert</a></li>
-                <li><a href="{{ url_for('recipes', category='vegan') }}">Vegan</a></li>
-            </ul>
-        <nav>
-            <div class="nav-wrapper black">
-                <a href="{{ url_for('index') }}" class="brand-logo"><img src="{{url_for('static', filename='images/bia-logo.png')}}" height="60" alt="Bia logo"></a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-                <ul class="right hide-on-med-and-down">
-                    <!-- Dropdown Trigger -->
-                        <li><a class="dropdown-trigger" href="{{ url_for('all_recipes') }}" data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a href="{{ url_for('bia_featured') }}">Bia Brands</a></li>
-                    {% if session.user %}
-                    <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="material-icons left">person</i> {{ username }}</a></li>
-                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                    {% else %}
-                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
-
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="{{ url_for('recipes', category='all') }}">All recipes</a></li>
+            <li><a href="{{ url_for('recipes', category='breakfast') }}">Breakfast</a></li>
+            <li><a href="{{ url_for('recipes', category='dinner') }}">Dinner</a></li>
+            <li><a href="{{ url_for('recipes', category='dessert') }}">Dessert</a></li>
+            <li><a href="{{ url_for('recipes', category='vegan') }}">Vegan</a></li>
+        </ul>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper black">
+                    <a href="{{ url_for('index') }}" class="brand-logo"><img
+                            src="{{url_for('static', filename='images/bia-logo.png')}}" height="60" alt="Bia logo"></a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <!-- Dropdown Trigger -->
+                        <li><a class="dropdown-trigger" href="{{ url_for('all_recipes') }}"
+                                data-target="dropdown1">Recipes <i class="fas fa-caret-down fa-lg"></i></a></li>
+                        <li><a href="{{ url_for('bia_featured') }}">Bia Brands</a></li>
+                        {% if session.user %}
+                        <li><a href="{{ url_for('profile', username=session['user']) }}"><i
+                                    class="fas fa-user fa-sm"></i> My Bia</a></li>
+                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        {% else %}
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <a href="{{ url_for('index') }}" class="brand-logo"><img src="static/images/bia-logo.png" height="60" alt="Bia logo"></a>
+                <a href="{{ url_for('index') }}" class="brand-logo center-align">BIA.IE</a></h4>
             </li>
-                    <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
-                    <li><a href="{{ url_for('bia_featured') }}">Bia Featured</a></li>
-                    {% if session.user %}
-                    <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="material-icons left">person</i> {{ username }}</a></li>                
-                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                    {% else %}
-                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
-                    {% endif %}
+            <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
+            <li><a href="{{ url_for('bia_featured') }}">Bia Featured</a></li>
+            {% if session.user %}
+            <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="fas fa-user fa-sm"></i>My Bia</a>
+            </li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            {% endif %}
         </ul>
     </header>
 
@@ -87,34 +92,52 @@
         {% block content %}
         {% endblock %}
     </main>
-    
-            <footer class="page-footer #000000 black">
-          <div class="container">
+
+    <footer class="page-footer #000000 black">
+        <div class="container">
+
             <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Bia.ie</h5>
-                <p class="grey-text text-lighten-4 footer-lowercase">Bia is an online cookbook and community supporting Irish food producers.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-               <!-- <h5 class="white-text">Links</h5>-->
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="{{ url_for('all_recipes') }}">Recipes</a></li>
-                  <li><a class="grey-text text-lighten-3" href="{{ url_for('bia_featured') }}">Bia Featured</a></li>
-                  <li><a class="grey-text text-lighten-3" href="{{ url_for('login') }}">Log in</a></li>
-                  <li><a class="grey-text text-lighten-3" href="{{ url_for('register') }}">Register</a></li>
-                </ul>
-              </div>
+
+                <div class="col m6 s8 offset-s2">
+
+                    <p class="grey-text text-lighten-4 lowercase">Bia.ie is an online cookbook and community supporting
+                        Irish food producers.</p>
+                </div>
+
+
+                <div class="col m6 s6 offset-s1 right-align">
+
+                    <p class="grey-text text-lighten-4 lowercase">
+                        <a href="mailto:hello@bia.ie" target="_blank" rel="noreferrer" role="button"
+                            aria-label="Email us now"><i class="fas fa-envelope fa-lg"></i></a> hello@bia.ie
+                    </p>
+                    <div class="socials">
+                        <a href="https://www.instagram.com" target="_blank" rel="noreferrer" role="button"
+                            aria-label="View our Instagram page"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noreferrer" role="button"
+                            aria-label="View our Twitter page"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noreferrer" role="button"
+                            aria-label="View our Facebook page"><i class="fab fa-facebook fa-lg"></i></a>
+                    </div>
+                </div>
+
             </div>
-          </div>
-          <div class="footer-copyright">
+        </div>
+
+
+
+        <div class="footer-copyright">
             <div class="container">
-            <div class="footer-lowercase">© 2021 Copyright Bia.ie</div>
-            <a class="grey-text text-lighten-4 right" href="#">BACK TO TOP <i class="fas fa-chevron-up"></i></a>
+                <div class="row">
+                    <div class="col s12 m6 lowercase">© 2021 Copyright Bia.ie</div>
+                    <div class="col s12 m6 lowercase right-align top-text"> <a href="#">BACK TO
+                            TOP <i class="fas fa-chevron-up"></i></a></div>
+                </div>
             </div>
-          </div>
-        </footer>
-            
-   
+        </div>
+    </footer>
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"

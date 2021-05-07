@@ -17,7 +17,7 @@ nav .brand-logo {
 }
 
 .input-field>label {
-    color: #000; 
+    color: #000;
     font-size: 16px;
 }
 
@@ -25,14 +25,15 @@ nav .brand-logo {
     font-family: 'Open Sans', sans-serif;
 }
 
-.dropdown-content{
+.dropdown-content {
     font-family: 'Open Sans', sans-serif;
     text-transform: none;
     letter-spacing: 0px;
 }
 
-.dropdown-content li>a, .dropdown-content li>span {
-    color: #000; 
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: #000;
 }
 
 
@@ -50,46 +51,57 @@ nav .brand-logo {
 }
 
 
-h1{
-    font-size: 44px;
+h1 {
+    font-size: 40px;
 }
 
-h2{
+h2 {
     font-size: 30px;
     padding-bottom: 20px;
 }
 
-h3{
+h3 {
     font-size: 16px;
 }
 
-h4{
+h4 {
     font-size: 16px;
 }
 
+.sidenav .fas {
+    margin: 0px;
+}
 
-.btn-small{
+
+.btn-small {
     margin-top: 15px;
     margin-left: 10px;
+    background-color: #28a745;
+    color: #ffffff;
 }
 
-.collapsible-header i{
+.btn-small:hover {
+    background-color: #ffffff;
+    color: #28a745;
+}
+
+.collapsible-header i {
     margin: 5px;
     line-height: 60px;
 }
 
-.recipe-desc{
+.recipe-desc {
     font-family: 'Open Sans', sans-serif;
     text-transform: none;
     letter-spacing: 0px;
 }
 
-.border-right{
-    border-right:1px solid #000;
+.border-right {
+    border-right: 1px solid #000;
 }
 
 
-.brand-info{
+.brand-info {
     padding-bottom: 50px;
 }
 
@@ -97,57 +109,63 @@ h4{
     color: #000;
 }
 
-.search-panel{
+.search-panel {
     padding: 0px;
 }
 
 .hero-image {
-  padding-top: 20px;
-  padding-bottom: 20px;  
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(40%, -50%);
-  color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -55%);
+    color: white;
+    padding: 30px;
 }
 
-.hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  color: black;
-  background-color: #ddd;
-  text-align: center;
-  cursor: pointer;
+
+.featured-image {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-.hero-text button:hover {
-  background-color: #555;
-  color: white;
+.featured-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -55%);
+    color: #ffffff;
+    padding: 28px;
 }
 
-.footer-lowercase{
+.lowercase {
     font-family: 'Open Sans', sans-serif;
     text-transform: none;
     letter-spacing: 0px;
 }
 
-.page-footer{
+.page-footer {
     padding: 0px;
 }
 
 
-.dash-heading{
+.dash-heading {
     font-family: 'Open Sans', sans-serif;
     text-transform: none;
     letter-spacing: 0px;
@@ -155,10 +173,10 @@ h4{
 }
 
 .dropdown-content li>a {
-       font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
-        color: #fff;
+    color: #fff;
     background-color: #000;
 }
 
@@ -168,3 +186,35 @@ nav ul a:hover {
     background-color: #fff;
 }
 
+.socials .fab {
+    color: #28a745;
+}
+
+footer .fas {
+    color: #28a745;
+}
+
+.socials .fab:hover {
+    color: #fff;
+}
+
+footer .fas:hover {
+    color: #fff;
+}
+
+.sidenav .brand-logo {
+    font-size: 20px;
+}
+
+
+.top-text a {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.page-footer .footer-copyright {
+    padding: 0px;
+    min-height: 0px;
+}
