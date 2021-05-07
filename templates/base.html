@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Favicon-->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon"/>
      <!-- Materialize icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- FontAwesome -->
@@ -22,11 +24,6 @@
 
 <body>
 
-
-
-
-
-
     <header>
         <!-- navbar -->
         <!-- Dropdown Structure -->
@@ -37,14 +34,13 @@
                 <li><a href="{{ url_for('recipes', category='dessert') }}">Dessert</a></li>
                 <li><a href="{{ url_for('recipes', category='vegan') }}">Vegan</a></li>
             </ul>
-
         <nav>
             <div class="nav-wrapper black">
-                <a href="{{ url_for('index') }}" class="brand-logo">BIA.IE</a>
+                <a href="{{ url_for('index') }}" class="brand-logo"><img src="{{url_for('static', filename='images/bia-logo.png')}}" height="60" alt="Bia logo"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <!-- Dropdown Trigger -->
-                        <li><a class="dropdown-trigger" href="{{ url_for('all_recipes') }}" data-target="dropdown1">Recipes<i class="material-icons left">arrow_drop_down</i></a></li>
+                        <li><a class="dropdown-trigger" href="{{ url_for('all_recipes') }}" data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
                     <li><a href="{{ url_for('bia_featured') }}">Bia Brands</a></li>
                     {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="material-icons left">person</i> {{ username }}</a></li>
@@ -60,7 +56,7 @@
         <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <a href="{{ url_for('index') }}" class="brand-logo">BIA.IE</a>
+                <a href="{{ url_for('index') }}" class="brand-logo"><img src="static/images/bia-logo.png" height="60" alt="Bia logo"></a>
             </li>
                     <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
                     <li><a href="{{ url_for('bia_featured') }}">Bia Featured</a></li>
