@@ -1,4 +1,4 @@
-// MaterializeCSS Nav, Modal & Select initialization
+// MaterializeCSS Nav, Confirm Deletion Modal & Select initialization
 
 $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});

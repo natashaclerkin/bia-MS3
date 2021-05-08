@@ -77,12 +77,12 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        # put the new user into 'session' cookie
+        # put the new user into session cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
 
-    return render_template("register.html")
+    return render_template("users/register.html")
 
 
 # login
@@ -112,22 +112,26 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("users/login.html")
 
 
 # user profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    # Only users can access profile
+    if not session.get("user"):
+        return render_template("errors/404.html")
+
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        # Admin has acces to all recipes
+        # Admin has access to all recipes
         if session["user"] == "admin":
             user_recipes = list(mongo.db.recipes.find())
         else:
-            # user sees own recipes
+            # user views own recipes
             user_recipes = list(
                 mongo.db.recipes.find({"created_by": session["user"]}))
         return render_template(
@@ -168,12 +172,20 @@ def recipe(recipe_id):
     # Find recipe from id
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
-    return render_template("recipe.html", recipe=recipe)
+    # Show 404 if recipe id doesn't exist
+    if not recipe:
+        return render_template("errors/404.html")
+
+    return render_template("recipes/recipe.html", recipe=recipe)
 
 
 # add recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    # Only logged in users can add recipes
+    if not session.get("user"):
+        return render_template("errors/404.html")
+
     # Adding recipe to db
     if request.method == "POST":
         recipe = {
@@ -192,7 +204,7 @@ def add_recipe():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe has been successfully added")
-        return redirect(url_for("profile", username=session['user']))
+        return redirect(url_for("profile", username=session["user"]))
     # Find categories in db
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
@@ -201,6 +213,10 @@ def add_recipe():
 # Edit recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    # Only logged in users can edit recipes
+    if not session.get("user"):
+        return render_template("errors/404.html")
+
     # editing recipe to db
     if request.method == "POST":
         editing = {
@@ -219,7 +235,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, editing)
         flash("Recipe has been successfully Updated")
-        return redirect(url_for("profile", username=session['user']))
+        return redirect(url_for("profile", username=session["user"]))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -233,12 +249,16 @@ def delete_recipe(recipe_id):
     # Remove recipe from db
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe has been successfully deleted")
-    return redirect(url_for("profile", username=session['user']))
+    return redirect(url_for("profile", username=session["user"]))
 
 
 # categories
 @app.route("/categories")
 def categories():
+    # Only the admin user can access categories
+    if not session.get("user") == "admin":
+        return render_template("errors/404.html")
+
     # Find categories in db
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
@@ -284,7 +304,20 @@ def delete_category(category_id):
     return redirect(url_for("categories"))
 
 
-# run application
+# CUSTOM ERROR HANDLERS
+# 404 Error - Page not found
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("errors/404.html"), 404
+
+
+# 500 Error - Internal Server Error
+@app.errorhandler(500)
+def internal_server(error):
+    return render_template("errors/500.html"), 500
+
+
+# RUN APPLICATION
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
