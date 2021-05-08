@@ -1,10 +1,11 @@
-// MaterializeCSS Nav & Select initialization
+// MaterializeCSS Nav, Modal & Select initialization
 
 $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
     $(".collapsible").collapsible();
     $("select").formSelect();
     $(".dropdown-trigger").dropdown();
+    $('.modal').modal();
 
     validateMaterializeSelect();
     function validateMaterializeSelect() {
