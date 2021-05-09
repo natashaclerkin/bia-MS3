@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <h1 class="center-align">Add Brand</h1>
+        <hr class="blackline">
+</div>
+
+
+<!-- Submit recipe form -->
+<div class="row card-panel #fafafa grey lighten-5">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_brand') }}">
+        <!-- Brand name -->
+        <div class="row">
+            <div class="input-field col s12">
+                <select id="brand_name" name="brand_name" class="validate" required>
+                    <option value="" disabled selected>Select brand</option>
+                    {% for recipe in recipes %}
+                    <option value="{{ recipe.brand_name}}">{{ recipe.brand_name}}</option>
+                    {% endfor %}
+                </select>
+                <label for="brand_name">Brand Name</label>
+            </div>
+        </div>
+        <!-- Brand IMG Upload URL -->
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="brand_img" name="brand_img" type="url" pattern="https?://.+" class="validate" required>
+                <label for="brand_img">Brand Image URL</label>
+                <span class="helper-text" data-error="Enter a valid URL." data-success="Looks good!"></span>
+            </div>
+        </div>
+        <!-- Short Description -->
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="brand_description" name="brand_description" class="materialize-textarea validate" required></textarea>
+                <label for="brand_description">Brand Description</label>
+                <span class="helper-text" data-error="Please include details on the Irish brand ingredients/recipes."
+                    data-success="Good job!">Please include details on the Irish brand ingredients/recipes.</span>
+            </div>
+        </div>
+        <!-- Featured Irish Brand URL -->
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="brand_url" name="brand_url" type="url" pattern="https?://.+" class="validate" required>
+                <label for="brand_url">Featured Irish Brand Website</label>
+                <span class="helper-text" data-error="Enter a valid URL." data-success="Looks good!">Help promote the brand by adding their direct website URL</span>
+            </div>
+        </div>
+        <!-- Submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <a class="btn-large red text-shadow"
+                    href="{{ url_for('manage_brands', username=session['user'])  }}">Cancel</a>
+                <button type="submit" class="btn-large #43a047 green darken-1">Add brand</button>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock %}

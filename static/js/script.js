@@ -3,7 +3,8 @@
 $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
     $(".collapsible").collapsible();
-    $("select").formSelect();
+    $("#category_name").formSelect();
+    $("#brand_name").formSelect();
     $(".dropdown-trigger").dropdown();
     $('.modal').modal();
 

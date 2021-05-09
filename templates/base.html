@@ -42,7 +42,7 @@
                         <!-- Dropdown Trigger -->
                         <li><a class="dropdown-trigger" href="{{ url_for('all_recipes') }}"
                                 data-target="dropdown1">Recipes <i class="fas fa-caret-down fa-lg"></i></a></li>
-                        <li><a href="{{ url_for('bia_featured') }}">Bia Brands</a></li>
+                        <li><a href="{{ url_for('bia_brands') }}">Bia Brands</a></li>
                         {% if session.user %}
                         <li><a href="{{ url_for('profile', username=session['user']) }}"><i
                                     class="fas fa-user fa-sm"></i> My Bia</a></li>
@@ -61,7 +61,7 @@
                 <a href="{{ url_for('index') }}" class="brand-logo center-align">BIA.IE</a>
             </li>
             <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
-            <li><a href="{{ url_for('bia_featured') }}">Bia Featured</a></li>
+            <li><a href="{{ url_for('bia_brands') }}">Bia Featured</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="fas fa-user fa-sm"></i>My Bia</a>
             </li>

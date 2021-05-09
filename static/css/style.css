@@ -246,3 +246,13 @@ footer .fas:hover {
     padding: 0px;
     min-height: 0px;
 }
+
+.file-field .btn, .file-field .btn-large, .file-field .btn-small {
+    float: right;
+}
+
+
+.file-field input.file-path {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
