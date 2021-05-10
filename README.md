@@ -342,11 +342,42 @@ The Testing process has been documented in this [testing.md file.](/testing.md "
 
 I took inspiration from the following sources however I did implement my own custom code with each snippet also:
 
+- I undertook a significant amount of research into backend development in preparation for the project. As well as the Code Institute's walkthrough tutorials which provided great guidance for the project, I also watched a significant amount of Youtube tutorials notably [Corey Schafer](https://www.youtube.com/user/schafer5) 
+
+
 ## Code
+
 ## Content and Media
+The Bia logo and main content for the site was created by myself however brand profile descriptions and recipes as well as their images were obtained from their own websites or Roz Purcell's Natural Born Feeder recipes. 
+
+- Lifeforce brand description & logo - [Lifeforce Website](www.lifeforce.ie)
+- Dr Coy's brand description & logo - [Dr Coy's Website](wwww.drcoys.ie)
+- Strong Roots brand description & logo - [Strong Roots Website](www.strongroots.com)
+- Fulfil brand description & logo - [Fulfil Website](www.fulfilnutrition.com)
+- Flahavans brand description & logo - [Flahavans Website](www.flahavans.ie)
+- Bunalun Organic brand description & logo - [Bunalun Organic Website](www.nationalorganic.com)
+
+- PB Chocolate Cups recipe & image - [Lifeforce Website](www.lifeforce.ie/recipes/peanut-butter-chocolate-cups)
+- No Bake PB Fudge Bars recipe & image - [Lifeforce Website](www.lifeforce.ie/recipes/no-bake-peanut-butter-fudge-bars)
+- Muesli Flapjack Bars recipe & image - [Lifeforce Website](www.lifeforce.ie/recipes/muesli-flapjack-bars)
+- Red Pepper Soup recipe & image - [Lifeforce Website](www.lifeforce.ie/recipes/roasted-red-pepper-almond-butter-soup)
+- Protein Brownies recipe & image - [Natural Born Feeder Website](www.naturalbornfeeder.com/brownies-with-white-chocolate-chunks)
+- Cookie Dough Balls recipe & image - [Natural Born Feeder Website](https://wwww.naturalbornfeeder.com/cookie-dough-balls)
+- Pad Thai recipe & image - [Natural Born Feeder Website](https://www.naturalbornfeeder.com/peanut-butter-pad-thai-style-noodles)
+- Carrot Cake recipe & image - [Natural Born Feeder Website](https://www.naturalbornfeeder.com/carrot-cake)
+- Vegan Stew recipe & image - [Natural Born Feeder Website](https://www.naturalbornfeeder.com/irish-vegan-stew)
+- French Toast recipe & image - [Natural Born Feeder Website](https://www.naturalbornfeeder.com/french-toast)
+- Banana Bread recipe & image - [Natural Born Feeder Website](https://www.naturalbornfeeder.com/marbled-banana-bread)
+- Vegan Wellington recipe & image - [Natural Born Feeder Website](https://www.naturalbornfeeder.com/vegan-christmas-wellington-with-strong-roots)
+
+- 404 & 500 pages spilled sugar background image - [Julie Blanner](https://julieblanner.com/wp-content/uploads/2019/10/how-to-make-cinnamon-sugar-2.jpeg)
+- About Bia hero image - [Karolina Grabowska at Pexels.com](https://www.pexels.com/photo/different-powdered-spices-on-spoons-on-marble-surface-4198756)
+- Homepage Lifeforce featured brand image (manipulated in Figma)- [Lifeforce Website](www.lifeforce.ie)
+
+
 ## Acknowledgements
 
-I would like to thank my mentor Guido Cecilio for his continued support and overall guidance throughout the project. 
+I would like to thank my fellow student Boris Gersic for his help with testing and of course my mentor Guido Cecilio for his continued support and overall guidance throughout the project. 
 
 [^ Back To Top ](#contents) 
 
