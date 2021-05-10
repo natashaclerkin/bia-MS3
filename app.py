@@ -45,7 +45,8 @@ def brand(brand_id):
     if not recipe:
         return render_template("errors/404.html")
 
-    return render_template("brand.html", brand=brand)
+    recipes = list(mongo.db.recipes.find())
+    return render_template("brand.html", brand=brand, recipes=recipes)
 
 
 # recipes
