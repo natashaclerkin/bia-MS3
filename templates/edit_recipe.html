@@ -3,20 +3,23 @@
 
 <div class="row">
     <h1 class="center-align">EDIT RECIPE</h1>
-        <hr class="blackline">
+    <hr class="blackline">
 </div>
 
 
 <!-- Submit recipe form -->
 <div class="row card-panel #fafafa grey lighten-5">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+    <form class="col s12 m8 offset-m2" method="POST"
+        action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
         <!-- Recipe name -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="recipe_name" name="recipe_name" value="{{recipe.recipe_name}}" type="text" maxlength="20"
-                    pattern="^[^\s][A-Za-z0-9\s]{1,20}$" class="validate" required>
+                <input id="recipe_name" name="recipe_name" value="{{recipe.recipe_name}}"
+                    type="text" maxlength="20" pattern="^[^\s][A-Za-z0-9\s]{1,20}$" class="validate"
+                    required>
                 <label for="recipe_name">Recipe name</label>
-                <span class="helper-text" data-error="Max 20 Characters." data-success="Sounds yummy!"></span>
+                <span class="helper-text" data-error="Max 20 Characters."
+                    data-success="Sounds yummy!"></span>
             </div>
         </div>
         <!-- Category name -->
@@ -25,12 +28,14 @@
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled>Select category</option>
                     {% for category in categories %}
-                            {% if category.category_name == recipe.category_name %}
-                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                            {% else %}
-                                <option value="{{ category.category_name}}">{{ category.category_name}}</option>
-                            {% endif %}
-                        {% endfor %}
+                    {% if category.category_name == recipe.category_name %}
+                    <option value="{{category.category_name}}" selected>
+                        {{- category.category_name -}}</option>
+                    {% else %}
+                    <option value="{{category.category_name}}">{{- category.category_name -}}
+                    </option>
+                    {% endif %}
+                    {% endfor %}
                 </select>
                 <label for="category_name">Recipe category</label>
             </div>
@@ -38,28 +43,36 @@
         <!-- IMG Upload URL -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="img_url" name="img_url" value="{{recipe.img_url}}" type="url" pattern="https?://.+" class="validate" required>
+                <input id="img_url" name="img_url" value="{{recipe.img_url}}" type="url"
+                    pattern="https?://.+" class="validate" required>
                 <label for="img_url">Image url</label>
-                <span class="helper-text" data-error="Enter a valid URL." data-success="Looks good!"></span>
+                <span class="helper-text" data-error="Enter a valid URL."
+                    data-success="Looks good!"></span>
             </div>
         </div>
-                     <!-- Photo -->
-                <div class="row">
-                    <div class="file-field input-field">
-                        <div class="btn black">                          
-                            <span>File</span>
-                            <input type="file" id="item_image" name="item_image" accept="image/png, image/jpeg" required>
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate" id="item_image_up" name="item_image_up" type="text" value="{{recipe.item_image}}" placeholder="UPLOAD IMAGE" required>                          
-                            <span class="helper-text" data-error="Enter a valid image." data-success="Looks good!">Adding a photo will be the cherry on the top of a beautiful recipe!</span>
-                        </div>
-                    </div>
+        <!-- Photo -->
+        <div class="row">
+            <div class="file-field input-field">
+                <div class="btn black">
+                    <span>File</span>
+                    <input type="file" id="item_image" name="item_image"
+                        accept="image/png, image/jpeg" required>
                 </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" id="item_image_up" name="item_image_up"
+                        type="text" value="{{recipe.item_image}}" placeholder="UPLOAD IMAGE"
+                        required>
+                    <span class="helper-text" data-error="Enter a valid image."
+                        data-success="Looks good!">Adding a photo will be the cherry on the top of a
+                        beautiful recipe!</span>
+                </div>
+            </div>
+        </div>
         <!-- Serves -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="serves" name="serves" value="{{recipe.serves}}" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
+                <input id="serves" name="serves" value="{{recipe.serves}}" type="text"
+                    pattern="^[1-9][0-9]*$" class="validate" required>
                 <label for="serves">Number of servings</label>
                 <span class="helper-text" data-error="Enter a valid serving amount."
                     data-success="Nice, Hopefully there's leftovers!">For example: 4</span>
@@ -68,64 +81,80 @@
         <!-- Prep time  -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="prep_time" name="prep_time" value="{{recipe.prep_time}}" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
+                <input id="prep_time" name="prep_time" value="{{recipe.prep_time}}" type="text"
+                    pattern="^[1-9][0-9]*$" class="validate" required>
                 <label for="prep_time">Prep time (in mins)</label>
-                <span class="helper-text" data-error="Enter a valid time." data-success="Only? Wow, that's quick!">For
+                <span class="helper-text" data-error="Enter a valid time."
+                    data-success="Only? Wow, that's quick!">For
                     example: 15</span>
             </div>
         </div>
         <!-- Cook time  -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="cook_time" name="cook_time" value="{{recipe.cook_time}}" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
+                <input id="cook_time" name="cook_time" value="{{recipe.cook_time}}" type="text"
+                    pattern="^[1-9][0-9]*$" class="validate" required>
                 <label for="cook_time">Cooking time (in mins)</label>
-                <span class="helper-text" data-error="Enter a valid time." data-success="Only? Wow, that's quick!">For
+                <span class="helper-text" data-error="Enter a valid time."
+                    data-success="Only? Wow, that's quick!">For
                     example: 15</span>
             </div>
         </div>
         <!-- Ingredients  -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required>{{- recipe.ingredients -}}</textarea>
+                <textarea id="ingredients" name="ingredients" class="materialize-textarea validate"
+                    required>{{- recipe.ingredients -}}</textarea>
                 <label for="ingredients">Ingredients</label>
                 <span class="helper-text" data-error="Write each new ingredient on a new line."
-                    data-success="Super, now I'm hungry!">Write each new ingredient on a new line.</span>
+                    data-success="Super, now I'm hungry!">Write each new ingredient on a new
+                    line.</span>
             </div>
         </div>
         <!-- Method  -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="method" name="method" class="materialize-textarea validate" required>{{- recipe.method -}}</textarea>
+                <textarea id="method" name="method" class="materialize-textarea validate"
+                    required>{{- recipe.method -}}</textarea>
                 <label for="method">Method</label>
                 <span class="helper-text" data-error="Write each step of the method on a new line."
-                    data-success="Great! Love it when a plan comes together.">Write each step of the method on a new
+                    data-success="Great! Love it when a plan comes together.">Write each step of the
+                    method on a new
                     line.</span>
             </div>
         </div>
         <!-- Short Description -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="description" name="description" class="materialize-textarea validate" required>{{- recipe.description -}}</textarea>
+                <textarea id="description" name="description" class="materialize-textarea validate"
+                    required>{{- recipe.description -}}</textarea>
                 <label for="description">Short Description</label>
-                <span class="helper-text" data-error="Please include details on the Irish brand ingredients used."
-                    data-success="Good job! My tummy's rumbling!">Tell us more about your recipe and any featured Irish brand ingredients!</span>
+                <span class="helper-text"
+                    data-error="Please include details on the Irish brand ingredients used."
+                    data-success="Good job! My tummy's rumbling!">Tell us more about your recipe and
+                    any featured Irish brand ingredients!</span>
             </div>
         </div>
         <!-- Featured Irish Brand -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="brand_name" name="brand_name" class="materialize-textarea validate" required>{{- recipe.brand_name -}}</textarea>
-                <label for="brand_name">Featured Irish Brand</label>
+                <label for="brand_name_recipe_edit">Featured Irish Brand</label>
+                <input type="text" name="brand_name_recipe_edit" id="brand_name_recipe_edit"
+                    value="{{- recipe.brand_name -}}">
                 <span class="helper-text" data-error="Please write the brand name only."
-                    data-success="Amazing, thanks for supporting one of our great Irish food businesses.">Tell us the name of the Irish food brand featured in your recipe!</span>
+                    data-success="Amazing, thanks for supporting one of our great Irish food businesses.">Tell
+                    us the name of the Irish food brand featured in your recipe!</span>
             </div>
         </div>
         <!-- Featured Irish Brand URL -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="brand_url" name="brand_url" value="{{recipe.brand_url}}"type="url" pattern="https?://.+" class="validate" required>
+                <input id="brand_url" name="brand_url" value="{{recipe.brand_url}}" type="url"
+                    pattern="https?://.+" class="validate" required>
                 <label for="brand_url">Featured Irish Brand Website</label>
-                <span class="helper-text" data-error="Enter a valid URL." data-success="Looks good!">Help promote the brand by adding their direct website URL</span>
+                <span class="helper-text" data-error="Enter a valid URL."
+                    data-success="Looks good!">Help promote the brand by adding their direct website
+                    URL</span>
             </div>
         </div>
         <!-- Submit & cancel buttons -->

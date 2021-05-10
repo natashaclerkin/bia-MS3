@@ -3,7 +3,7 @@
 
 <div class="row">
     <h1 class="center-align">SUBMIT A RECIPE</h1>
-        <hr class="blackline">
+    <hr class="blackline">
 </div>
 
 
@@ -16,7 +16,8 @@
                 <input id="recipe_name" name="recipe_name" type="text" maxlength="21"
                     pattern="^[^\s][A-Za-z0-9\s]{1,20}$" class="validate" required>
                 <label for="recipe_name">Recipe name</label>
-                <span class="helper-text" data-error="Max 20 Characters." data-success="Sounds yummy!"></span>
+                <span class="helper-text" data-error="Max 20 Characters."
+                    data-success="Sounds yummy!"></span>
             </div>
         </div>
         <!-- Category name -->
@@ -34,28 +35,35 @@
         <!-- IMG Upload URL -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="img_url" name="img_url" type="url" pattern="https?://.+" class="validate" required>
+                <input id="img_url" name="img_url" type="url" pattern="https?://.+" class="validate"
+                    required>
                 <label for="img_url">Image url</label>
-                <span class="helper-text" data-error="Enter a valid URL." data-success="Looks good!"></span>
+                <span class="helper-text" data-error="Enter a valid URL."
+                    data-success="Looks good!"></span>
             </div>
         </div>
-             <!-- Photo -->
-                <div class="row">
-                    <div class="file-field input-field">
-                        <div class="btn black">                          
-                            <span>File</span>
-                            <input type="file" id="item_image" name="item_image" accept="image/png, image/jpeg" required>
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text" placeholder="IMAGE UPLOAD" class="validate" required>                           
-                            <span class="helper-text" data-error="Enter a valid image." data-success="Looks good!">Adding a photo will be the cherry on the top of a beautiful recipe!</span>
-                        </div>
-                    </div>
+        <!-- Photo -->
+        <div class="row">
+            <div class="file-field input-field">
+                <div class="btn black">
+                    <span>File</span>
+                    <input type="file" id="item_image" name="item_image"
+                        accept="image/png, image/jpeg" required>
                 </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="IMAGE UPLOAD"
+                        class="validate" required>
+                    <span class="helper-text" data-error="Enter a valid image."
+                        data-success="Looks good!">Adding a photo will be the cherry on the top of a
+                        beautiful recipe!</span>
+                </div>
+            </div>
+        </div>
         <!-- Serves -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="serves" name="serves" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
+                <input id="serves" name="serves" type="text" pattern="^[1-9][0-9]*$"
+                    class="validate" required>
                 <label for="serves">Number of servings</label>
                 <span class="helper-text" data-error="Enter a valid serving amount."
                     data-success="Nice, Hopefully there's leftovers!">For example: 4</span>
@@ -64,64 +72,79 @@
         <!-- Prep time  -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="prep_time" name="prep_time" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
+                <input id="prep_time" name="prep_time" type="text" pattern="^[1-9][0-9]*$"
+                    class="validate" required>
                 <label for="prep_time">Prep time (in mins)</label>
-                <span class="helper-text" data-error="Enter a valid time." data-success="Only? Wow, that's quick!">For
+                <span class="helper-text" data-error="Enter a valid time."
+                    data-success="Only? Wow, that's quick!">For
                     example: 15</span>
             </div>
         </div>
         <!-- Cook time  -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="cook_time" name="cook_time" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
+                <input id="cook_time" name="cook_time" type="text" pattern="^[1-9][0-9]*$"
+                    class="validate" required>
                 <label for="cook_time">Cooking time (in mins)</label>
-                <span class="helper-text" data-error="Enter a valid time." data-success="Only? Wow, that's quick!">For
+                <span class="helper-text" data-error="Enter a valid time."
+                    data-success="Only? Wow, that's quick!">For
                     example: 15</span>
             </div>
         </div>
         <!-- Ingredients  -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required></textarea>
+                <textarea id="ingredients" name="ingredients" class="materialize-textarea validate"
+                    required></textarea>
                 <label for="ingredients">Ingredients</label>
                 <span class="helper-text" data-error="Write each new ingredient on a new line."
-                    data-success="Super, now I'm hungry!">Write each new ingredient on a new line.</span>
+                    data-success="Super, now I'm hungry!">Write each new ingredient on a new
+                    line.</span>
             </div>
         </div>
         <!-- Method  -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="method" name="method" class="materialize-textarea validate" required></textarea>
+                <textarea id="method" name="method" class="materialize-textarea validate"
+                    required></textarea>
                 <label for="method">Method</label>
                 <span class="helper-text" data-error="Write each step of the method on a new line."
-                    data-success="Great! Love it when a plan comes together.">Write each step of the method on a new
+                    data-success="Great! Love it when a plan comes together.">Write each step of the
+                    method on a new
                     line.</span>
             </div>
         </div>
         <!-- Short Description -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="description" name="description" class="materialize-textarea validate" required></textarea>
+                <textarea id="description" name="description" class="materialize-textarea validate"
+                    required></textarea>
                 <label for="description">Short Description</label>
-                <span class="helper-text" data-error="Please include details on the Irish brand ingredients used."
-                    data-success="Good job! My tummy's rumbling!">Tell us more about your recipe and any featured Irish brand ingredients!</span>
+                <span class="helper-text"
+                    data-error="Please include details on the Irish brand ingredients used."
+                    data-success="Good job! My tummy's rumbling!">Tell us more about your recipe and
+                    any featured Irish brand ingredients!</span>
             </div>
         </div>
         <!-- Featured Irish Brand -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="brand_name" name="brand_name" class="materialize-textarea validate" required></textarea>
-                <label for="brand_name">Featured Irish Brand</label>
+                <input type="text" id="brand_name_recipe" name="brand_name_recipe">
+                <label for="brand_name_recipe">Featured Irish Brand</label>
                 <span class="helper-text" data-error="Please write the brand name only."
-                    data-success="Amazing, thanks for supporting one of our great Irish food businesses.">Tell us the name of the Irish food brand featured in your recipe!</span>
+                    data-success="Amazing, thanks for supporting one of our great Irish food businesses.">Tell
+                    us the name of the Irish food brand featured in your recipe!</span>
             </div>
         </div>
         <!-- Featured Irish Brand URL -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="brand_url" name="brand_url" type="url" pattern="https?://.+" class="validate" required>
+                <input id="brand_url" name="brand_url" type="url" pattern="https?://.+"
+                    class="validate" required>
                 <label for="brand_url">Featured Irish Brand Website</label>
-                <span class="helper-text" data-error="Enter a valid URL." data-success="Looks good!">Help promote the brand by adding their direct website URL</span>
+                <span class="helper-text" data-error="Enter a valid URL."
+                    data-success="Looks good!">Help promote the brand by adding their direct website
+                    URL</span>
             </div>
         </div>
         <!-- Submit button -->
@@ -129,7 +152,8 @@
             <div class="col s12 center-align">
                 <a class="btn-large red text-shadow"
                     href="{{ url_for('profile', username=session['user'])  }}">Cancel</a>
-                <button type="submit" class="btn-large #43a047 green darken-1">Submit recipe</button>
+                <button type="submit" class="btn-large #43a047 green darken-1">Submit
+                    recipe</button>
             </div>
 
         </div>

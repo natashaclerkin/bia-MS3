@@ -103,11 +103,11 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}".format(
-                            request.form.get("username")))
-                        return redirect(url_for(
-                            "profile", username=session["user"]))
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -215,7 +215,7 @@ def add_recipe():
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "description": request.form.get("description"),
-            "brand_name": request.form.get("brand_name"),
+            "brand_name": request.form.get("brand_name_recipe"),
             "brand_url": request.form.get("brand_url"),
             "created_by": session["user"],
             'img_id': result
@@ -226,7 +226,10 @@ def add_recipe():
         return redirect(url_for("profile", username=session["user"]))
     # Find categories in db
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_recipe.html", categories=categories)
+    # Find brands in db
+    brands = list(mongo.db.brands.find().sort("brand_name", 1))
+    return render_template("add_recipe.html", categories=categories,
+                           brands=brands)
 
 
 # retrieve images from mongoDB
@@ -276,7 +279,7 @@ def edit_recipe(recipe_id):
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "description": request.form.get("description"),
-            "brand_name": request.form.get("brand_name"),
+            "brand_name": request.form.get("brand_name_recipe_edit"),
             "brand_url": request.form.get("brand_url"),
             "created_by": session["user"],
             'img_id': result
@@ -328,7 +331,7 @@ def add_category():
     if request.method == "POST":
         # Add category to db
         category = {
-            "category_name": request.form.get("category_name")
+            "category_name": request.form.get("category_name_add")
         }
         mongo.db.categories.insert_one(category)
         flash("New category has been successfully added")
@@ -343,7 +346,7 @@ def edit_category(category_id):
     if request.method == "POST":
         # Edit category from db
         editing = {
-            "category_name": request.form.get("category_name")
+            "category_name": request.form.get("category_name_edit")
         }
         mongo.db.categories.update({"_id": ObjectId(category_id)}, editing)
         flash("Category has been successfully edited")
@@ -385,7 +388,7 @@ def add_brand():
     if request.method == "POST":
 
         brand = {
-            "brand_name": request.form.get("brand_name"),
+            "brand_name": request.form.get("brand_name_add"),
             "brand_description": request.form.get("brand_description"),
             "brand_url": request.form.get("brand_url"),
             "brand_img": request.form.get("brand_img")
@@ -410,7 +413,7 @@ def edit_brand(brand_id):
     if request.method == "POST":
 
         updating = {
-            "brand_name": request.form.get("brand_name"),
+            "brand_name": request.form.get("brand_name_edit"),
             "brand_description": request.form.get("brand_description"),
             "brand_url": request.form.get("brand_url"),
             "brand_img": request.form.get("brand_img")
