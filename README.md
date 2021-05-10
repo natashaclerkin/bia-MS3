@@ -45,10 +45,9 @@ My own goals as a developer creating this project were to:
 - Create the backend and frontend functionality for users to locate recipes based on the recipe's fields providing full search functionality on the site.
 - Provide these search results in a manner that is visually appealing and user-friendly.
 
-
+[^ Back To Top ](#contents)
 
 # UX
-[^ Back To Top ](#contents) 
 
 ![alt text](images/wireframes/PNG "Bia.ie Main Website")
 
@@ -103,7 +102,7 @@ As a business/admin user, I would like to do all of the above as well as:
 I wanted to use [Montserrat](https://fonts.google.com/specimen/Montserrat#about) for the headings and [Open Sans](https://fonts.google.com/specimen/Open+Sans/#about) as a supporting body font to achieve the desired clean-cut image.
 
 ### Icons
-Materialize icons has been used for this project.
+Font Awesome icons has been used for this project.
 
 ### Color Scheme
 The Bia.ie brand monochrome colour scheme was implemented along with pops of green to reflect the Irish fresh products represented throughout the site.
@@ -112,16 +111,17 @@ However the colour red is used for error messages for the Signup and Login pages
 
 I ended up creating and using the below palette once it had passed rigorous Accessibility testing in **A11y's Color Contrast Accessibility Validator**. 
 
-![alt text](static/images/bia-color-palette.PNG "Bia Color Palette")
+![alt text](wireframes/bia-color-palette.PNG "Bia Color Palette")
 
 
 ## Wireframes
 
-The folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") including mockups of the homepage, an individual recipe page, submit recipe page, featured business page and account creation page designed at the beginning of the project for desktop, tablet and mobile devices. I have also included the projected [sitemap](wireframes/site-map.png "Bia Sitemap") and data [schema](wireframes/schema.PNG "Bia Schema").
-**Please note the finalised project contains slight variations to the original wireframe**
+The folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") including mockups of the homepage, an individual recipe page, submit recipe page, featured business page and account creation page designed at the beginning of the project for desktop, tablet and mobile devices. I have also included the projected [sitemap](wireframes/bia-site-map.png "Bia Sitemap") and data [schema](wireframes/schema.PNG "Bia Schema").
+**Please note the finalised project contains slight variations to the original wireframes**
+
+[^ Back To Top ](#contents)
 
 # Features
-[^ Back To Top ](#contents) 
 
 ![alt text](images/wireframes/PNG "wireframe")
 
@@ -176,9 +176,12 @@ Google/Facebook login
  Contact form and admin to be able to see all received messages directly in the admin console
  Recipe image url validation
 
+[^ Back To Top ](#contents)
 
 # Information Architecture
+
 [^ Back To Top ](#contents)
+
 ## Database Choice
 In order to fulfil the project requirements, the NoSQL database MongoDB was utilised to store the data.
 
@@ -242,7 +245,6 @@ The project currently relies on five database collections:
 |business_url|string||
 
 # Technologies Used
-[^ Back To Top ](#contents)
 ## Languages
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -288,24 +290,26 @@ The project currently relies on five database collections:
 - [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) to check the site for Accessibility compatibility and highlight any potenial issues.
 - [Am I Responsive?](http://ami.responsivedesign.is/) to provide a preview of the site across a variety of popular devices.  
 
+[^ Back To Top ](#contents)
 
 # Testing
-[^ Back To Top ](#contents)
 The Testing process has been documented in this [testing.md file.](/testing.md "testing.md File")
 
+[^ Back To Top ](#contents)
+
 # Deployment
+
 [^ Back To Top ](#contents)
 
 ## Local Deployment
 ## Heroku Deployment
 
 # Credits
-[^ Back To Top ](#contents)
-
 I took inspiration from the following sources however I did implement my own custom code with each snippet also:
 
 - I undertook a significant amount of research into backend development in preparation for the project. As well as the Code Institute's walkthrough tutorials by [Tim Nelson](https://github.com/TravelTimN) which provided great guidance for the project, I also watched a significant amount of Youtube tutorials notably [Corey Schafer](https://www.youtube.com/user/schafer5) 
 
+[^ Back To Top ](#contents)
 
 ## Code
 
