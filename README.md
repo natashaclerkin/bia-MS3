@@ -244,8 +244,8 @@ The project currently relies on five database collections:
 # Technologies Used
 [^ Back To Top ](#contents)
 ## Languages
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Python](https://www.python.org/)
   - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
@@ -253,79 +253,41 @@ The project currently relies on five database collections:
 ## Libraries and Frameworks
 
 - [Flask](https://palletsprojects.com/p/flask/)
-- [jQuery](https://jquery.com/)?????????
+- [jQuery](https://jquery.com/) 
 - [Materialize](https://materializecss.com/)
-
 
 ## Extensions and kits
 
-- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)???????
-- [Flask Paginate](https://pythonhosted.org/Flask-paginate/)
-- [Pillow](https://pillow.readthedocs.io/en/stable/)?????
+- [Flask](https://pythonhosted.org/Flask)
 - [Werkzeug](https://palletsprojects.com/p/werkzeug/)
 
-## Tools
-- [Am I Responsive?](http://ami.responsivedesign.is/)
-- [Autoprefixer](https://autoprefixer.github.io/)
-- [Favicon.io](https://favicon.io//)
-- [Font Awesome](https://fontawesome.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [Amazon AWS](https://aws.amazon.com/) (S3)??????????????
-- [Balsamiq](https://balsamiq.com/wireframes/)
+## Project management & Databases
+
 - [GitHub](https://github.com/)
 - [GitPod](https://gitpod.io/)
 - [Heroku](https://www.heroku.com/about)
-
-## Databases
 - [MongoDB](https://www.mongodb.com/)
 
+## Tools
+- [Autoprefixer](https://autoprefixer.github.io/) to parse my CSS and add vendor prefixes to allow cross-browser compatibility and support.
+- [Freeformatter CSS Beautify](https://www.freeformatter.com/css-beautifier.html) to format and automatically indent my CSS file.
+- [Freeformatter HTML Formatter](https://www.freeformatter.com/html-formatter.html) to format the HTML in the project.
+- [Freeformatter JS Formatter](https://www.freeformatter.com/javascript-beautifier.html) to format the JS file.      
+- [Unicorn Revealer Chrome Extension](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln) to inspect and locate where overflow was located in order to simplify the debugging process. 
+- [Favicon.io](https://favicon.io//) to generate the favicons for the site.
+- [Font Awesome](https://fontawesome.com/) to define signup, login and nav elements by a visual means.
+- [Google Fonts](https://fonts.google.com/) to style the website fonts.
+- [Figma](https://figma.com) to create the wireframes for the project and customize images for the homepage.
+- [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools) to consistently test the site and run reports from Lighthouse.
+- [Color Hex](https://www.color-hex.com/) to create the color palette for my project and help structure the UI for the site. 
+- [Color Contrast Accessibility Validator](https://color.a11y.com/) to test for colour contrast on the project.
+- [W3C Markup Validation Service](https://validator.w3.org/) to check the markup validity of Web documents in HTML.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check the validity of my CSS in the project.
+- [JS Hint Validator](https://jshint.com/) to analyze and ensure the source code complies with coding rules. 
+- [Pep8 Online](http://pep8online.com/) to check code for PEP8 requirements in Python
+- [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) to check the site for Accessibility compatibility and highlight any potenial issues.
+- [Am I Responsive?](http://ami.responsivedesign.is/) to provide a preview of the site across a variety of popular devices.  
 
-In the construction of this project I have utilised the following languages, frameworks, libraries and tools:
-- **HTML5,** **CSS3** and **JavaScript** programming languages
-- [Bootstrap v4.5.3](https://getbootstrap.com)
-    - The project used **Bootstrap** to simplify the website layout by integrating the Congrats Modal and Navbar. 
-- [GitPod](https://www.gitpod.io/)
-    - I used **GitPod** as the development environment for my website. I also used Git for Version Control in the project.
-- [GitHub](https://www.github.com/)
-    - The project used **GitHub** to host my code that was created and pushed from GitPod.
-- [Balsamiq](https://balsamiq.com/)
-    - I used **Balsamiq**, the rapid low-fidelity UI wireframing tool during the prototyping phase to structure the website and its content following best UX practices.
-- [Color Hex](https://www.color-hex.com/)
-    - I created the color palette for my project using the theme colours of the main Bia.ie website and **Color Hex** to help structure the UI for the game. 
-- [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools)
-    - **Chrome Dev Tools** was used to consistently test the site and run reports from Lighthouse.
-- [Google Fonts](https://fonts.google.com)
-    - **Google Fonts** was used to style the website fonts.
-- [Font Awesome](https://fontawesome.com/)
-    - I used the font & icon toolkit Font Awesome in the win modal to define elements by a visual means and break up the larger section of text.
-- [Favicon.io](https://favicon.io/)
-    - **Favicon.io** was used to generate the favicons for the site.    
-- [Freeformatter CSS Beautify](https://www.freeformatter.com/css-beautifier.html)
-    - I used **CSS Beautify** to format and automatically indent my CSS file.
-- [Freeformatter HTML Formatter](https://www.freeformatter.com/html-formatter.html)
-    - The **HTML Formatter** was used to format the HTML document.  
-- [Freeformatter JS Formatter](https://www.freeformatter.com/javascript-beautifier.html)
-    - The **JavaScript Formatter** was used to format the JS file.      
-- [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln)
-    - I regularly used the **Unicorn Revealer** Chrome extension to inspect and locate where overflow was located making the debugging process a lot easier. 
-- [Autoprefixer](https://autoprefixer.github.io)
-    - The project used PostCSS plugin **Autoprefixer** which parsed my CSS and added vendor prefixes to allow cross-browser compatibility and support.
-- [Color Contrast Accessibility Validator](https://color.a11y.com/)
-    - The **Color Contrast Accessibility Validator** was used to test for colour contrast on the project.
-- [W3C Markup Validation Service](https://validator.w3.org/)
-    - The **W3C Markup Validation Service** checked the markup validity of Web documents in HTML.
-- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
-    - **W3C CSS Validation Service** was used to check the validity of my CSS in the project.
-- [JS Hint Validator](https://jshint.com/)
-    - **JS Hint** was used to analyze and ensure the source code complies with coding rules. 
-- [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/)
-    - I used **WAVE** to make my site more accessible to individuals with disabilities by detecting any potential issues.
-- [Pep8 Online](http://pep8online.com/)
-    - **Pep 8 Online** 
-Figma
-Python
-mongodb
-materialise for icons etc
 
 # Testing
 [^ Back To Top ](#contents)
@@ -342,7 +304,7 @@ The Testing process has been documented in this [testing.md file.](/testing.md "
 
 I took inspiration from the following sources however I did implement my own custom code with each snippet also:
 
-- I undertook a significant amount of research into backend development in preparation for the project. As well as the Code Institute's walkthrough tutorials which provided great guidance for the project, I also watched a significant amount of Youtube tutorials notably [Corey Schafer](https://www.youtube.com/user/schafer5) 
+- I undertook a significant amount of research into backend development in preparation for the project. As well as the Code Institute's walkthrough tutorials by [Tim Nelson](https://github.com/TravelTimN) which provided great guidance for the project, I also watched a significant amount of Youtube tutorials notably [Corey Schafer](https://www.youtube.com/user/schafer5) 
 
 
 ## Code
@@ -382,3 +344,7 @@ I would like to thank my fellow student Boris Gersic for his help with testing a
 [^ Back To Top ](#contents) 
 
 # Disclaimer
+
+If there are any issues with copyright of content, please contact me directly and I will amend as soon as possible. This project is for educational purposes only.
+
+[^ Back To Top ](#contents) 
