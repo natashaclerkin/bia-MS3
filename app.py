@@ -41,6 +41,10 @@ def brand(brand_id):
     # Find brand from id
     brand = mongo.db.brands.find_one({"_id": ObjectId(brand_id)})
 
+    # Show 404 if recipe id doesn't exist
+    if not recipe:
+        return render_template("errors/404.html")
+
     return render_template("brand.html", brand=brand)
 
 
