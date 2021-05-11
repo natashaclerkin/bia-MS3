@@ -215,7 +215,7 @@ def add_recipe():
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "description": request.form.get("description"),
-            "brand_name": request.form.get("brand_name_recipe"),
+            "brand_name": request.form.get("brand_name"),
             "brand_url": request.form.get("brand_url"),
             "created_by": session["user"],
             'img_id': result
@@ -226,10 +226,7 @@ def add_recipe():
         return redirect(url_for("profile", username=session["user"]))
     # Find categories in db
     categories = mongo.db.categories.find().sort("category_name", 1)
-    # Find brands in db
-    brands = list(mongo.db.brands.find().sort("brand_name", 1))
-    return render_template("add_recipe.html", categories=categories,
-                           brands=brands)
+    return render_template("add_recipe.html", categories=categories)
 
 
 # retrieve images from mongoDB
@@ -279,7 +276,7 @@ def edit_recipe(recipe_id):
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "description": request.form.get("description"),
-            "brand_name": request.form.get("brand_name_recipe_edit"),
+            "brand_name": request.form.get("brand_name"),
             "brand_url": request.form.get("brand_url"),
             "created_by": session["user"],
             'img_id': result
@@ -373,7 +370,7 @@ def manage_brands():
         return render_template("errors/404.html")
 
     # Find brands in db
-    brands = list(mongo.db.brands.find().sort("brand_name", 1))
+    brands = list(mongo.db.brands.find())
     return render_template("manage_brands.html", brands=brands)
 
 
@@ -388,7 +385,7 @@ def add_brand():
     if request.method == "POST":
 
         brand = {
-            "brand_name": request.form.get("brand_name_add"),
+            "brand_name": request.form.get("brand_name"),
             "brand_description": request.form.get("brand_description"),
             "brand_url": request.form.get("brand_url"),
             "brand_img": request.form.get("brand_img")

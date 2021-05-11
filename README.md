@@ -2,12 +2,8 @@
 
 ## Code Institute MS3 Project in Backend Development 
 The brief was to develop a full-stack site that allows users to manage a common dataset about a particular domain. Users make use of the site to share their own data with the community, and benefit from having convenient access to the data provided by all other members. This website is created for educational purposes.
+ 
 
-AM I RESPONSIVE IMAGE/GIF
-
-[View website](URL.ie)
-
---
 # Contents
 
 1. [Project Overview](#project-overview)
@@ -22,21 +18,22 @@ AM I RESPONSIVE IMAGE/GIF
 
 
 # Project Overview
-[^ Back To Top ](#contents) 
-## [Bia.ie Online Cookbook](https://LINK.URL) 
+
+## [Bia.ie Online Cookbook](http://bia-ms3.herokuapp.com/)
 
 
-WEBSITE IMAGE/BIE. IE LOGO
+![alt text](wireframes/amiresponsive.PNG "Am I Responsive Image") 
 
+[View website](http://bia-ms3.herokuapp.com/) 
  
-Bia.ie is an online cookbook and community for Irish food-lovers.  
-For any non-native Irish speakers who may be slightly confused re the website name, 'bia' is Gaeilge for the word 'food'! 
-The idea for Bia.ie was conceived in the midst of the Covid 19 Pandemic where many industries became decimated as a result of the virus and life as we once knew it changed forever. 
+[Bia.ie](http://bia-ms3.herokuapp.com/) is an online cookbook and community for Irish food-lovers. For any non-native Irish speakers who may be slightly confused re the website name, 'bia' is Gaeilge for the word 'food'! 
+
+The idea for Bia was conceived in the midst of the Covid 19 Pandemic where many industries became decimated as a result of the virus and life as we once knew it changed forever. 
 With the nation ordered to remain socially distanced from one another and stay confined in their homes, people turned to the two things that were constant in this new normal: food and the internet!
 Enter the avalanche of tutorials and baking recipes with everyone claiming to hold the ultimate banana bread recipe!
-The challenge? To fulfil this new demand for online recipes and create a community around it. Also, to boost the economy by supporting struggling Irish businesses. Bia.ie was the obvious solution. 
-Unlike any other online cookbook, the website showcases recipes utilising locally-produced ingredients & products and allows the promotion of these homegrown food producers by displaying individual ingredients as direct links to their website.
-Users of Bia.ie make use of the site by sharing their own recipes with the community, and benefit from having convenient access to recipes provided by all other members all whilst promoting local Irish food businneses.
+The challenge? To fulfil this new demand for online recipes and create a community around it. Also, to boost the economy by supporting struggling Irish businesses. Bia was the obvious solution. 
+Unlike any other online cookbook, the website showcases recipes utilising locally-produced ingredients & products and allows the promotion of these homegrown food producers by displaying ingredients or brands with direct links to their website.
+Users of Bia make use of the site by sharing their own recipes with the community, and benefit from having convenient access to recipes provided by all other members all whilst promoting local Irish food businesses.
 
 My own goals as a developer creating this project were to: 
 - Develop a web application that allowed users to store and easily access cooking recipes. 
@@ -49,14 +46,13 @@ My own goals as a developer creating this project were to:
 
 # UX
 
-![alt text](images/wireframes/PNG "Bia.ie Main Website")
 
 ## Goals
 
 ### External user’s goal:
-- To easily find inspiration for a future meal or locate a specific recipe based on a past meal or from a personal wishlist. To find recipes from other members by: meal type, by specific ingredients and by dietary requirement. 
-- To share knowledge from a homemade recipe or a successful recipe used in the past. To share by adding recipes to the community and providing details by ingredients, cook & prep time, dietary requirements relevant to the recipes and being able to edit and delete them when I no longer want to share with the community.
-- To create a list of recipes and store as a customised online cookback to refer back to in the future.
+- Locate - To easily find inspiration for a future meal or locate a specific recipe based on a past meal or from a personal wishlist. To find recipes from other members by: meal type, by specific ingredients and by dietary requirement. 
+- Share - To share knowledge from a homemade recipe or a successful recipe used in the past. To share by adding recipes to the community and providing details by ingredients, cook & prep time, dietary requirements relevant to the recipes and being able to edit and delete them when I no longer want to share with the community.
+- Create - To create a list of recipes and store as a customised online cookback to refer back to in the future.
 
 ### Site owner's goal:
 - Provide a simple, easy to use online cookbook and space where food-lovers can find and share recipes using Irish ingredients with the community. 
@@ -64,18 +60,24 @@ My own goals as a developer creating this project were to:
 - To benefit from the collection of the recipes in the community to operate as a content incubator for the website.
 - Earn revenue through affiliate marketing by directing potential customers towards featured food producers websites. 
 
+### Brand owner's goal:
+- Create awareness for the brand on the website.
+- Gain potential new customers.
+- Show versatility of products by creating recipes on the site.
+
+
 ## User Stories
 
 ### External Users
 
 As a new user, I would like to:
 - View a visually clean and appealing homepage so that I can instantly understand the purpose of the site and navigate it's offering easily.
-- Access the site from any mobile, tablets and desktop devices so that I can have an equally enjoyable experience regardless of the selected device/platform.
+- Access the site from any mobile, tablet or desktop devices so that I can have an equally enjoyable experience regardless of the selected device/platform.
 - Register a profile easily without the requirement to provide a lot of info so that I can join the community and add my own recipes. 
 - View content without requiring to register so that I can quickly locate a specific recipe.
 - Browse and filter recipes by meal or dietary category so that I can easily find inspiration for a future meal.
-- View a list of recipes by ingedient/meal/dietary keyword search criteria so that I can quickly locate a specific meal/dish.
-- View the featured food producers so that I can see any connected recipes that I can use their ingredients/products in. 
+- View a list of recipes by ingredient/meal/dietary keyword search criteria so that I can quickly locate a specific meal/dish.
+- View the featured food producers so that I can see any connected recipes that use their products. 
 - Learn more about the food producers on the site so that I can support them by purchasing their products.
 
 As a returning user, I would like to:
@@ -87,13 +89,21 @@ As a returning user, I would like to:
 - To have access to all recipes provided by the community so that I can view content from other members.
 - To browse recipes from other members so that I can get inspiration for future meals based on meal type, specific ingredients used and by dietary requirement. 
 
+As a brand owner user, I would like to:
+
+- Create recipes to share with the community highlighting products from the brand.
+- Get the products in as many places on the website to create awareness for the brand.
+- Offer discount to community users to gain potential new customers. 
+
 ### Business/Admin Users
 
 As a business/admin user, I would like to do all of the above as well as:
+
 - The ability to edit or remove recipes created by users so that I can vet the content and ensure it's appropriate for users.
 - The ability to add, edit or remove recipe categories so that I can keep the categories relevant to what users are searching for
-- Edit the linked ingredient URLs so that they divert to the correct business website.
+- The ability to add, edit or remove brands as required to maintain relevance between the recipes and brands currently in the community.
 - View the amount of clicks from the featured business page and linked ingredient URLs so that I can gauge potential success of affiliate marketing. 
+
 
 
 ## Design
@@ -105,7 +115,7 @@ I wanted to use [Montserrat](https://fonts.google.com/specimen/Montserrat#about)
 Font Awesome icons has been used for this project.
 
 ### Color Scheme
-The Bia.ie brand monochrome colour scheme was implemented along with pops of green to reflect the Irish fresh products represented throughout the site.
+The Bia brand monochrome colour scheme was implemented along with pops of green to reflect the Irish fresh products represented throughout the site.
 I wanted to keep the color palette simplistic and clean to allow for the imagery from the recipes to stand out and inject the site with colour.
 However the colour red is used for error messages for the Signup and Login pages to highlight a warning to the user.
 
@@ -185,7 +195,7 @@ Google/Facebook login
 ## Database Choice
 In order to fulfil the project requirements, the NoSQL database MongoDB was utilised to store the data.
 
-This non-relational database structure suits Bia.ie as there are only a few relationships between the various collections. 
+This non-relational database structure suits Bia as there are only a few relationships between the various collections. 
 
 ## Data Modeling
 The project currently relies on five database collections:

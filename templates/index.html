@@ -10,8 +10,7 @@
         <h1>About Bia </h1>
         <p class="white-text lowercase">We support Irish food producers through the nation's love of good Irish
             ingredients!</p>
-        <p class="white-text lowercase">Join Bia.ie and share your favorite recipes with the community using homegrown
-            brands.</p>
+        <p class="white-text lowercase">Join the Bia community and share recipes with your favourite homegrown brands.</p>
         <a class="btn-small" href="{{ url_for('register') }}">Join now</a>
     </div>
 </div>
@@ -54,13 +53,12 @@
     <img class="responsive-img" src="static/images/bia-featured.png">
     <div class="featured-text">
         <h2>Bia Featured</h2>
-        <p class="white-text lowercase">We support Irish food producers through the nation's love of good Irish
-            ingredients!</p>
-        <p class="white-text lowercase">Join Bia.ie and share your favorite recipes with the community using homegrown
-            brands.</p>
-        <a class="btn-small" href="{{ url_for('bia_brands') }}">Learn more</a>
+        <p class="white-text lowercase">Bia is loving Irish nut butter brand, Lifeforce.</p>
+        <p class="white-text lowercase">With over 40 years in the biz, they have maintained their philosophy to provide foods just as nature intended.</p>
+        <a class="btn-small" href="{{ url_for( 'brand', brand_id='60983c6bd2b7896551a0a7ac') }}">Learn more</a>
     </div>
 </div>
+
 
 
 {% endblock %}
