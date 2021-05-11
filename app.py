@@ -1,5 +1,4 @@
 import os
-import uuid
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -194,21 +193,11 @@ def add_recipe():
 
     # Adding recipe to db
     if request.method == "POST":
-        result = None
-
-        # add image to database
-        if 'item_image' in request.files:
-            item_image = request.files['item_image']
-            if item_image.filename != '':
-                # generate filename using an uuid
-                item_image.filename = str(uuid.uuid4())
-                result = mongo.save_file(item_image.filename, item_image)
 
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "category_name": request.form.get("category_name"),
             "img_url": request.form.get("img_url"),
-            'item_image': item_image.filename,
             "serves": request.form.get("serves"),
             "prep_time": request.form.get("prep_time"),
             "cook_time": request.form.get("cook_time"),
@@ -217,8 +206,7 @@ def add_recipe():
             "description": request.form.get("description"),
             "brand_name": request.form.get("brand_name"),
             "brand_url": request.form.get("brand_url"),
-            "created_by": session["user"],
-            'img_id': result
+            "created_by": session["user"]
         }
 
         mongo.db.recipes.insert_one(recipe)
@@ -227,12 +215,6 @@ def add_recipe():
     # Find categories in db
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
-
-
-# retrieve images from mongoDB
-@app.route('/img_uploads/<filename>')
-def img_uploads(filename):
-    return mongo.send_file(filename)
 
 
 # Edit recipe
@@ -244,32 +226,11 @@ def edit_recipe(recipe_id):
 
     # editing recipe to db
     if request.method == "POST":
-        result = None
-        # check if new image selected
-        if 'item_image' in request.files:
-            item_image = request.files['item_image']
-            if item_image.filename == '':
-                item_image.filename = request.form.get('item_image_up')
-            else:
-                # if new image selected delete old from mongoDB
-                recipe = mongo.db.recipes.find_one_or_404(
-                    {"_id": ObjectId(recipe_id)})
-                img_id = recipe["img_id"]
-                if img_id:
-                    files_id = mongo.db.fs.files.find_one_or_404(
-                        {"_id": img_id})["_id"]
-                    mongo.db.fs.chunks.remove({"files_id": ObjectId(files_id)})
-                    mongo.db.fs.files.remove({"_id": ObjectId(img_id)})
-
-                # generate filename using an uuid
-                item_image.filename = str(uuid.uuid4())
-                result = mongo.save_file(item_image.filename, item_image)
 
         editing = {
             "recipe_name": request.form.get("recipe_name"),
             "category_name": request.form.get("category_name"),
             "img_url": request.form.get("img_url"),
-            'item_image': item_image.filename,
             "serves": request.form.get("serves"),
             "prep_time": request.form.get("prep_time"),
             "cook_time": request.form.get("cook_time"),
@@ -278,8 +239,7 @@ def edit_recipe(recipe_id):
             "description": request.form.get("description"),
             "brand_name": request.form.get("brand_name"),
             "brand_url": request.form.get("brand_url"),
-            "created_by": session["user"],
-            'img_id': result
+            "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, editing)
         flash("Recipe has been successfully Updated")
@@ -294,16 +254,6 @@ def edit_recipe(recipe_id):
 # delete recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
-    # check if recipe has image
-    recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
-    img_id = recipe["img_id"]
-
-    if img_id:
-        files_id = mongo.db.fs.files.find_one_or_404(
-            {"_id": img_id})["_id"]
-        mongo.db.fs.chunks.remove({"files_id": ObjectId(files_id)})
-        mongo.db.fs.files.remove({"_id": ObjectId(img_id)})
-
     # Remove recipe from db
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe has been successfully deleted")

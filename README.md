@@ -347,7 +347,7 @@ The Bia logo and main content for the site was created by myself however brand p
 - Vegan Wellington recipe & image - [Natural Born Feeder Website](https://www.naturalbornfeeder.com/vegan-christmas-wellington-with-strong-roots)
 
 - 404 & 500 pages spilled sugar background image - [Julie Blanner](https://julieblanner.com/wp-content/uploads/2019/10/how-to-make-cinnamon-sugar-2.jpeg)
-- About Bia hero image - [Karolina Grabowska at Pexels.com](https://www.pexels.com/photo/different-powdered-spices-on-spoons-on-marble-surface-4198756)
+- About Bia hero image - [Mamasezz.com](https://www.mamasezz.com/blogs/news/seasonings-without-salt)
 - Homepage Lifeforce featured brand image (manipulated in Figma)- [Lifeforce Website](www.lifeforce.ie)
 
 

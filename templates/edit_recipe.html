@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="container">
+
 <div class="row">
     <h1 class="center-align">EDIT RECIPE</h1>
     <hr class="blackline">
@@ -48,24 +50,6 @@
                 <label for="img_url">Image url</label>
                 <span class="helper-text" data-error="Enter a valid URL."
                     data-success="Looks good!"></span>
-            </div>
-        </div>
-        <!-- Photo -->
-        <div class="row">
-            <div class="file-field input-field">
-                <div class="btn black">
-                    <span>File</span>
-                    <input type="file" id="item_image" name="item_image"
-                        accept="image/png, image/jpeg" required>
-                </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" id="item_image_up" name="item_image_up"
-                        type="text" value="{{recipe.item_image}}" placeholder="UPLOAD IMAGE"
-                        required>
-                    <span class="helper-text" data-error="Enter a valid image."
-                        data-success="Looks good!">Adding a photo will be the cherry on the top of a
-                        beautiful recipe!</span>
-                </div>
             </div>
         </div>
         <!-- Serves -->
@@ -169,5 +153,5 @@
     </form>
 </div>
 
-
+</div>
 {% endblock %}
