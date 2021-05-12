@@ -57,6 +57,7 @@ My own goals as a developer creating this project were to:
 ### Site owner's goal:
 - Provide a simple, easy to use online cookbook and space where food-lovers can find and share recipes using Irish ingredients with the community. 
 - Promote homegrown irish food producers online.
+- Provide an enjoyable experience for users to encourage them to return to the site by featuring intuitive prompts and witty Irish banter through the content. 
 - To benefit from the collection of the recipes in the community to operate as a content incubator for the website.
 - Earn revenue through affiliate marketing by directing potential customers towards featured food producers websites. 
 
@@ -132,7 +133,7 @@ This folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") in
 
 # Features
 
-![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620759118/manage-brands_ocmi88.png "Manage Brands")
+![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620780109/profile_t2gq79.png "Admin Profile")
 ## Existing Features
 - A clean, simplistic responsive website.
 - Clear navigation and UI with reused template structure across profile, brand and recipe sections.
@@ -182,6 +183,8 @@ This folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") in
 In order to fulfil the project requirements, the NoSQL database MongoDB was utilised to store the data.
 
 This non-relational database structure suits Bia as there are only a few relationships between the various collections. 
+
+![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620782460/mongodb_s0znhx.png "Mongo DB")
 
 ## Data Modeling
 The project currently relies on four database collections:
@@ -260,8 +263,9 @@ The project currently relies on four database collections:
 - [GitHub](https://github.com/)
 - [GitPod](https://gitpod.io/)
 - [Balsamiq](https://balsamiq.com)
-- [Heroku](https://www.heroku.com/about)
+- [Heroku](https://www.heroku.com)
 - [MongoDB](https://www.mongodb.com/)
+- [Cloudinary](https://cloudinary.com/)
 
 ## Tools
 - [Autoprefixer](https://autoprefixer.github.io/) to parse my CSS and add vendor prefixes to allow cross-browser compatibility and support.
@@ -279,9 +283,10 @@ The project currently relies on four database collections:
 - [W3C Markup Validation Service](https://validator.w3.org/) to check the markup validity of Web documents in HTML.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check the validity of my CSS in the project.
 - [JS Hint Validator](https://jshint.com/) to analyze and ensure the source code complies with coding rules. 
-- [Pep8 Online](http://pep8online.com/) to check code for PEP8 requirements in Python
+- [Pep8 Online](http://pep8online.com/) to check code for PEP8 requirements in Python.
 - [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) to check the site for Accessibility compatibility and highlight any potenial issues.
 - [Am I Responsive?](http://ami.responsivedesign.is/) to provide a preview of the site across a variety of popular devices.  
+
 
 [^ Back To Top ](#contents)
 
@@ -292,19 +297,79 @@ The Testing process has been documented in this [testing.md file.](/testing.md "
 
 # Deployment
 
-[^ Back To Top ](#contents)
-
 ## Local Deployment
+
+### Requirements:
+- [Python 3](https://www.python.org) 
+- [PIP](https://pypi.org/project/pip/) 
+- [Git](https://git-scm.com/) 
+- [MongoDB](https://www.mongodb.com/)
+
+
+### How to clone Bia:
+
+![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620783586/deploy_w39xv3.png "Local Deployment")
+1. Log in to GitHub and go to [this repository](https://github.com/natashaclerkin/bia-MS3).
+2. At the top of the repository, select **Code** and copy the **Clone URL**.
+3. In your IDE, open a Terminal window and change to the directory where you want the cloned directory to be made and type `git clone` and paste in `https://github.com/natashaclerkin/bia-MS3.git`.
+4. Click enter and the project will be created and cloned locally.
+
+### Working with the local copy:
+
+1. Install all the project dependencies from the terminal window of your IDE by typing: pip3 install -r requirements.txt.
+2. Register or login to your [MongoDB](https://www.mongodb.com/) account to create a database. First create a cluster, then a database and the four collections as displayed [here](https://res.cloudinary.com/nclerkin/image/upload/v1620758330/schema_ufevtk.png).
+3. Create an env.py file to contain the environment variables, which should include the following:
+
+```console
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "**secret key goes here**")
+os.environ.setdefault("MONGO_URI", "**mongo uri goes here**")
+os.environ.setdefault("MONGO_DBNAME", "**database name goes here**")
+```
+4. Create a .gitignore file in the root directory of the project and add the env.py to the .gitignore file to prevent the environment variables being made public.
+5. Type `python3 app.py` into the terminal to run the app locally. 
+
+
+
 ## Heroku Deployment
 
+1. Set up local workspace for Heroku by typing `pip3 freeze -- local > requirements.txt` into the terminal to inform Heroku of the files required and then `python app.py > Procfile` to setup the Procfile. 
+2. Set up [Heroku](https://www.heroku.com) by signing in or registering an account to create the app. To create the app, you must select the local region and the app must have a unique name.
+3. Link the app to the GitHub repository by going to the **Deploy** tab in the main app menu, search for your correct repository and select to connect.
+4. Add the corresponding Config Variables by selecting **Config Vars** and click on **Reveal Config Vars**. Input the variables from the IDE created in earlier steps to the **Settings** tab:
+
+|**Key**|**Value**|
+|:-----|:-----|
+|IP|`0.0.0.0`|
+|PORT|`5000`|
+|SECRET_KEY|`secret key goes here`|
+|MONGO_URI|`mongo uri goes here`|
+|MONGO_DBNAME|`database name goes here`|
+
+5. Push the requirements.txt and Procfile to repository.
+```console
+$ git add requirements.txt
+$ git commit -m "Add requirements.txt"
+
+$ git add Procfile 
+$ git commit -m "Add Procfile"
+```
+
+6. Go back to the **Deploy** tab and under **Automatic deploys** select **Enable Automatic Deploys** and under **Manual deploy**, select **master** and click **Deploy Branch**.
+7. Once the app has completed the build from Github using the required packages, click **Open app** to reveal the live URL.
+
+[^ Back To Top ](#contents)
+
 # Credits
+## Code
 I took inspiration from the following sources however I did implement my own custom code with each snippet also:
 
 - I undertook a significant amount of research into backend development in preparation for the project. As well as the Code Institute's walkthrough tutorials by [Tim Nelson](https://github.com/TravelTimN) which provided great guidance for the project, I also watched a significant amount of Youtube tutorials notably [Corey Schafer](https://www.youtube.com/user/schafer5) 
 
-[^ Back To Top ](#contents)
 
-## Code
 
 ## Content and Media
 The Bia logo and main content for the site was created by myself however brand profile descriptions and recipes as well as their images were obtained from their own websites or Roz Purcell's Natural Born Feeder recipes. 
