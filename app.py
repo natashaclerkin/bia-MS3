@@ -175,12 +175,7 @@ def recipes(category):
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
     # Find recipe from id
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-
-    # Show 404 if recipe id doesn't exist
-    if not recipe:
-        return render_template("errors/404.html")
-
+    recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
     return render_template("recipe.html", recipe=recipe)
 
 
@@ -188,8 +183,8 @@ def recipe(recipe_id):
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     # Only logged in users can add recipes
-    if not session.get("user"):
-        return render_template("errors/404.html")
+    if not is_authenticated():
+        return abort(404)
 
     # Adding recipe to db
     if request.method == "POST":
@@ -204,7 +199,7 @@ def add_recipe():
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "description": request.form.get("description"),
-            "brand_name": request.form.get("brand_name"),
+            "brand_name": request.form.get("brand_name_recipe"),
             "brand_url": request.form.get("brand_url"),
             "created_by": session["user"]
         }
@@ -221,8 +216,8 @@ def add_recipe():
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     # Only logged in users can edit recipes
-    if not session.get("user"):
-        return render_template("errors/404.html")
+    if not is_authenticated():
+        return abort(404)
 
     # editing recipe to db
     if request.method == "POST":
@@ -237,7 +232,7 @@ def edit_recipe(recipe_id):
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "description": request.form.get("description"),
-            "brand_name": request.form.get("brand_name_recipe_edit"),
+            "brand_name": request.form.get("brand_name_recipe"),
             "brand_url": request.form.get("brand_url"),
             "created_by": session["user"]
         }
@@ -245,7 +240,7 @@ def edit_recipe(recipe_id):
         flash("Recipe has been successfully Updated")
         return redirect(url_for("profile"))
 
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
         "edit_recipe.html", recipe=recipe, categories=categories)
