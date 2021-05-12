@@ -22,7 +22,7 @@ The brief was to develop a full-stack site that allows users to manage a common 
 ## [Bia.ie Online Cookbook](http://bia-ms3.herokuapp.com/)
 
 
-![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620756623/amiresponsive_urcfgx.png "Am I Responsive Image") 
+![Am I Responsive Image](https://res.cloudinary.com/nclerkin/image/upload/v1620756623/amiresponsive_urcfgx.png "Am I Responsive Image") 
 
 [View website](http://bia-ms3.herokuapp.com/) 
  
@@ -95,18 +95,22 @@ As a brand owner user, I would like to:
 - Create recipes to share with the community so that I can highlight our products from the brand.
 - Get the products in as many locations on the website so that I can create awareness for the brand.
 - Offer discount to community users so that I can gain potential new customers for the brand. 
+- View analytics/reports for the quantity of users that have clicked through to our site to value potential customer acquisition.
 
 ### Business/Admin Users
 
-As a business/admin user, I would like to do all of the above as well as:
+As a business/admin user, I would like to have access to all of the above as well as:
 
 - The ability to edit or remove recipes created by users so that I can vet the content and ensure it's appropriate for users.
-- The ability to add, edit or remove recipe categories so that I can keep the categories relevant to what users are searching for
+- The ability to add, edit or remove recipe categories so that I can keep the categories relevant to what users are searching for.
 - The ability to add, edit or remove brands as required to maintain relevance between the recipes and brands currently in the community.
 - View the amount of clicks from the featured business page and linked ingredient URLs so that I can gauge potential success of affiliate marketing. 
+- Ensure witty helper/success text is present when users add recipes in the community to convey a great sense of Irish humour and provide an enjoyable user experience.
 
 
 ## Design
+
+![Data Success messaging](https://res.cloudinary.com/nclerkin/image/upload/v1620829925/data-success_qvjnaj.png "Data Success messaging")
 
 ### Typography
 I wanted to use [Montserrat](https://fonts.google.com/specimen/Montserrat#about) for the headings and [Open Sans](https://fonts.google.com/specimen/Open+Sans/#about) as a supporting body font to achieve the desired clean-cut image.
@@ -121,7 +125,7 @@ However the colour red is used for error messages for the Signup and Login pages
 
 I ended up creating and using the below palette once it had passed rigorous Accessibility testing in **A11y's Color Contrast Accessibility Validator**. 
 
-![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620756644/bia-color-palette_wfndir.png "Bia Color Palette")
+![Bia Color Palette](https://res.cloudinary.com/nclerkin/image/upload/v1620756644/bia-color-palette_wfndir.png "Bia Color Palette")
 
 
 ## Wireframes
@@ -133,7 +137,7 @@ This folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") in
 
 # Features
 
-![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620780109/profile_t2gq79.png "Admin Profile")
+![Admin Profile](https://res.cloudinary.com/nclerkin/image/upload/v1620780109/profile_t2gq79.png "Admin Profile")
 ## Existing Features
 - A clean, simplistic responsive website.
 - Clear navigation and UI with reused template structure across profile, brand and recipe sections.
@@ -153,7 +157,7 @@ This folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") in
 - Flash messaging upon login and CRUD actions.
 - 404 & 500 custom built error pages to keep the user on the site when an error appears and to guide them back to the content.
 
-![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620758927/404_rxtgcf.png "404")
+![Custom 404 Page](https://res.cloudinary.com/nclerkin/image/upload/v1620758927/404_rxtgcf.png "Custom 404 Page")
 
 ## Features Left to Implement
 - Bia newsletter sign up form to update users of new recipes and possible discounts from on-site brands.
@@ -164,19 +168,20 @@ This folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") in
 - Full user authentication functionality.
 - Server side credential validation.
 - Ability to favourite recipes/brands
+- Submission verification for recipe image URLS and implement a placeholder image if an URL gets broken.
 - Enable comments and social media sharing functionality on each recipe.
 - Public facing user profiles for general users and brand owners in the style of a social media account such as Instagram so other users can see the recipes created and their favourite recipes/brands.
 - Expand the admin profile to include usage and analytics reports to validate possible affiliate marketing.
-- Upload image functionality.
+- Upload image functionality for better UX pictured below but due to time constraints could not implement fully before the stated deadline.
 - Individual ingredient fields in the ‘Add recipe’ form so more than one brand can be linked to a recipe.
 - Contact form for brand owner users to learn more about promoting their brand on the site.
-
+![Image Upload feature](https://res.cloudinary.com/nclerkin/image/upload/v1620833192/imageupload_uiamfz.png "Image Upload feature")
 
 [^ Back To Top ](#contents)
 
 # Information Architecture
 
-![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620756692/bia-sitemap_iqzi13.png "Sitemap")
+![Bia Sitemap](https://res.cloudinary.com/nclerkin/image/upload/v1620756692/bia-sitemap_iqzi13.png "Bia Sitemap")
 
 
 ## Database Choice
@@ -184,7 +189,7 @@ In order to fulfil the project requirements, the NoSQL database MongoDB was util
 
 This non-relational database structure suits Bia as there are only a few relationships between the various collections. 
 
-![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620782460/mongodb_s0znhx.png "Mongo DB")
+![Mongo DB Bia Collections](https://res.cloudinary.com/nclerkin/image/upload/v1620782460/mongodb_s0znhx.png "Mongo DB Bia Collections")
 
 ## Data Modeling
 The project currently relies on four database collections:
@@ -235,7 +240,7 @@ The project currently relies on four database collections:
 |brand_img|string|The url to the brand's logo. Image upload to be implemented in next release.Admin to control this.|
 
 
-![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620758330/schema_ufevtk.png "Schema")
+![Bia Schema](https://res.cloudinary.com/nclerkin/image/upload/v1620758330/schema_ufevtk.png "Bia Schema")
 
 [^ Back To Top ](#contents)
 
@@ -308,7 +313,7 @@ The Testing process has been documented in this [testing.md file.](/testing.md "
 
 ### How to clone Bia:
 
-![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620783586/deploy_w39xv3.png "Local Deployment")
+![Local Deployment](https://res.cloudinary.com/nclerkin/image/upload/v1620783586/deploy_w39xv3.png "Local Deployment")
 1. Log in to GitHub and go to [this repository](https://github.com/natashaclerkin/bia-MS3).
 2. At the top of the repository, select **Code** and copy the **Clone URL**.
 3. In your IDE, open a Terminal window and change to the directory where you want the cloned directory to be made and type `git clone` and paste in `https://github.com/natashaclerkin/bia-MS3.git`.
