@@ -25,27 +25,132 @@
 
 
 
-<!-- Recipe Gallery-->
+<!-- Trending Recipe Gallery-->
 
 <div class="row">
-    {% for recipe in recipes %}
+
     <div class="col s12 m6 l4">
         <div class="card">
-            <a href="{{ url_for('recipe', recipe_id=recipe._id) }}">
+            <a href="{{ url_for('recipe', recipe_id='608b380a4609abde2c443293') }}">
                 <div class="card-image">
-                    <img class="img_recipe" src="{{ recipe.img_url}}">
-                    <!--<span class="card-title">Card Title</span>-->
-                    <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="far fa-heart"></i></a>-->
-                </div>
+                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/pad-thai_d0zw89.jpg">
+                                    </div>
                 <div class="card-content center-align">
-                    <p>{{ recipe.recipe_name }}
-                    </p>
+                    <p>Pad Thai</p>
                 </div>
             </a>
         </div>
     </div>
-    {% endfor %}
+
+        <div class="col s12 m6 l4">
+        <div class="card">
+            <a href="{{ url_for('recipe', recipe_id='60904afbec43ab74cc26a3c3') }}">
+                <div class="card-image">
+                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/peanut-butter-fudge-bars_wuhl4v.png">
+                                    </div>
+                <div class="card-content center-align">
+                    <p>No Bake PB Bars</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+        <div class="col s12 m6 l4">
+        <div class="card">
+            <a href="{{ url_for('recipe', recipe_id='60902528bffdb0f8e3341a89') }}">
+                <div class="card-image">
+                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839752/strong-roots-vegan-wellington_hgafin.jpg">
+                                    </div>
+                <div class="card-content center-align">
+                    <p>Vegan Nut Roast</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+        <div class="col s12 m6 l4">
+        <div class="card">
+            <a href="{{ url_for('recipe', recipe_id='60904771ec43ab74cc26a3c0') }}">
+                <div class="card-image">
+                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620840101/Red-Pepper-Soup_ngjyxm.jpg">
+                                    </div>
+                <div class="card-content center-align">
+                    <p>Red Pepper Soup</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+        <div class="col s12 m6 l4">
+        <div class="card">
+            <a href="{{ url_for('recipe', recipe_id='60904393ec43ab74cc26a3be') }}">
+                <div class="card-image">
+                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/fulfil-brownies_yyegfm.jpg">
+                                    </div>
+                <div class="card-content center-align">
+                    <p>Fulfil Brownies</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+        <div class="col s12 m6 l4">
+        <div class="card">
+            <a href="{{ url_for('recipe', recipe_id='6090487aec43ab74cc26a3c1') }}">
+                <div class="card-image">
+                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620840101/Muesli-Flapjack-Bars_y6gmtd.jpg">
+                                    </div>
+                <div class="card-content center-align">
+                    <p>Muesli Bars</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+        <div class="col s12 m6 l4">
+        <div class="card">
+            <a href="{{ url_for('recipe', recipe_id='60904988ec43ab74cc26a3c2') }}">
+                <div class="card-image">
+                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/cookie-balls_ua42zu.jpg">
+                                    </div>
+                <div class="card-content center-align">
+                    <p>Cookie Balls</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+        <div class="col s12 m6 l4">
+        <div class="card">
+            <a href="{{ url_for('recipe', recipe_id='608b3c7e4609abde2c443294') }}">
+                <div class="card-image">
+                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/carrot-cake_jemggi.jpg">
+                                    </div>
+                <div class="card-content center-align">
+                    <p>Carrot Cake</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+        <div class="col s12 m6 l4">
+        <div class="card">
+            <a href="{{ url_for('recipe', recipe_id='60904671ec43ab74cc26a3bf') }}">
+                <div class="card-image">
+                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/no-bake-peanut-butter-cups_gru27s.png">
+                                    </div>
+                <div class="card-content center-align">
+                    <p>PB Choco Cups</p>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
+
+
+
+
+
 
 <!-- Featured section -->
 

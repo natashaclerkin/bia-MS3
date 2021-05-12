@@ -140,7 +140,7 @@ This folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") in
 ![Admin Profile](https://res.cloudinary.com/nclerkin/image/upload/v1620780109/profile_t2gq79.png "Admin Profile")
 ## Existing Features
 - A clean, simplistic responsive website.
-- Clear navigation and UI with reused template structure across profile, brand and recipe sections.
+- Clear, fixed navigation which is available to the user if exessive scrolling is required and UI with reused template structure across profile, brand and recipe sections.
 - Monochrome palette to allow for recipe and brand sections to focus and capture the user’s attention.
 - Header with information about the website and it’s purpose.
 - ‘Trending’ section of recipes on the homepage for recipe inspiration.
@@ -149,8 +149,8 @@ This folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") in
 - ‘All recipes’ page which can be filtered by category and also has search functionality which pulls from the data in the recipe description and recipe name. Users are also advised to feature brands when adding their recipe so this should pick up brand names also. 
 - ‘Bia Brands’ section compiles all brands added by the admin and links to their individual brand page with an about section and related recipes.
 - An individual recipe page contains a short description, image, featured brand info, ingredients and recipe info.
-- Simple user register & login pages.
-- Confirm deletion modals.
+- Simple user-friendly register & login pages with Regex defensive programming to ensure registration/login forms are not submitted unless usernames and passwords are between 4-15 characters in length. 
+- Confirm deletion modals for defensive programming.
 - Personalised Username profile heading 
 - User profile with access to any submitted recipes, the ability to add a new recipe to the community, edit it or remove it with delete confirmation popups. 
 - Admin user has access to all recipes and can edit or remove them, they also have access to manage categories, brands as well as edit them, remove them or add new ones.
@@ -249,8 +249,7 @@ The project currently relies on four database collections:
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [Python](https://www.python.org/)
-  - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+- [Python](https://www.python.org/) with [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
 
 ## Libraries and Frameworks
 
@@ -296,7 +295,7 @@ The project currently relies on four database collections:
 [^ Back To Top ](#contents)
 
 # Testing
-The Testing process has been documented in this [testing.md file.](/testing.md "testing.md File")
+The Testing process has been documented in this [testing.md file](TESTING.md "TESTING.md File")
 
 [^ Back To Top ](#contents)
 
@@ -370,7 +369,7 @@ $ git commit -m "Add Procfile"
 
 # Credits
 ## Code
-I took inspiration from the following sources however I did implement my own custom code with each snippet also:
+I took inspiration from the following sources however I did implement my own custom code:
 
 - I undertook a significant amount of research into backend development in preparation for the project. As well as the Code Institute's walkthrough tutorials by [Tim Nelson](https://github.com/TravelTimN) which provided great guidance for the project, I also watched a significant amount of Youtube tutorials notably [Corey Schafer](https://www.youtube.com/user/schafer5) 
 

@@ -140,11 +140,6 @@ nav ul a:hover {
     letter-spacing: 0px;
 }
 
-.dropdown-content li>a,
-.dropdown-content li>span {
-    color: #000;
-}
-
 .dropdown-content li>a {
     font-size: 14px;
 }
