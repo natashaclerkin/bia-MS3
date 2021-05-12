@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template,
+    Flask, flash, render_template, abort,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -85,7 +85,7 @@ def register():
         # put the new user into session cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("profile"))
 
     return render_template("users/register.html")
 
@@ -121,11 +121,11 @@ def login():
 
 
 # user profile
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
+@app.route("/profile", methods=["GET", "POST"])
+def profile():
     # Only users can access profile
-    if not session.get("user"):
-        return render_template("errors/404.html")
+    if not is_authenticated():
+        abort(404)
 
     # grab the session user's username from db
     username = mongo.db.users.find_one(
@@ -211,7 +211,7 @@ def add_recipe():
 
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe has been successfully added")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("profile"))
     # Find categories in db
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
@@ -243,7 +243,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, editing)
         flash("Recipe has been successfully Updated")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("profile"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -257,7 +257,7 @@ def delete_recipe(recipe_id):
     # Remove recipe from db
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe has been successfully deleted")
-    return redirect(url_for("profile", username=session["user"]))
+    return redirect(url_for("profile"))
 
 
 # manage categories
@@ -381,6 +381,10 @@ def delete_brand(brand_id):
     mongo.db.brands.remove({"_id": ObjectId(brand_id)})
     flash("Brand has been successfully deleted")
     return redirect(url_for("manage_brands"))
+
+
+def is_authenticated():
+    return "user" in session
 
 
 # CUSTOM ERROR HANDLERS
