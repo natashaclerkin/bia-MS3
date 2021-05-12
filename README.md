@@ -22,7 +22,7 @@ The brief was to develop a full-stack site that allows users to manage a common 
 ## [Bia.ie Online Cookbook](http://bia-ms3.herokuapp.com/)
 
 
-![alt text](wireframes/amiresponsive.PNG "Am I Responsive Image") 
+![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620756623/amiresponsive_urcfgx.png "Am I Responsive Image") 
 
 [View website](http://bia-ms3.herokuapp.com/) 
  
@@ -50,9 +50,9 @@ My own goals as a developer creating this project were to:
 ## Goals
 
 ### External user’s goal:
-- Locate - To easily find inspiration for a future meal or locate a specific recipe based on a past meal or from a personal wishlist. To find recipes from other members by: meal type, by specific ingredients and by dietary requirement. 
-- Share - To share knowledge from a homemade recipe or a successful recipe used in the past. To share by adding recipes to the community and providing details by ingredients, cook & prep time, dietary requirements relevant to the recipes and being able to edit and delete them when I no longer want to share with the community.
-- Create - To create a list of recipes and store as a customised online cookback to refer back to in the future.
+- Locate: To easily find inspiration for a future meal or locate a specific recipe based on a past meal or from a personal wishlist. To find recipes from other members by: meal type, by specific ingredients and by dietary requirement. 
+- Share: To share knowledge from a homemade recipe or a successful recipe used in the past. To share by adding recipes to the community and providing details by ingredients, cook & prep time, dietary requirements relevant to the recipes and being able to edit and delete them when I no longer want to share with the community.
+- Create: To create a list of recipes and store as a customised online cookback to refer back to in the future.
 
 ### Site owner's goal:
 - Provide a simple, easy to use online cookbook and space where food-lovers can find and share recipes using Irish ingredients with the community. 
@@ -91,9 +91,9 @@ As a returning user, I would like to:
 
 As a brand owner user, I would like to:
 
-- Create recipes to share with the community highlighting products from the brand.
-- Get the products in as many places on the website to create awareness for the brand.
-- Offer discount to community users to gain potential new customers. 
+- Create recipes to share with the community so that I can highlight our products from the brand.
+- Get the products in as many locations on the website so that I can create awareness for the brand.
+- Offer discount to community users so that I can gain potential new customers for the brand. 
 
 ### Business/Admin Users
 
@@ -103,7 +103,6 @@ As a business/admin user, I would like to do all of the above as well as:
 - The ability to add, edit or remove recipe categories so that I can keep the categories relevant to what users are searching for
 - The ability to add, edit or remove brands as required to maintain relevance between the recipes and brands currently in the community.
 - View the amount of clicks from the featured business page and linked ingredient URLs so that I can gauge potential success of affiliate marketing. 
-
 
 
 ## Design
@@ -121,76 +120,63 @@ However the colour red is used for error messages for the Signup and Login pages
 
 I ended up creating and using the below palette once it had passed rigorous Accessibility testing in **A11y's Color Contrast Accessibility Validator**. 
 
-![alt text](wireframes/bia-color-palette.PNG "Bia Color Palette")
+![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620756644/bia-color-palette_wfndir.png "Bia Color Palette")
 
 
 ## Wireframes
 
-The folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") including mockups of the homepage, an individual recipe page, submit recipe page, featured business page and account creation page designed at the beginning of the project for desktop, tablet and mobile devices. I have also included the projected [sitemap](wireframes/bia-site-map.png "Bia Sitemap") and data [schema](wireframes/schema.PNG "Bia Schema").
+This folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") including mockups of the homepage, an individual recipe page, submit recipe page, featured business page and account creation page designed at the beginning of the project for desktop, tablet and mobile devices. I have also included the projected [sitemap](https://res.cloudinary.com/nclerkin/image/upload/v1620756692/bia-sitemap_iqzi13.png "Bia Sitemap") and data [schema](https://res.cloudinary.com/nclerkin/image/upload/v1620758330/schema_ufevtk.png "Bia Schema").
 **Please note the finalised project contains slight variations to the original wireframes**
 
 [^ Back To Top ](#contents)
 
 # Features
 
-![alt text](images/wireframes/PNG "wireframe")
-
+![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620759118/manage-brands_ocmi88.png "Manage Brands")
 ## Existing Features
-Existing features
-Index page informs the user about the site in the eye-catching jumbotron
- Ads for featured businesses
- Signup
- Login
-Search: users are able to search for recipes by username, title or any other text. If no results are found message "No results found. Please try again".
- Sorting by category in navigation links.
- Access to user profile with all users recipes
- If user has not added any recipes, the profile reads "X" and has "Submit Recipe" CTA.
- Whenever user has logged in user is greeted with a 5 second flash welcome message
- When user is first registerd user is greeted with 5 second "Signup Successful" flashed message.
- Profile page displays username in banner
- Thank you page with a "Back Home" button that appears after user has edited or submitted a recipe
- Only registered and logged in users allowed to sumbit/edit and delete recipes.
- Only user that posted the recipe or admin can delete and/or edit it.
- Social icons with links in the page footer
- Recipes displayed in list have title, description, cooking time and user information
- Single recipe page have full recipe information, the date and time it was first created, image and list.
- Single recipe page displays tips only if they have been defined. All other fields are required.
- Submit recipe and edit recipe forms have clear instructions and character limits for certain fields.
- If password is too short or email is invalid etc tooltip appears
- Favicon
- Bootstrap input field validation
+- A clean, simplistic responsive website.
+- Clear navigation and UI with reused template structure across profile, brand and recipe sections.
+- Monochrome palette to allow for recipe and brand sections to focus and capture the user’s attention.
+- Header with information about the website and it’s purpose.
+- ‘Trending’ section of recipes on the homepage for recipe inspiration.
+- ‘Featured Brand’ section to highlight a particular brand and it’s products which links to it’s individual brand profile.
+- Footer with social media links, email and website information and icon to propel user back to the top of the page.
+- ‘All recipes’ page which can be filtered by category and also has search functionality which pulls from the data in the recipe description and recipe name. Users are also advised to feature brands when adding their recipe so this should pick up brand names also. 
+- ‘Bia Brands’ section compiles all brands added by the admin and links to their individual brand page with an about section and related recipes.
+- An individual recipe page contains a short description, image, featured brand info, ingredients and recipe info.
+- Simple user register & login pages.
+- Confirm deletion modals.
+- Personalised Username profile heading 
+- User profile with access to any submitted recipes, the ability to add a new recipe to the community, edit it or remove it with delete confirmation popups. 
+- Admin user has access to all recipes and can edit or remove them, they also have access to manage categories, brands as well as edit them, remove them or add new ones.
+- Flash messaging upon login and CRUD actions.
+- 404 & 500 custom built error pages to keep the user on the site when an error appears and to guide them back to the content.
 
+![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620758927/404_rxtgcf.png "404")
 
 ## Features Left to Implement
-newsletter
-Future features
-Pagination
-Google/Facebook login
- Admin recipe review to either accept or reject recipe for it to be public.
- More categories
- Admin able to add/edit/delete categories
- Sort recipes by tags
- Nutrition calculations
- Server side credential validation
- SSL certificate
- Recipe Comments
- Lazy loading images
- Prevent duplicate subscribers
- "Remember me" signup checkbox
- Edit user profiles
- User profiles with description, avatar, post list
- Ability to click on other user profiles and see recipes they posted
- Page loading animation
- Filter emails so that there are no duplicates for subscription letters
- Admin portal
- Contact form and admin to be able to see all received messages directly in the admin console
- Recipe image url validation
+- Bia newsletter sign up form to update users of new recipes and possible discounts from on-site brands.
+- Pagination for inspiration browsing when more users submit recipes to the community 
+- Google Sign-in to allow users to sign in quicker and more securely
+- Additional brands, recipes & categories as more recipes are submitted to the community.
+- Automated recipe/brand review for admin before they are published live on the community or smart filtering for inappropriate content.
+- Full user authentication functionality.
+- Server side credential validation.
+- Ability to favourite recipes/brands
+- Enable comments and social media sharing functionality on each recipe.
+- Public facing user profiles for general users and brand owners in the style of a social media account such as Instagram so other users can see the recipes created and their favourite recipes/brands.
+- Expand the admin profile to include usage and analytics reports to validate possible affiliate marketing.
+- Upload image functionality.
+- Individual ingredient fields in the ‘Add recipe’ form so more than one brand can be linked to a recipe.
+- Contact form for brand owner users to learn more about promoting their brand on the site.
+
 
 [^ Back To Top ](#contents)
 
 # Information Architecture
 
-[^ Back To Top ](#contents)
+![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620756692/bia-sitemap_iqzi13.png "Sitemap")
+
 
 ## Database Choice
 In order to fulfil the project requirements, the NoSQL database MongoDB was utilised to store the data.
@@ -198,32 +184,32 @@ In order to fulfil the project requirements, the NoSQL database MongoDB was util
 This non-relational database structure suits Bia as there are only a few relationships between the various collections. 
 
 ## Data Modeling
-The project currently relies on five database collections:
+The project currently relies on four database collections:
 
 #### Categories collection
 
 |**Key**|**Type**|**Notes**|
 |:-----|:-----|:-----|
 |_id|ObjectId||
-|category_name|string||
+|category_name|string|The Recipe Category title selected by the admin. This can be edited or deleted in the admin profile.|
 
 #### Recipe collection
 
 |**Key**|**Type**|**Notes**|
 |:-----|:-----|:-----|
 |_id|ObjectId||
-|title|string||
-|category_name|string||
-|recipe_description|string||
-|image_url|string||
-|serves|Array||
-|prep|string||
-|cooks|string||
-|difficulty|string||
-|ingredient_name|string||
-|instructions|string||
-|date_added|string||
-|username|string||
+|recipe_name|string|Name of the recipe inputted by the user. Data used in the search functionality|
+|category_name|string|The categories available to the user to select on the addition of their recipe.|
+|image_url|string|This is a link to a relevant recipe image.Image upload to be implemented in next release.|
+|serves|string|The user to input a number of servings. Could possibly use int in future updates.|
+|prep_time|string|The user to input a number related to the time taken to prep the dish as minutes is hard-coded. Could possibly use int in future updates.|
+|cook_time|string|The user to input a number related to the time taken to cook the dish as minutes is hard-coded. Could possibly use int in future updates.|
+|ingredients|string|All ingredients stored as a string with the user advised to enter each ingrdient on a separate line. Should use an array in the next release when updating each single ingredient to appear in individual fields.|
+|method|string|All instructions stored as a string with the user advised to enter each ingrdient on a separate line. Should use an array in the next release when updating each single step to appear in individual fields.|
+|recipe_description|string|Short description on the recipe. Data used in the search functionality.|
+|brand_name|string|Name of Irish brand featured in the recipe.|
+|brand_url|string|This is a link to a brand's website which is displayed at the top of the recipe page above the ingredients.|
+|created_by|string|The user in session.|
 
 
 #### Users collection
@@ -231,28 +217,24 @@ The project currently relies on five database collections:
 |**Key**|**Type**|**Notes**|
 |:-----|:-----|:-----|
 |_id|ObjectId||
-|username|string||
-|password|string||
-|email|string||
+|username|string|Selected by user on account creation. Cannot be changed.|
+|password|string|Selected by user on creation of the account and hashed using Werkzeug Security.|
 
 
-#### Businesses collection
-
-|**Key**|**Type**|**Notes**|
-|:-----|:-----|:-----|
-|_id|ObjectId||
-|business_name|string||
-|business_description|string||
-|business_url|string||
-
-
-#### Ingredients collection
+#### Brands collection
 
 |**Key**|**Type**|**Notes**|
 |:-----|:-----|:-----|
 |_id|ObjectId||
-|ingredient_name|string||
-|business_url|string||
+|brand_name|string| This is connected to the brands inputted at the time of recipe creation. Web display controlled by admin in the admin profile.|
+|brand_description|string|Short description about the brand. To appear at the top of individual brand pages.Admin to control this.|
+|brand_url|string|The link to the brand's website.Admin to control this.|
+|brand_img|string|The url to the brand's logo. Image upload to be implemented in next release.Admin to control this.|
+
+
+![alt text](https://res.cloudinary.com/nclerkin/image/upload/v1620758330/schema_ufevtk.png "Schema")
+
+[^ Back To Top ](#contents)
 
 # Technologies Used
 ## Languages
@@ -277,6 +259,7 @@ The project currently relies on five database collections:
 
 - [GitHub](https://github.com/)
 - [GitPod](https://gitpod.io/)
+- [Balsamiq](https://balsamiq.com)
 - [Heroku](https://www.heroku.com/about)
 - [MongoDB](https://www.mongodb.com/)
 

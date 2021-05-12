@@ -237,7 +237,7 @@ def edit_recipe(recipe_id):
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "description": request.form.get("description"),
-            "brand_name": request.form.get("brand_name"),
+            "brand_name": request.form.get("brand_name_recipe_edit"),
             "brand_url": request.form.get("brand_url"),
             "created_by": session["user"]
         }
