@@ -37,12 +37,11 @@ def bia_brands():
 # individual brand page
 @app.route("/brand/<brand_id>")
 def brand(brand_id):
-    # Find brand from id
-    brand = mongo.db.brands.find_one({"_id": ObjectId(brand_id)})
+    if not is_object_id_valid(brand_id):
+        return abort(404)
 
-    # Show 404 if recipe id doesn't exist
-    if not recipe:
-        return render_template("errors/404.html")
+    # Find brand from id
+    brand = mongo.db.brands.find_one_or_404({"_id": ObjectId(brand_id)})
 
     recipes = list(mongo.db.recipes.find())
     return render_template("brand.html", brand=brand, recipes=recipes)
@@ -166,6 +165,8 @@ def recipes(category):
         recipes = list(mongo.db.recipes.find({"category_name": "Dessert"}))
     elif category == "vegan":
         recipes = list(mongo.db.recipes.find({"category_name": "Vegan"}))
+    else:
+        abort(404)
 
     return render_template(
         "recipes.html", recipes=recipes, category=category)
@@ -174,6 +175,8 @@ def recipes(category):
 # individual recipe page
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
+    if not is_object_id_valid(recipe_id):
+        return abort(404)
     # Find recipe from id
     recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
     return render_template("recipe.html", recipe=recipe)
@@ -216,7 +219,7 @@ def add_recipe():
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     # Only logged in users can edit recipes
-    if not is_authenticated():
+    if not is_authenticated() or not is_object_id_valid(recipe_id):
         return abort(404)
 
     # editing recipe to db
@@ -249,7 +252,15 @@ def edit_recipe(recipe_id):
 # delete recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    # Only logged in users can edit recipes
+    if not is_authenticated() or not is_object_id_valid(recipe_id):
+        return abort(404)
+
+    # TODO: Ensure that the current user is the owner of the recipe that
+    # is going to be deleted.
+
     # Remove recipe from db
+    mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe has been successfully deleted")
     return redirect(url_for("profile"))
@@ -380,6 +391,12 @@ def delete_brand(brand_id):
 
 def is_authenticated():
     return "user" in session
+
+
+def is_object_id_valid(id_value):
+    """ Validate is the id_value is a valid ObjectId
+    """
+    return id_value != "" and ObjectId.is_valid(id_value)
 
 
 # CUSTOM ERROR HANDLERS
