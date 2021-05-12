@@ -9,7 +9,7 @@ The brief was to develop a full-stack site that allows users to manage a common 
 1. [Project Overview](#project-overview)
 2. [UX](#ux)
 3. [Features](#features)
-4. [Information Architecture](#ia)
+4. [Information Architecture](#information-architecture)
 5. [Technologies Used](#technologies-used)
 6. [Testing](#testing)
 7. [Deployment](#deployment)
@@ -151,6 +151,7 @@ This folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") in
 - An individual recipe page contains a short description, image, featured brand info, ingredients and recipe info.
 - Simple user-friendly register & login pages with Regex defensive programming to ensure registration/login forms are not submitted unless usernames and passwords are between 4-15 characters in length. 
 - Confirm deletion modals for defensive programming.
+- Route protections to keep pages secure and redirect users that shouldn't have access.
 - Personalised Username profile heading 
 - User profile with access to any submitted recipes, the ability to add a new recipe to the community, edit it or remove it with delete confirmation popups. 
 - Admin user has access to all recipes and can edit or remove them, they also have access to manage categories, brands as well as edit them, remove them or add new ones.
