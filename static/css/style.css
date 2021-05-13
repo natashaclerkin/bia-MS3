@@ -1,9 +1,10 @@
 /* FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap: 100, 200, 300, 400, 500, 600, 700, 800, 900');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
 
 /* GENERAL STYLES */
+
 body {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
@@ -75,47 +76,13 @@ nav ul a:hover {
     background-color: #fff;
 }
 
+/* BUTTONS */
 
-/* Buttons */
-
-.btn-small {
-    margin-top: 15px;
-    margin-left: 10px;
-    background-color: #28a745;
-    color: #ffffff;
+.btn-small{
+    margin-top: 17px;
+    margin-left: 5px;
+    font-family: 'Montserrat', sans-serif;
 }
-
-.btn-small:hover {
-    background-color: #ffffff;
-    color: #28a745;
-}
-
-
-.btn-large .red{
-    margin-top: 15px;
-    margin-left: 10px;
-    background-color: red;
-    color: #ffffff;
-}
-
-.btn-large .red:hover{
-    background-color: #ffffff;
-    color: red;
-}
-
-.btn-large {
-    margin-top: 15px;
-    margin-left: 10px;
-    background-color: #28a745;
-    color: #ffffff;
-}
-
-.btn-large:hover {
-    background-color: #ffffff;
-    color: #28a745;
-}
-
-
 
 /* FORM ELEMENTS */
 
@@ -164,7 +131,7 @@ nav ul a:hover {
 
 /* Header*/
 #image-header {
-    background: url("https://res.cloudinary.com/nclerkin/image/upload/v1620745038/aboutbia_nrrfyn.png");
+    background: url("https://res.cloudinary.com/nclerkin/image/upload/v1620857833/header_hvfku1.png");
     background-size: cover;
     background-position: right center;
     min-height: 400px;
@@ -175,7 +142,7 @@ nav ul a:hover {
 #home-about {
     padding-top: 10%;
     margin-bottom: 0;
-    font-weight: bold;
+    font-weight: 500;
     color: #ffffff;
 }
 
@@ -186,7 +153,7 @@ nav ul a:hover {
 
 /* Featured*/
 #image-featured {
-    background: url("https://res.cloudinary.com/nclerkin/image/upload/v1620751914/bia-featured2_zkhfv7.png");
+    background: url("https://res.cloudinary.com/nclerkin/image/upload/v1620861522/featuredbia_axgteq.png");
     background-size: cover;
     min-height: 400px;
     width: 100%;
@@ -196,7 +163,7 @@ nav ul a:hover {
 #home-featured {
     padding-top: 15%;
     margin-bottom: 0;
-    font-weight: bold;
+    font-weight: 500;
     color: #ffffff;
 }
 

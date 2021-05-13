@@ -296,7 +296,7 @@ The project currently relies on four database collections:
 [^ Back To Top ](#contents)
 
 # Testing
-The Testing process has been documented in this [testing.md file](TESTING.md "TESTING.md File")
+The Testing process has been documented in this [TESTING.md file](TESTING.md "TESTING.md File")
 
 [^ Back To Top ](#contents)
 

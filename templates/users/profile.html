@@ -20,19 +20,19 @@
             <h2 class="dash-heading">My Recipes</h2>
         </div>
         <div class="col right">
-            <a class="btn-small #43a047 green darken-1"
+            <a class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3"
                     href="{{ url_for('add_recipe') }}">Add a new recipe +</a>
         </div>
                                 
                     
                     {% if session.user|lower == "admin"|lower %}    
                 <div class="col right">
-            <a class="btn-small #000000 black"
+            <a class="waves-effect waves-light black btn-small z-depth-3"
                     href="{{ url_for('categories') }}">Manage Categories</a>
         </div>
 
                 <div class="col right">
-            <a class="btn-small #000000 black"
+            <a class="waves-effect waves-light black btn-small z-depth-3"
                     href="{{ url_for('manage_brands') }}">Manage Brands</a>
         </div>
         {% endif %}
@@ -51,20 +51,20 @@
                         </div>
                         <div class="col s5">
                          <!-- Modal delete Trigger -->
-                            <a class="modal-trigger btn-small #e53935 red darken-1 center align right" href="#modal{{ loop.index }}">Delete</a>
+                            <a class="modal-trigger waves-effect waves-light red btn-small z-depth-3 center align right" href="#modal{{ loop.index }}">Delete</a>
                             <!-- Modal delete Structure -->
                             <div id="modal{{ loop.index }}" class="modal">
                                 <div class="modal-content">
                                     <h4>Are you sure you want to delete {{ recipe.recipe_name }}?</h4>
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="#" class="modal-close btn-small #ffffff white #43a047 green-text darken-1">Cancel</a>
-                                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="modal-close btn-small #e53935 red darken-1">Delete</a>
+                                    <a href="#" class="modal-close waves-effect waves-light white green-text btn-small z-depth-3">Cancel</a>
+                                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="modal-close waves-effect waves-light red btn-small z-depth-3">Delete</a>
                                 </div>
                             </div>
 
 
-                    <a class="btn-small right #ffffff white #43a047 green-text darken-1"
+                    <a class="waves-effect waves-light white green-text btn-small z-depth-3 right"
                     href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit</a>
                         </div>
                     </div>
