@@ -21,7 +21,7 @@ The website is tested on Chrome, Firefox, Safari and Edge on the following devic
 # Automated Testing
 ## Validation Programs
 
-I used the [W3C Markup Validation Service](https://validator.w3.org/) to check the Markup, The error 'Consider using h2-h6 elements to add identifying heading to all sections' was cited as a warning because of the flash messaging through the code.[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check the CSS validity, [JS Hint Validator](https://jshint.com/) to check the JS rules and [PEP8](http://pep8online.com/) to validate Python in the project. After fixing the errors on all testing sites, the sites eventually passed validation.
+I used the [W3C Markup Validation Service](https://validator.w3.org/) to check the Markup, The error 'Consider using h2-h6 elements to add identifying heading to all sections' was cited as a warning because of the flash messaging through the code. I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check the CSS validity, [JS Hint Validator](https://jshint.com/) to check the JS rules and [PEP8](http://pep8online.com/) to validate Python in the project. After fixing the errors on all testing sites, the sites eventually passed validation.
 
 ![HTML Validation Final Results](https://res.cloudinary.com/nclerkin/image/upload/v1620888747/htmlval_qkngqf.png "HTML Validation Final Results")
 
@@ -32,8 +32,6 @@ I used the [W3C Markup Validation Service](https://validator.w3.org/) to check t
 ![Python validator](https://res.cloudinary.com/nclerkin/image/upload/v1620888747/pythonval_eqntd4.png "JS Validation Final Results")
 
 I constantly tested the code in [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools) and often ran Lighthouse audits to identify and fix issues that affected the site's performance, accessibility and user experience. 
-
-![Lighthouse Testing](wireframes/lighthouse-audit-1.PNG "Lighthouse Testing")
 
 
 
