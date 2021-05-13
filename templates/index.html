@@ -5,10 +5,10 @@
    <div class="col s12 m6 offset-m6 l6 offset-l6 center-align">
       <div class="col s12 m10 offset-m2 l10 offset-l2">
          <h1 id="home-about">About Bia</h1>
-         <p id="home-text" class="lowercase">We support Irish food producers through the nation's love of good Irish
+         <p class="home-text" class="lowercase">We support Irish food producers through the nation's love of good Irish
             ingredients.
          </p>
-         <p id="home-text" class="lowercase">Join the Bia community and share recipes with your favourite homegrown brands.</p>
+         <p class="home-text" class="lowercase">Join the Bia community and share recipes with your favourite homegrown brands.</p>
          <a class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3" href="{{ url_for('register') }}">Join now</a>
       </div>
    </div>
@@ -25,7 +25,7 @@
          <div class="card">
             <a href="{{ url_for('recipe', recipe_id='608b380a4609abde2c443293') }}">
                <div class="card-image">
-                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/pad-thai_d0zw89.jpg">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/pad-thai_d0zw89.jpg" alt="trending-recipe">
                </div>
                <div class="card-content center-align">
                   <p>Pad Thai</p>
@@ -37,7 +37,7 @@
          <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60904afbec43ab74cc26a3c3') }}">
                <div class="card-image">
-                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/peanut-butter-fudge-bars_wuhl4v.png">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/peanut-butter-fudge-bars_wuhl4v.png" alt="trending-recipe">
                </div>
                <div class="card-content center-align">
                   <p>No Bake PB Bars</p>
@@ -49,7 +49,7 @@
          <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60902528bffdb0f8e3341a89') }}">
                <div class="card-image">
-                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839752/strong-roots-vegan-wellington_hgafin.jpg">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839752/strong-roots-vegan-wellington_hgafin.jpg" alt="trending-recipe">
                </div>
                <div class="card-content center-align">
                   <p>Vegan Nut Roast</p>
@@ -61,7 +61,7 @@
          <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60904771ec43ab74cc26a3c0') }}">
                <div class="card-image">
-                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620840101/Red-Pepper-Soup_ngjyxm.jpg">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620840101/Red-Pepper-Soup_ngjyxm.jpg" alt="trending-recipe">
                </div>
                <div class="card-content center-align">
                   <p>Red Pepper Soup</p>
@@ -73,7 +73,7 @@
          <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60904393ec43ab74cc26a3be') }}">
                <div class="card-image">
-                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/fulfil-brownies_yyegfm.jpg">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/fulfil-brownies_yyegfm.jpg" alt="trending-recipe">
                </div>
                <div class="card-content center-align">
                   <p>Fulfil Brownies</p>
@@ -85,7 +85,7 @@
          <div class="card">
             <a href="{{ url_for('recipe', recipe_id='6090487aec43ab74cc26a3c1') }}">
                <div class="card-image">
-                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620840101/Muesli-Flapjack-Bars_y6gmtd.jpg">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620840101/Muesli-Flapjack-Bars_y6gmtd.jpg" alt="trending-recipe">
                </div>
                <div class="card-content center-align">
                   <p>Muesli Bars</p>
@@ -97,7 +97,7 @@
          <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60904988ec43ab74cc26a3c2') }}">
                <div class="card-image">
-                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/cookie-balls_ua42zu.jpg">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/cookie-balls_ua42zu.jpg" alt="trending-recipe">
                </div>
                <div class="card-content center-align">
                   <p>Cookie Balls</p>
@@ -109,7 +109,7 @@
          <div class="card">
             <a href="{{ url_for('recipe', recipe_id='608b3c7e4609abde2c443294') }}">
                <div class="card-image">
-                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/carrot-cake_jemggi.jpg">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/carrot-cake_jemggi.jpg" alt="trending-recipe">
                </div>
                <div class="card-content center-align">
                   <p>Carrot Cake</p>
@@ -121,7 +121,7 @@
          <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60904671ec43ab74cc26a3bf') }}">
                <div class="card-image">
-                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/no-bake-peanut-butter-cups_gru27s.png">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/no-bake-peanut-butter-cups_gru27s.png" alt="trending-recipe">
                </div>
                <div class="card-content center-align">
                   <p>PB Choco Cups</p>

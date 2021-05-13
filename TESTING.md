@@ -9,53 +9,37 @@
 [< Take me back to the README file](README.md "README.md File")
 # Responsive Testing
 
-Responsiveness of the site is tested with [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) and [Responsive Design Checker](https://www.responsivedesignchecker.com/).
+Responsiveness of the site is tested with [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools).
 The website is tested on Chrome, Firefox, Safari and Edge on the following devices: 
 - Desktop: 1024px, 1280px, 1440px, 1600px and 1680px. 
 - Mobile & Tablet: Galaxy S5, iPhone 5/SE, iPhone 6/7/8, iPhone 6/7/8 Plus, iPhone X, iPad, iPad Pro and Google Nexus 10.
 
-![Responsive testing](responsive-testing.png)
-
 
 [^ Back To Top ](#contents) 
 
 
-Passing the HTML file content through the W3C Validator for HTML resulted in numerous errors triggered by Jinja's framework embedded within the document. The standard HTML is W3C compliant, no other errors found.
 # Automated Testing
 ## Validation Programs
-I used the [W3C Markup Validation Service](https://validator.w3.org/) to check the Markup, [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check the CSS validity, [JS Hint Validator](https://jshint.com/) to check the JS rules and [PEP8](http://pep8online.com/) to validate Python in the project. After fixing the errors on all testing sites, the sites eventually passed validation.
 
-![HTML Validation Final Results](wireframes/html-validation.PNG "HTML Validation Final Results")
+I used the [W3C Markup Validation Service](https://validator.w3.org/) to check the Markup, The error 'Consider using h2-h6 elements to add identifying heading to all sections' was cited as a warning because of the flash messaging through the code.[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check the CSS validity, [JS Hint Validator](https://jshint.com/) to check the JS rules and [PEP8](http://pep8online.com/) to validate Python in the project. After fixing the errors on all testing sites, the sites eventually passed validation.
 
-![CSS Validation Final Results](wireframes/css-validation.PNG "CSS Validation Final Results")
+![HTML Validation Final Results](https://res.cloudinary.com/nclerkin/image/upload/v1620888747/htmlval_qkngqf.png "HTML Validation Final Results")
 
-![JS Validation Final Results](wireframes/js-validation.PNG "JS Validation Final Results")
+![CSS Validation Final Results](https://res.cloudinary.com/nclerkin/image/upload/v1620888747/cssval_zufx86.png "CSS Validation Final Results")
 
-![Python validator](testing/python-validator.png)
+![JS Validation Final Results](https://res.cloudinary.com/nclerkin/image/upload/v1620888747/jsval_t9hgjp.png "JS Validation Final Results")
 
-The [Color Contrast Accessibility Validator](https://color.a11y.com/) was used to test for colour contrast on the project and confirmation that the overall site complies with accessibility standards.
-
-![Color Validation Testing](wireframes/color-validation.PNG "Color Validation Testing")
-
-In order to have optimal user experience, the site needs to be accessible for everyone. I would continually run the URL through **WAVE Web Accessibility Evaluation Tool** to highlight potential issues. I continued until no further errors or alerts were given.
-
-![Wave Accessibility Test results](wireframes/wave-validation-1.PNG "Wave Accessibility Test results")
+![Python validator](https://res.cloudinary.com/nclerkin/image/upload/v1620888747/pythonval_eqntd4.png "JS Validation Final Results")
 
 I constantly tested the code in [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools) and often ran Lighthouse audits to identify and fix issues that affected the site's performance, accessibility and user experience. 
 
-![Lighthouse Testing Initial Results](wireframes/lighthouse-audit-1.PNG "Lighthouse Testing Initial Results")
+![Lighthouse Testing](wireframes/lighthouse-audit-1.PNG "Lighthouse Testing")
 
-This highlighted the areas that required improvement for validation.
-Also, a Cross-Origin security issue pertaining to Best Practices was simply resolved via adding `rel= noreferrer` to all external links. I also ensured all the necessary aria labels, alt tags etc were present to conform to best practices. 
-Through constant testing, I was able to achieve almost 100% on all metrics for optimum Performance, Accessibility, SEO and Best Practices.  
-
-![alt text](wireframes/lighthouse-audit-2.PNG "Lighthouse Testing Final Run Results")
 
 
 [^ Back To Top ](#contents) 
 
 
- can browse the 'Trending' recipes on the homepage, as well as click filtered categories from the Nav to see a selection of relevant recipes, I can view all recipes and have the ability to search recipes by title and short description content. I can view the featured brands on the site and click through to individual recipes from their profiles. I have access to all content with the exception of creating, updating or deleting recipes.  
 # Manual Testing
 ## Manual Testing of User Stories
 |  USER     | USER STORY TEST      |  OUTCOME    |  STATUS    |
