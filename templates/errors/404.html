@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Favicon-->
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon"/>
-    <!-- Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        type="text/css">
-    <!-- Static css file -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    <title>404</title>
-</head>
-
-<body>
-
-<div>
-<div class="img">
-    <div class="error-text">
-        <h1 class="white-text error-title">Oh sugar!</h1>
-        <h2 class="white-text error-title">404 - Page Not Found</h2>
-                <p class="white-text lowercase"><i>'Country road...take me home, to the place I belong!'</i></p>
-    <a class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3" href="{{ url_for('index') }}">Take me home</a>
-    </div>
-</div>
-</div>
-</body>
-
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Favicon-->
+      <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon"/>
+      <!-- Materialize CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+         type="text/css">
+      <!-- Static css file -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+      <title>404</title>
+   </head>
+   <body>
+      <div>
+         <div class="img">
+            <div class="error-text">
+               <h1 class="white-text error-title">Oh sugar!</h1>
+               <h2 class="white-text error-title">404 - Page Not Found</h2>
+               <p class="white-text lowercase"><i>'Country road...take me home, to the place I belong!'</i></p>
+               <a class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3" href="{{ url_for('index') }}">Take me home</a>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>

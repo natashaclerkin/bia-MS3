@@ -1,73 +1,67 @@
 {% extends "base.html" %}
 {% block content %}
-
 <div class="container">
-<div class="row">
-    <h1 class="center-align">Edit Brand</h1>
-    <hr class="blackline">
-</div>
-
-
-<!-- Submit recipe form -->
-<div class="row card-panel #fafafa grey lighten-5">
-    <form class="col s12 m8 offset-m2" method="POST"
-        action="{{ url_for('edit_brand', brand_id=brand._id) }}">
-        <!-- Brand name -->
-        <div class="row">
+   <div class="row">
+      <h1 class="center-align">Edit Brand</h1>
+      <hr class="blackline">
+   </div>
+   <!-- Edit brand form -->
+   <div class="row card-panel #fafafa grey lighten-5">
+      <form class="col s12 m8 offset-m2" method="POST"
+         action="{{ url_for('edit_brand', brand_id=brand._id) }}">
+         <!-- Brand name -->
+         <div class="row">
             <div class="input-field col s12">
-                <input type="text" value="{{brand.brand_name}}" id="brand_name_edit"
-                    name="brand_name_edit">
-                <label for="brand_name_edit"></label>
+               <input type="text" value="{{brand.brand_name}}" id="brand_name_edit"
+                  name="brand_name_edit">
+               <label for="brand_name_edit"></label>
             </div>
-        </div>
-        <!-- Brand IMG Upload URL -->
-        <div class="row">
+         </div>
+         <!-- Brand IMG Upload URL -->
+         <div class="row">
             <div class="input-field col s12">
-                <input id="brand_img" name="brand_img" value="{{brand.brand_img}}" type="url"
-                    pattern="https?://.+" class="validate" required>
-                <label for="brand_img">Brand Image URL</label>
-                <span class="helper-text" data-error="Enter a valid JPG/PNG URL (https://)"
-                    data-success="Looks good!"></span>
+               <input id="brand_img" name="brand_img" value="{{brand.brand_img}}" type="url"
+                  pattern="https?://.+" class="validate" required>
+               <label for="brand_img">Brand Image URL</label>
+               <span class="helper-text" data-error="Enter a valid JPG/PNG URL (https://)"
+                  data-success="Looks good!"></span>
             </div>
-        </div>
-        <!-- Short Description -->
-        <div class="row">
+         </div>
+         <!-- Short Description -->
+         <div class="row">
             <div class="input-field col s12">
-                <textarea id="brand_description" name="brand_description"
-                    class="materialize-textarea validate"
-                    required>{{- brand.brand_description -}}</textarea>
-                <label for="brand_description">Brand Description</label>
-                <span class="helper-text"
-                    data-error="Irish brand, X, DESCRIPTION WILL BE DISPLAYED HERE"
-                    data-success="Good job!">Irish brand, X, DESCRIPTION WILL BE DISPLAYED
-                    HERE</span>
+               <textarea id="brand_description" name="brand_description"
+                  class="materialize-textarea validate"
+                  required>{{- brand.brand_description -}}</textarea>
+               <label for="brand_description">Brand Description</label>
+               <span class="helper-text"
+                  data-error="Irish brand, X, DESCRIPTION WILL BE DISPLAYED HERE"
+                  data-success="Good job!">Irish brand, X, DESCRIPTION WILL BE DISPLAYED
+               HERE</span>
             </div>
-        </div>
-        <!-- Featured Irish Brand URL -->
-        <div class="row">
+         </div>
+         <!-- Featured Irish Brand URL -->
+         <div class="row">
             <div class="input-field col s12">
-                <input id="brand_url" name="brand_url" type="url" value="{{brand.brand_url}}"
-                    pattern="https?://.+" class="validate" required>
-                <label for="brand_url">Featured Irish Brand Website</label>
-                <span class="helper-text" data-error="Enter a valid URL (https://)"
-                    data-success="Looks good!">Help promote the brand by adding their direct
-                    website
-                    URL</span>
+               <input id="brand_url" name="brand_url" type="url" value="{{brand.brand_url}}"
+                  pattern="https?://.+" class="validate" required>
+               <label for="brand_url">Featured Irish Brand Website</label>
+               <span class="helper-text" data-error="Enter a valid URL (https://)"
+                  data-success="Looks good!">Help promote the brand by adding their direct
+               website
+               URL</span>
             </div>
-        </div>
-        <!-- Submit button -->
-        <div class="row">
+         </div>
+         <!-- Submit button -->
+         <div class="row">
             <div class="col s12 center-align">
-                <a class="waves-effect waves-light red btn-small z-depth-3"
-                    href="{{ url_for('manage_brands', username=session['user'])  }}">Cancel</a>
-                <button type="submit" class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3">Save
-                    brand</button>
+               <a class="waves-effect waves-light red btn-small z-depth-3"
+                  href="{{ url_for('manage_brands', username=session['user'])  }}">Cancel</a>
+               <button type="submit" class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3">Save
+               brand</button>
             </div>
-
-        </div>
-    </form>
+         </div>
+      </form>
+   </div>
 </div>
-
-</div>
-
 {% endblock %}

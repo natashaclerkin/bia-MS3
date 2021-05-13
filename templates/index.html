@@ -1,169 +1,144 @@
 {% extends "base.html" %}
 {% block content %}
-
-
 <!-- About us section -->
-
-    <div class="row" id="image-header">   
-        <div class="col s12 m6 offset-m6 l6 offset-l6 center-align">
-        <div class="col s12 m10 offset-m2 l10 offset-l2">
-            <h1 id="home-about">About Bia</h1>
-            <p id="home-text" class="lowercase">We support Irish food producers through the nation's love of good Irish
-            ingredients.</p>
-            <p id="home-text" class="lowercase">Join the Bia community and share recipes with your favourite homegrown brands.</p>
-            <a class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3" href="{{ url_for('register') }}">Join now</a>
-            </div>
-        </div>
-    </div>
-
+<div class="row" id="image-header">
+   <div class="col s12 m6 offset-m6 l6 offset-l6 center-align">
+      <div class="col s12 m10 offset-m2 l10 offset-l2">
+         <h1 id="home-about">About Bia</h1>
+         <p id="home-text" class="lowercase">We support Irish food producers through the nation's love of good Irish
+            ingredients.
+         </p>
+         <p id="home-text" class="lowercase">Join the Bia community and share recipes with your favourite homegrown brands.</p>
+         <a class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3" href="{{ url_for('register') }}">Join now</a>
+      </div>
+   </div>
+</div>
 <div class="container">
-<!-- Title -->
-<div class="row">
-    <h2 class="center-align">#TRENDING</h2>
-    <hr class="blackline">
-</div>
-
-
-
-<!-- Trending Recipe Gallery-->
-
-<div class="row">
-
-    <div class="col s12 m6 l4">
-        <div class="card">
+   <!-- Title -->
+   <div class="row">
+      <h2 class="center-align">#TRENDING</h2>
+      <hr class="blackline">
+   </div>
+   <!-- Trending Recipe Gallery-->
+   <div class="row">
+      <div class="col s12 m6 l4">
+         <div class="card">
             <a href="{{ url_for('recipe', recipe_id='608b380a4609abde2c443293') }}">
-                <div class="card-image">
-                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/pad-thai_d0zw89.jpg">
-                                    </div>
-                <div class="card-content center-align">
-                    <p>Pad Thai</p>
-                </div>
+               <div class="card-image">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/pad-thai_d0zw89.jpg">
+               </div>
+               <div class="card-content center-align">
+                  <p>Pad Thai</p>
+               </div>
             </a>
-        </div>
-    </div>
-
-        <div class="col s12 m6 l4">
-        <div class="card">
+         </div>
+      </div>
+      <div class="col s12 m6 l4">
+         <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60904afbec43ab74cc26a3c3') }}">
-                <div class="card-image">
-                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/peanut-butter-fudge-bars_wuhl4v.png">
-                                    </div>
-                <div class="card-content center-align">
-                    <p>No Bake PB Bars</p>
-                </div>
+               <div class="card-image">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/peanut-butter-fudge-bars_wuhl4v.png">
+               </div>
+               <div class="card-content center-align">
+                  <p>No Bake PB Bars</p>
+               </div>
             </a>
-        </div>
-    </div>
-
-        <div class="col s12 m6 l4">
-        <div class="card">
+         </div>
+      </div>
+      <div class="col s12 m6 l4">
+         <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60902528bffdb0f8e3341a89') }}">
-                <div class="card-image">
-                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839752/strong-roots-vegan-wellington_hgafin.jpg">
-                                    </div>
-                <div class="card-content center-align">
-                    <p>Vegan Nut Roast</p>
-                </div>
+               <div class="card-image">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839752/strong-roots-vegan-wellington_hgafin.jpg">
+               </div>
+               <div class="card-content center-align">
+                  <p>Vegan Nut Roast</p>
+               </div>
             </a>
-        </div>
-    </div>
-
-        <div class="col s12 m6 l4">
-        <div class="card">
+         </div>
+      </div>
+      <div class="col s12 m6 l4">
+         <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60904771ec43ab74cc26a3c0') }}">
-                <div class="card-image">
-                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620840101/Red-Pepper-Soup_ngjyxm.jpg">
-                                    </div>
-                <div class="card-content center-align">
-                    <p>Red Pepper Soup</p>
-                </div>
+               <div class="card-image">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620840101/Red-Pepper-Soup_ngjyxm.jpg">
+               </div>
+               <div class="card-content center-align">
+                  <p>Red Pepper Soup</p>
+               </div>
             </a>
-        </div>
-    </div>
-
-        <div class="col s12 m6 l4">
-        <div class="card">
+         </div>
+      </div>
+      <div class="col s12 m6 l4">
+         <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60904393ec43ab74cc26a3be') }}">
-                <div class="card-image">
-                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/fulfil-brownies_yyegfm.jpg">
-                                    </div>
-                <div class="card-content center-align">
-                    <p>Fulfil Brownies</p>
-                </div>
+               <div class="card-image">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/fulfil-brownies_yyegfm.jpg">
+               </div>
+               <div class="card-content center-align">
+                  <p>Fulfil Brownies</p>
+               </div>
             </a>
-        </div>
-    </div>
-
-        <div class="col s12 m6 l4">
-        <div class="card">
+         </div>
+      </div>
+      <div class="col s12 m6 l4">
+         <div class="card">
             <a href="{{ url_for('recipe', recipe_id='6090487aec43ab74cc26a3c1') }}">
-                <div class="card-image">
-                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620840101/Muesli-Flapjack-Bars_y6gmtd.jpg">
-                                    </div>
-                <div class="card-content center-align">
-                    <p>Muesli Bars</p>
-                </div>
+               <div class="card-image">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620840101/Muesli-Flapjack-Bars_y6gmtd.jpg">
+               </div>
+               <div class="card-content center-align">
+                  <p>Muesli Bars</p>
+               </div>
             </a>
-        </div>
-    </div>
-
-        <div class="col s12 m6 l4">
-        <div class="card">
+         </div>
+      </div>
+      <div class="col s12 m6 l4">
+         <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60904988ec43ab74cc26a3c2') }}">
-                <div class="card-image">
-                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/cookie-balls_ua42zu.jpg">
-                                    </div>
-                <div class="card-content center-align">
-                    <p>Cookie Balls</p>
-                </div>
+               <div class="card-image">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/cookie-balls_ua42zu.jpg">
+               </div>
+               <div class="card-content center-align">
+                  <p>Cookie Balls</p>
+               </div>
             </a>
-        </div>
-    </div>
-
-        <div class="col s12 m6 l4">
-        <div class="card">
+         </div>
+      </div>
+      <div class="col s12 m6 l4">
+         <div class="card">
             <a href="{{ url_for('recipe', recipe_id='608b3c7e4609abde2c443294') }}">
-                <div class="card-image">
-                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/carrot-cake_jemggi.jpg">
-                                    </div>
-                <div class="card-content center-align">
-                    <p>Carrot Cake</p>
-                </div>
+               <div class="card-image">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839751/carrot-cake_jemggi.jpg">
+               </div>
+               <div class="card-content center-align">
+                  <p>Carrot Cake</p>
+               </div>
             </a>
-        </div>
-    </div>
-
-        <div class="col s12 m6 l4">
-        <div class="card">
+         </div>
+      </div>
+      <div class="col s12 m6 l4">
+         <div class="card">
             <a href="{{ url_for('recipe', recipe_id='60904671ec43ab74cc26a3bf') }}">
-                <div class="card-image">
-                    <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/no-bake-peanut-butter-cups_gru27s.png">
-                                    </div>
-                <div class="card-content center-align">
-                    <p>PB Choco Cups</p>
-                </div>
+               <div class="card-image">
+                  <img class="img_recipe" src="https://res.cloudinary.com/nclerkin/image/upload/v1620839750/no-bake-peanut-butter-cups_gru27s.png">
+               </div>
+               <div class="card-content center-align">
+                  <p>PB Choco Cups</p>
+               </div>
             </a>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-<!-- Featured section -->
-
-    <div class="row" id="image-featured">   
-        <div class="col s12 m6 offset-m6 l6 offset-l6 center-align">
-        <div class="col s12 m10 offset-m2 l10 offset-l2">
+         </div>
+      </div>
+   </div>
+   <!-- Featured section -->
+   <div class="row" id="image-featured">
+      <div class="col s12 m6 offset-m6 l6 offset-l6 center-align">
+         <div class="col s12 m10 offset-m2 l10 offset-l2">
             <h2 id="home-featured">Bia Featured</h2>
             <p id="featured-text" class="lowercase hide-on-small-only">Bia is loving Irish nut butter brand, Lifeforce. With over 40 years in the biz, they have maintained their philosophy to provide foods just as nature intended.</p>
-        <div class="button-home"><a class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3" href="{{ url_for( 'brand', brand_id='60983c6bd2b7896551a0a7ac') }}">Learn more</a></div>
-            </div>
-        </div>
-    </div>
-
+            <div class="button-home"><a class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3" href="{{ url_for( 'brand', brand_id='60983c6bd2b7896551a0a7ac') }}">Learn more</a></div>
+         </div>
+      </div>
+   </div>
 </div>
-
 {% endblock %}

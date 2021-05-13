@@ -1,50 +1,47 @@
 {% extends "base.html" %}
 {% block content %}
-
 <div class="container">
-    <h1 class="center-align">Join the Bia Community</h1>
-
-    <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
-            <div class="card-panel">
-                <!-- username -->
-                <div class="row">
-					<div class="input-field col s12">
-						<i class="fas fa-user-plus prefix #43a047 green-text text-darken-1"></i>
-						<input id="username" name="username" type="text" minlength="4"
-                            maxlength="15" pattern="^[A-Za-z0-9_]{4,15}$" class="validate" required>
-                        <label for="username">Username</label>
-                        <span class="helper-text" data-error="4-15 characters, letters and numbers only" data-success="Looks good!">4-15 characters, letters and numbers only</span>
-					</div>
-                </div>
-                <!-- password -->
-                <div class="row">
-                    <div class="input-field col s12">
-						<i class="fas fa-user-lock prefix #43a047 green-text text-darken-1"></i>
-                        <input id="password" name="password" type="password" minlength="4"
-                            maxlength="15" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,15}$" class="validate" required>
-                        <label for="password">Password</label>
-                        <span class="helper-text" data-error="Must contain at least one number, one uppercase and lowercase letter, and between 4-15 characters" data-success="Looks good!">Must contain at least one number, one uppercase and lowercase letter, and between 4-15 characters</span>
-                </div>
+   <h1 class="center-align">Join the Bia Community</h1>
+   <div class="row">
+      <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+         <div class="card-panel">
+            <!-- username -->
+            <div class="row">
+               <div class="input-field col s12">
+                  <i class="fas fa-user-plus prefix #43a047 green-text text-darken-1"></i>
+                  <input id="username" name="username" type="text" minlength="4"
+                     maxlength="15" pattern="^[A-Za-z0-9_]{4,15}$" class="validate" required>
+                  <label for="username">Username</label>
+                  <span class="helper-text" data-error="4-15 characters, letters and numbers only" data-success="Looks good!">4-15 characters, letters and numbers only</span>
+               </div>
             </div>
-                <!-- register -->
-                <div class="row">
-                    <button type="submit" class="col s12 waves-effect waves-light #00c853 green accent-4 btn-large z-depth-3">
-                        Register <i class="fas fa-sign-in-alt"></i>
-                    </button>
-                </div>
+            <!-- password -->
+            <div class="row">
+               <div class="input-field col s12">
+                  <i class="fas fa-user-lock prefix #43a047 green-text text-darken-1"></i>
+                  <input id="password" name="password" type="password" minlength="4"
+                     maxlength="15" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,15}$" class="validate" required>
+                  <label for="password">Password</label>
+                  <span class="helper-text" data-error="Must contain at least one number, one uppercase and lowercase letter, and between 4-15 characters" data-success="Looks good!">Must contain at least one number, one uppercase and lowercase letter, and between 4-15 characters</span>
+               </div>
             </div>
-        </form>
-    </div>
-    <!-- Navigate registered users to login -->
-    <div class="row">
-        <div class="col s12">
-            <p class="center-align">
-                Already Registered?
-                <a href="{{ url_for('login') }}" class="#43a047 green-text text-darken-1">Log In</a>
-            </p>
-        </div>
-    </div>
-
-    </div>
+            <!-- register -->
+            <div class="row">
+               <button type="submit" class="col s12 waves-effect waves-light #00c853 green accent-4 btn-large z-depth-3">
+               Register <i class="fas fa-sign-in-alt"></i>
+               </button>
+            </div>
+         </div>
+      </form>
+   </div>
+   <!-- Navigate registered users to login -->
+   <div class="row">
+      <div class="col s12">
+         <p class="center-align">
+            Already Registered?
+            <a href="{{ url_for('login') }}" class="#43a047 green-text text-darken-1">Log In</a>
+         </p>
+      </div>
+   </div>
+</div>
 {% endblock %}

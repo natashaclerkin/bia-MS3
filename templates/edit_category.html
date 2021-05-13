@@ -1,38 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
-
 <div class="container">
-<div class="row">
-    <h1 class="center-align">Edit Category</h1>
-    <hr class="blackline">
-</div>
-
-
-<!-- Edit category form -->
-<div class="row card-panel #fafafa grey lighten-5">
-    <form class="col s12 m8 offset-m2" method="POST"
-        action="{{ url_for('edit_category', category_id=category._id) }}">
-        <!-- Category name -->
-        <div class="row">
+   <div class="row">
+      <h1 class="center-align">Edit Category</h1>
+      <hr class="blackline">
+   </div>
+   <!-- Edit category form -->
+   <div class="row card-panel #fafafa grey lighten-5">
+      <form class="col s12 m8 offset-m2" method="POST"
+         action="{{ url_for('edit_category', category_id=category._id) }}">
+         <!-- Category name -->
+         <div class="row">
             <div class="input-field col s12">
-                <input id="category_name_edit" name="category_name_edit"
-                    value="{{category.category_name}}" type="text" minlength="3" maxlength="25"
-                    pattern="^[^\s][A-Za-z0-9\s]{1,20}$" class="validate" required>
-                <label for="category_name_edit">Category name</label>
+               <input id="category_name_edit" name="category_name_edit"
+                  value="{{category.category_name}}" type="text" minlength="3" maxlength="25"
+                  pattern="^[^\s][A-Za-z0-9\s]{1,20}$" class="validate" required>
+               <label for="category_name_edit">Category name</label>
             </div>
-        </div>
-        <!-- Submit button -->
-        <div class="row">
+         </div>
+         <!-- Submit button -->
+         <div class="row">
             <div class="col s12 center-align">
-                <a class="waves-effect waves-light red btn-small z-depth-3"
-                    href="{{ url_for('categories', username=session['user'])  }}">Cancel</a>
-                <button type="submit" class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3">Save
-                    Category</button>
+               <a class="waves-effect waves-light red btn-small z-depth-3"
+                  href="{{ url_for('categories', username=session['user'])  }}">Cancel</a>
+               <button type="submit" class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3">Save
+               Category</button>
             </div>
-
-        </div>
-    </form>
-</div>
-
+         </div>
+      </form>
+   </div>
 </div>
 {% endblock %}

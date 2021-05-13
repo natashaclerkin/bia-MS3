@@ -28,16 +28,16 @@ The brief was to develop a full-stack site that allows users to manage a common 
  
 [Bia.ie](http://bia-ms3.herokuapp.com/) is an online cookbook and community for Irish food-lovers. For any non-native Irish speakers who may be slightly confused re the website name, 'bia' is Gaeilge for the word 'food'! 
 
-The idea for Bia was conceived in the midst of the Covid 19 Pandemic where many industries became decimated as a result of the virus and life as we once knew it changed forever. 
+The idea for Bia was conceived during the Covid 19 Pandemic where many industries became decimated as a result of the virus and life as we once knew it changed forever. 
 With the nation ordered to remain socially distanced from one another and stay confined in their homes, people turned to the two things that were constant in this new normal: food and the internet!
 Enter the avalanche of tutorials and baking recipes with everyone claiming to hold the ultimate banana bread recipe!
 The challenge? To fulfil this new demand for online recipes and create a community around it. Also, to boost the economy by supporting struggling Irish businesses. Bia was the obvious solution. 
 Unlike any other online cookbook, the website showcases recipes utilising locally-produced ingredients & products and allows the promotion of these homegrown food producers by displaying ingredients or brands with direct links to their website.
-Users of Bia make use of the site by sharing their own recipes with the community, and benefit from having convenient access to recipes provided by all other members all whilst promoting local Irish food businesses.
+Users of Bia make use of the site by sharing their own recipes with the community and benefit from having convenient access to recipes provided by all other members all whilst promoting local Irish food businesses.
 
 My own goals as a developer creating this project were to: 
 - Develop a web application that allowed users to store and easily access cooking recipes. 
-- Create an app which is highly accessibile, responsive and simplistic in design.
+- Create an app that is highly accessible, responsive and simplistic in design.
 - Create the backend code and frontend forms allowing users to add new recipes to the site, view them, edit them and delete them using CRUD operations.
 - Create the backend and frontend functionality for users to locate recipes based on the recipe's fields providing full search functionality on the site.
 - Provide these search results in a manner that is visually appealing and user-friendly.
@@ -50,13 +50,13 @@ My own goals as a developer creating this project were to:
 ## Goals
 
 ### External user’s goal:
-- Locate: To easily find inspiration for a future meal or locate a specific recipe based on a past meal or from a personal wishlist. To find recipes from other members by: meal type, by specific ingredients and by dietary requirement. 
+- Locate: To easily find inspiration for a future meal or locate a specific recipe based on a past meal or from a personal wishlist. To find recipes from other members by meal type, by specific ingredients and by dietary requirement. 
 - Share: To share knowledge from a homemade recipe or a successful recipe used in the past. To share by adding recipes to the community and providing details by ingredients, cook & prep time, dietary requirements relevant to the recipes and being able to edit and delete them when I no longer want to share with the community.
-- Create: To create a list of recipes and store as a customised online cookback to refer back to in the future.
+- Create: To create a list of recipes and store it as a customised online cookbook to refer back to in the future.
 
 ### Site owner's goal:
 - Provide a simple, easy to use online cookbook and space where food-lovers can find and share recipes using Irish ingredients with the community. 
-- Promote homegrown irish food producers online.
+- Promote homegrown Irish food producers online.
 - Provide an enjoyable experience for users to encourage them to return to the site by featuring intuitive prompts and witty Irish banter through the content. 
 - To benefit from the collection of the recipes in the community to operate as a content incubator for the website.
 - Earn revenue through affiliate marketing by directing potential customers towards featured food producers websites. 
@@ -72,7 +72,7 @@ My own goals as a developer creating this project were to:
 ### External Users
 
 As a new user, I would like to:
-- View a visually clean and appealing homepage so that I can instantly understand the purpose of the site and navigate it's offering easily.
+- View a visually clean and appealing homepage so that I can instantly understand the purpose of the site and navigate its offering easily.
 - Access the site from any mobile, tablet or desktop devices so that I can have an equally enjoyable experience regardless of the selected device/platform.
 - Register a profile easily without the requirement to provide a lot of info so that I can join the community and add my own recipes. 
 - View content without requiring to register so that I can quickly locate a specific recipe.
@@ -86,16 +86,16 @@ As a returning user, I would like to:
 - View all the recipes I have stored in a specific area so that I can review my current collection at any time and refer back to them when needed.
 - Create a new recipe providing necessary details so that I can share knowledge from a homemade/successful recipe used in the past with the community.
 - Edit one of my current recipes so that I can improve the recipe for other members or users.
-- Remove one of my current recipes so I that I can choose to no longer share it with the community.
+- Remove one of my current recipes so that I can choose to no longer share it with the community.
 - To have access to all recipes provided by the community so that I can view content from other members.
 - To browse recipes from other members so that I can get inspiration for future meals based on meal type, specific ingredients used and by dietary requirement. 
 
 As a brand owner user, I would like to:
 
 - Create recipes to share with the community so that I can highlight our products from the brand.
-- Get the products in as many locations on the website so that I can create awareness for the brand.
-- Offer discount to community users so that I can gain potential new customers for the brand. 
-- View analytics/reports for the quantity of users that have clicked through to our site to value potential customer acquisition.
+- View the products in as many locations on the website so that I can create awareness for the brand.
+- Offer a discount to community users so that I can gain potential new customers for the brand. 
+- View analytics/reports for the number of users that have clicked through to our site to value potential customer acquisition.
 
 ### Business/Admin Users
 
@@ -104,7 +104,7 @@ As a business/admin user, I would like to have access to all of the above as wel
 - The ability to edit or remove recipes created by users so that I can vet the content and ensure it's appropriate for users.
 - The ability to add, edit or remove recipe categories so that I can keep the categories relevant to what users are searching for.
 - The ability to add, edit or remove brands as required to maintain relevance between the recipes and brands currently in the community.
-- View the amount of clicks from the featured business page and linked ingredient URLs so that I can gauge potential success of affiliate marketing. 
+- View the number of clicks from the featured business page and linked ingredient URLs so that I can gauge the potential success of affiliate marketing. 
 - Ensure witty helper/success text is present when users add recipes in the community to convey a great sense of Irish humour and provide an enjoyable user experience.
 
 
@@ -116,12 +116,12 @@ As a business/admin user, I would like to have access to all of the above as wel
 I wanted to use [Montserrat](https://fonts.google.com/specimen/Montserrat#about) for the headings and [Open Sans](https://fonts.google.com/specimen/Open+Sans/#about) as a supporting body font to achieve the desired clean-cut image.
 
 ### Icons
-Font Awesome icons has been used for this project.
+Font Awesome icons have been used for this project.
 
 ### Color Scheme
 The Bia brand monochrome colour scheme was implemented along with pops of green to reflect the Irish fresh products represented throughout the site.
-I wanted to keep the color palette simplistic and clean to allow for the imagery from the recipes to stand out and inject the site with colour.
-However the colour red is used for error messages for the Signup and Login pages to highlight a warning to the user.
+I wanted to keep the colour palette simplistic and clean to allow for the imagery from the recipes to stand out and inject the site with colour.
+However, the colour red is used for error messages for the Signup and Login pages to highlight a warning to the user.
 
 I ended up creating and using the below palette once it had passed rigorous Accessibility testing in **A11y's Color Contrast Accessibility Validator**. 
 
@@ -140,13 +140,13 @@ This folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") in
 ![Admin Profile](https://res.cloudinary.com/nclerkin/image/upload/v1620780109/profile_t2gq79.png "Admin Profile")
 ## Existing Features
 - A clean, simplistic responsive website.
-- Clear, fixed navigation which is available to the user if exessive scrolling is required and UI with reused template structure across profile, brand and recipe sections.
+- Clear, fixed navigation which is available to the user if excessive scrolling is required and UI with reused template structure across the profile, brand and recipe sections.
 - Monochrome palette to allow for recipe and brand sections to focus and capture the user’s attention.
-- Header with information about the website and it’s purpose.
+- Header with information about the website and its purpose.
 - ‘Trending’ section of recipes on the homepage for recipe inspiration.
-- ‘Featured Brand’ section to highlight a particular brand and it’s products which links to it’s individual brand profile.
+- ‘Featured Brand’ section to highlight a particular brand and its products which links to its individual brand profile.
 - Footer with social media links, email and website information and icon to propel user back to the top of the page.
-- ‘All recipes’ page which can be filtered by category and also has search functionality which pulls from the data in the recipe description and recipe name. Users are also advised to feature brands when adding their recipe so this should pick up brand names also. 
+- ‘All recipes’ page can be filtered by category and also has search functionality that pulls from the data in the recipe description and recipe name. Users are also advised to feature brands when adding their recipe so this should pick up brand names also. 
 - ‘Bia Brands’ section compiles all brands added by the admin and links to their individual brand page with an about section and related recipes.
 - An individual recipe page contains a short description, image, featured brand info, ingredients and recipe info.
 - Simple user-friendly register & login pages with Regex defensive programming to ensure registration/login forms are not submitted unless usernames and passwords are between 4-15 characters in length. 
@@ -167,11 +167,12 @@ This folder contains [Wireframes](wireframes/wireframes.pdf "Bia Wireframes") in
 - Additional brands, recipes & categories as more recipes are submitted to the community.
 - Automated recipe/brand review for admin before they are published live on the community or smart filtering for inappropriate content.
 - Full user authentication functionality.
-- Server side credential validation.
+- Server-side credential validation.
+- Expansion of Admin dashboard to include the ability for admin to change the Featured Brand on the homepage when desired.
 - Ability to favourite recipes/brands
-- Submission verification for recipe image URLS and implement a placeholder image if an URL gets broken.
+- Submission verification for recipe image URLs and implement a placeholder image if an URL gets broken.
 - Enable comments and social media sharing functionality on each recipe.
-- Public facing user profiles for general users and brand owners in the style of a social media account such as Instagram so other users can see the recipes created and their favourite recipes/brands.
+- Public-facing user profiles for general users and brand owners in the style of a social media account such as Instagram so other users can see the recipes created and their favourite recipes/brands.
 - Expand the admin profile to include usage and analytics reports to validate possible affiliate marketing.
 - Upload image functionality for better UX pictured below but due to time constraints could not implement fully before the stated deadline.
 - Individual ingredient fields in the ‘Add recipe’ form so more than one brand can be linked to a recipe.
@@ -209,12 +210,12 @@ The project currently relies on four database collections:
 |_id|ObjectId||
 |recipe_name|string|Name of the recipe inputted by the user. Data used in the search functionality|
 |category_name|string|The categories available to the user to select on the addition of their recipe.|
-|image_url|string|This is a link to a relevant recipe image.Image upload to be implemented in next release.|
-|serves|string|The user to input a number of servings. Could possibly use int in future updates.|
+|image_url|string|This is a link to a relevant recipe image. Image upload to be implemented in next release.|
+|serves|string|The user to input a specific number of servings. Could possibly use int in future updates.|
 |prep_time|string|The user to input a number related to the time taken to prep the dish as minutes is hard-coded. Could possibly use int in future updates.|
 |cook_time|string|The user to input a number related to the time taken to cook the dish as minutes is hard-coded. Could possibly use int in future updates.|
-|ingredients|string|All ingredients stored as a string with the user advised to enter each ingrdient on a separate line. Should use an array in the next release when updating each single ingredient to appear in individual fields.|
-|method|string|All instructions stored as a string with the user advised to enter each ingrdient on a separate line. Should use an array in the next release when updating each single step to appear in individual fields.|
+|ingredients|string|All ingredients stored as a string with the user advised to enter each ingredient on a separate line. Should use an array in the next release when updating every single ingredient to appear in individual fields.|
+|method|string|All instructions stored as a string with the user advised to enter each ingredient on a separate line. Should use an array in the next release when updating every single step to appear in individual fields.|
 |recipe_description|string|Short description on the recipe. Data used in the search functionality.|
 |brand_name|string|Name of Irish brand featured in the recipe.|
 |brand_url|string|This is a link to a brand's website which is displayed at the top of the recipe page above the ingredients.|
@@ -236,9 +237,9 @@ The project currently relies on four database collections:
 |:-----|:-----|:-----|
 |_id|ObjectId||
 |brand_name|string| This is connected to the brands inputted at the time of recipe creation. Web display controlled by admin in the admin profile.|
-|brand_description|string|Short description about the brand. To appear at the top of individual brand pages.Admin to control this.|
-|brand_url|string|The link to the brand's website.Admin to control this.|
-|brand_img|string|The url to the brand's logo. Image upload to be implemented in next release.Admin to control this.|
+|brand_description|string|Short description about the brand. To appear at the top of individual brand pages. Admin to control this.|
+|brand_url|string|The link to the brand's website. Admin to control this.|
+|brand_img|string|The URL to the brand's logo. Image upload to be implemented in next release. Admin to control this.|
 
 
 ![Bia Schema](https://res.cloudinary.com/nclerkin/image/upload/v1620758330/schema_ufevtk.png "Bia Schema")
@@ -283,13 +284,13 @@ The project currently relies on four database collections:
 - [Google Fonts](https://fonts.google.com/) to style the website fonts.
 - [Figma](https://figma.com) to create the wireframes for the project and customize images for the homepage.
 - [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools) to consistently test the site and run reports from Lighthouse.
-- [Color Hex](https://www.color-hex.com/) to create the color palette for my project and help structure the UI for the site. 
+- [Color Hex](https://www.color-hex.com/) to create the colour palette for my project and help structure the UI for the site. 
 - [Color Contrast Accessibility Validator](https://color.a11y.com/) to test for colour contrast on the project.
 - [W3C Markup Validation Service](https://validator.w3.org/) to check the markup validity of Web documents in HTML.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check the validity of my CSS in the project.
 - [JS Hint Validator](https://jshint.com/) to analyze and ensure the source code complies with coding rules. 
 - [Pep8 Online](http://pep8online.com/) to check code for PEP8 requirements in Python.
-- [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) to check the site for Accessibility compatibility and highlight any potenial issues.
+- [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) to check the site for Accessibility compatibility and highlight any potential issues.
 - [Am I Responsive?](http://ami.responsivedesign.is/) to provide a preview of the site across a variety of popular devices.  
 
 
@@ -334,7 +335,7 @@ os.environ.setdefault("SECRET_KEY", "**secret key goes here**")
 os.environ.setdefault("MONGO_URI", "**mongo uri goes here**")
 os.environ.setdefault("MONGO_DBNAME", "**database name goes here**")
 ```
-4. Create a .gitignore file in the root directory of the project and add the env.py to the .gitignore file to prevent the environment variables being made public.
+4. Create a .gitignore file in the root directory of the project and add the env.py to the .gitignore file to prevent the environment variables from being made public.
 5. Type `python3 app.py` into the terminal to run the app locally. 
 
 
@@ -377,7 +378,7 @@ I took inspiration from the following sources however I did implement my own cus
 
 
 ## Content and Media
-The Bia logo and main content for the site was created by myself however brand profile descriptions and recipes as well as their images were obtained from their own websites or Roz Purcell's Natural Born Feeder recipes. 
+The Bia logo and main content for the site were created by myself however brand profile descriptions and recipes as well as their images, were obtained from their own websites or Roz Purcell's Natural Born Feeder recipes. 
 
 - Lifeforce brand description & logo - [Lifeforce Website](www.lifeforce.ie)
 - Dr Coy's brand description & logo - [Dr Coy's Website](wwww.drcoys.ie)
@@ -412,6 +413,6 @@ I would like to thank my fellow student Boris Gersic for his help with testing a
 
 # Disclaimer
 
-If there are any issues with copyright of content, please contact me directly and I will amend as soon as possible. This project is for educational purposes only.
+If there are any issues with the copyright of content, please contact me directly and I will amend it as soon as possible. This project is for educational purposes only.
 
 [^ Back To Top ](#contents) 

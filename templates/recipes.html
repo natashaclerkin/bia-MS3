@@ -1,60 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
-
 <div class="container">
-<!-- Recipes Title -->
-<div class="row">
-    <h1 class="center-align">RECIPES</h1>
-    <hr class="blackline">
-</div>
-
-<!-- Search -->
-<div class="row card-panel search-panel grey lighten-5">
-    <form action="{{ url_for('search') }}" method="post" class="col s12">
-        <div class="row valign-wrapper center-align">
+   <!-- Recipes Title -->
+   <div class="row">
+      <h1 class="center-align">RECIPES</h1>
+      <hr class="blackline">
+   </div>
+   <!-- Search -->
+   <div class="row card-panel search-panel grey lighten-5">
+      <form action="{{ url_for('search') }}" method="post" class="col s12">
+         <div class="row valign-wrapper center-align">
             <div class="input-field col s12 m8">
-                <i class="fas fa-search prefix #43a047 green-text text-darken-1"></i>
-                <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                <label for="query">Search Recipes</label>
+               <i class="fas fa-search prefix #43a047 green-text text-darken-1"></i>
+               <input type="text" name="query" id="query" minlength="3" class="validate" required>
+               <label for="query">Search Recipes</label>
             </div>
             <div class="col s12 m4">
-                <a href="{{ url_for('all_recipes')}}"
-                    class="waves-effect waves-light white green-text btn-small z-depth-3">Reset</a>
-                <button type="submit" class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3">
-                    <i class="fas fa-search left"></i> Search
-                </button>
+               <a href="{{ url_for('all_recipes')}}"
+                  class="waves-effect waves-light white green-text btn-small z-depth-3">Reset</a>
+               <button type="submit" class="waves-effect waves-light #00c853 green accent-4 btn-small z-depth-3">
+               <i class="fas fa-search left"></i> Search
+               </button>
             </div>
-        </div>
-    </form>
-</div>
-<!-- Recipe Gallery-->
-{% if recipes|length > 0 %}
-
-<div class="row">
-    {% for recipe in recipes %}
-    <div class="col s12 m6 l4">
-        <div class="card">
+         </div>
+      </form>
+   </div>
+   <!-- Recipe Gallery-->
+   {% if recipes|length > 0 %}
+   <div class="row">
+      {% for recipe in recipes %}
+      <div class="col s12 m6 l4">
+         <div class="card">
             <a href="{{ url_for('recipe', recipe_id=recipe._id) }}">
-                <div class="card-image">
-                    <img class="img_recipe" src="{{ recipe.img_url}}">
-                </div>
-                <div class="card-content center-align">
-                    <p>{{ recipe.recipe_name }}
-                    </p>
-                </div>
-                </a>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-
-{% else %}
-<div class="row">
-    <div class="col s12 center-align">
-        <p class="red-text">Hmm... no results found, try another dish!</p>
-    </div>
-</div>
-{% endif %}
-
+               <div class="card-image">
+                  <img class="img_recipe" src="{{ recipe.img_url}}">
+               </div>
+               <div class="card-content center-align">
+                  <p>{{ recipe.recipe_name }}
+                  </p>
+               </div>
+            </a>
+         </div>
+      </div>
+      {% endfor %}
+   </div>
+   {% else %}
+   <div class="row">
+      <div class="col s12 center-align">
+         <p class="red-text">Hmm... no results found, try another dish!</p>
+      </div>
+   </div>
+   {% endif %}
 </div>
 {% endblock %}

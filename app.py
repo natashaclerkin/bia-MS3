@@ -341,7 +341,7 @@ def add_brand():
     if request.method == "POST":
 
         brand = {
-            "brand_name": request.form.get("brand_name"),
+            "brand_name": request.form.get("brand_name_add"),
             "brand_description": request.form.get("brand_description"),
             "brand_url": request.form.get("brand_url"),
             "brand_img": request.form.get("brand_img")
